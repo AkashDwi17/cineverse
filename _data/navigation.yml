@@ -22,7 +22,6 @@ docs:
 
   - title: Backend
     children:
-      # Existing documentation
       - title: "Auth Service"
         url: /docs/backend/auth-service/
       - title: "Theatre Service"
@@ -40,6 +39,7 @@ docs:
 
   - title: Database
     children:
+      # Existing docs
       - title: "OVS Database"
         url: /docs/database/ovs-database/
       - title: "Database Structure"
@@ -50,6 +50,18 @@ docs:
         url: /docs/database/databaseinsertion2/
       - title: "Database ER Diagram"
         url: /docs/database/databaseer/
+
+      # --- NEW BookMyShow Database Files ---
+      - title: "Auth Database"
+        url: /docs/database/auth-database/
+      - title: "Theatre Database"
+        url: /docs/database/theatre-database/
+      - title: "Show Database"
+        url: /docs/database/show-database/
+      - title: "Booking Database"
+        url: /docs/database/booking-database/
+      - title: "Movie Database (Mongo)"
+        url: /docs/database/movie-database/
 
   - title: Frontend
     children:
