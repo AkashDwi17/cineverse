@@ -1,8 +1,3 @@
-
----
-
-### 5) `booking-service.md`
-```md
 ---
 title: "Booking Service"
 permalink: /docs/backend/booking-service/
@@ -10,6 +5,8 @@ excerpt: "Manages booking lifecycle: seat lock, confirm, cancel, and retrieval."
 last_modified_at: 2025-12-05
 toc: true
 ---
+
+### 5 `booking-service.md`
 
 # Booking Service
 
@@ -43,3 +40,4 @@ Request:
  "userId": 20,
  "seats": ["A1","A2"]
 }
+```

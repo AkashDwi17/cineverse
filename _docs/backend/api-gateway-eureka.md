@@ -1,8 +1,3 @@
-
----
-
-### 7) `api-gateway-eureka.md`
-```md
 ---
 title: "API Gateway & Eureka Server"
 permalink: /docs/backend/api-gateway-eureka/
@@ -11,11 +6,13 @@ last_modified_at: 2025-12-05
 toc: true
 ---
 
+### 7 `api-gateway-eureka.md`
+
 # API Gateway & Eureka
 
 This document covers the API Gateway (router) and the Eureka service registry.
 
-## 1) API Gateway
+## 1 API Gateway
 
 **Gateway Port:** `9191` (frontend should use this port)
 
@@ -28,3 +25,4 @@ This document covers the API Gateway (router) and the Eureka service registry.
 - `/api/notify/**` → notification-service
 
 ### Example
+

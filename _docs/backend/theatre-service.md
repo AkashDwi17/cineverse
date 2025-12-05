@@ -1,8 +1,3 @@
-
----
-
-### 2) `theatre-service.md`
-```md
 ---
 title: "Theatre Service"
 permalink: /docs/backend/theatre-service/
@@ -46,3 +41,4 @@ Create theatre.
  "screenType":"TWO_D",
  "totalSeats":250
 }
+```

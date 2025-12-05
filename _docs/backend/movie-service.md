@@ -1,8 +1,3 @@
-
----
-
-### 3) `movie-service.md`
-```md
 ---
 title: "Movie Service"
 permalink: /docs/backend/movie-service/
@@ -46,3 +41,4 @@ Get a single movie.
   "releaseDate":"2025-11-15",
   "duration":180
 }
+```

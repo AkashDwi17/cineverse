@@ -1,8 +1,3 @@
-
----
-
-### 6) `notification-service.md`
-```md
 ---
 title: "Notification Service"
 permalink: /docs/backend/notification-service/
@@ -39,3 +34,4 @@ toc: true
   "showTime": "6:30 PM",
   "seats": ["A1","A2"]
 }
+```

@@ -1,8 +1,3 @@
-
----
-
-### 4) `show-service.md`
-```md
 ---
 title: "Show Service"
 permalink: /docs/backend/show-service/
@@ -49,3 +44,4 @@ List shows for a theatre.
  "showTime":"18:30",
  "price":200
 }
+```
