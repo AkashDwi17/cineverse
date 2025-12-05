@@ -16,7 +16,7 @@ feature_row:
     alt: "Database"
     title: "Database"
     excerpt: "Learn about the database structure, schemas, and ER diagrams"
-    url: "/docs/database/ovs-database/"
+    url: "/docs/database/auth-database/"
     btn_label: "Read More"
     btn_class: "btn--primary"
   - image_path: /assets/images/backend-icon.png
