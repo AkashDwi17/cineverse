@@ -22,7 +22,8 @@ docs:
 
   - title: Backend
     children:
-      - title: "Aakahs md file"
+      # Existing documentation
+      - title: "Aakash MD File"
         url: /docs/backend/aakash/
       - title: "API Reference"
         url: /docs/backend/api-reference/
@@ -36,14 +37,30 @@ docs:
         url: /docs/backend/springcontainer/
       - title: "Authentication"
         url: /docs/backend/authentication/
-        
+
+      # --- BookMyShow Microservices (New Section) ---
+      - title: "Auth Service"
+        url: /docs/backend/auth-service/
+      - title: "Theatre Service"
+        url: /docs/backend/theatre-service/
+      - title: "Movie Service"
+        url: /docs/backend/movie-service/
+      - title: "Show Service"
+        url: /docs/backend/show-service/
+      - title: "Booking Service"
+        url: /docs/backend/booking-service/
+      - title: "Notification Service"
+        url: /docs/backend/notification-service/
+      - title: "API Gateway & Eureka"
+        url: /docs/backend/api-gateway-eureka/
+
   - title: Database
     children:
       - title: "OVS Database"
         url: /docs/database/ovs-database/
       - title: "Database Structure"
         url: /docs/database/databasestructure/
-      - title: "Database Insertion Queries 1 "
+      - title: "Database Insertion Queries 1"
         url: /docs/database/databaseinsertion/
       - title: "Database Insertion Queries 2"
         url: /docs/database/databaseinsertion2/
