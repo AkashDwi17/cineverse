@@ -4,9 +4,9 @@ title: "About"
 permalink: /about/
 ---
 
-## About Online Voting System
+## About 
 
-The Online Voting System is a secure and reliable platform designed for conducting online elections. Built with modern web technologies, it ensures transparency, security, and ease of use for both voters and administrators.
+The BookMyShow is a secure and reliable platform designed for booking the Movies. Built with modern web technologies, it ensures transparency, security, and ease of use for both users and administrators.
 
 ---
 
@@ -14,10 +14,7 @@ The Online Voting System is a secure and reliable platform designed for conducti
 
 **Course Name**: PG-DAC  
 **Batch Name**: August 2025  
-**Group Number**: 06  
-
-### Project Title
-**Online Voting System** - A secure web-based platform for online voting and real-time result display
+**Group Number**: 24 
 
 ---
 
