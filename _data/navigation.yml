@@ -23,22 +23,6 @@ docs:
   - title: Backend
     children:
       # Existing documentation
-      - title: "Aakash MD File"
-        url: /docs/backend/aakash/
-      - title: "API Reference"
-        url: /docs/backend/api-reference/
-      - title: "Backend Overview"
-        url: /docs/backend/backend-overview/
-      - title: "Backend Structure"
-        url: /docs/backend/backend-structure/
-      - title: "Security Authentication"
-        url: /docs/backend/security-auth/
-      - title: "Spring Container"
-        url: /docs/backend/springcontainer/
-      - title: "Authentication"
-        url: /docs/backend/authentication/
-
-      # --- BookMyShow Microservices (New Section) ---
       - title: "Auth Service"
         url: /docs/backend/auth-service/
       - title: "Theatre Service"

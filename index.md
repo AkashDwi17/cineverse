@@ -23,7 +23,7 @@ feature_row:
     alt: "Backend"
     title: "Backend"
     excerpt: "Explore the Spring Boot backend architecture and APIs"
-    url: "/docs/backend/springcontainer/"
+    url: "/docs/backend/auth-service/"
     btn_label: "Read More"
     btn_class: "btn--primary"
   - image_path: /assets/images/frontend-icon.png
