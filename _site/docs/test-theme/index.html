@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Auth Service Database - Cineverse</title>
-<meta name="description" content="Database schema for BookMyShow Auth Service (MySQL).">
+<!-- begin _includes/seo.html --><title>Theme Test Page - Cineverse</title>
+<meta name="description" content="Theme Verification">
 
 
   <meta name="author" content="AkashDwi17">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Cineverse">
-<meta property="og:title" content="Auth Service Database">
-<meta property="og:url" content="http://localhost:4000/cineverse/docs/database/auth-database/">
+<meta property="og:title" content="Theme Test Page">
+<meta property="og:url" content="http://localhost:4000/cineverse/docs/test-theme/">
 
 
-  <meta property="og:description" content="Database schema for BookMyShow Auth Service (MySQL).">
+  <meta property="og:description" content="Theme Verification">
 
 
 
@@ -38,12 +38,10 @@
 
 
 
-  <meta property="article:modified_time" content="2025-12-05T00:00:00+05:30">
 
 
 
-
-<link rel="canonical" href="http://localhost:4000/cineverse/docs/database/auth-database/">
+<link rel="canonical" href="http://localhost:4000/cineverse/docs/test-theme/">
 
 
 
@@ -215,7 +213,7 @@
         
         <ul>
           
-            <li><a href="/cineverse/docs/database/auth-database/" class="active">Auth Database</a></li>
+            <li><a href="/cineverse/docs/database/auth-database/">Auth Database</a></li>
           
             <li><a href="/cineverse/docs/database/theatre-database/">Theatre Database</a></li>
           
@@ -257,15 +255,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Auth Service Database">
-    <meta itemprop="description" content="Database schema for BookMyShow Auth Service (MySQL).">
+    <meta itemprop="headline" content="Theme Test Page">
+    <meta itemprop="description" content="Theme Verification">
     
-    <meta itemprop="dateModified" content="2025-12-05T00:00:00+05:30">
+    
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Auth Service Database
+          <h1 id="page-title" class="page__title" itemprop="headline">Theme Test Page
 </h1>
           
 
@@ -278,97 +276,71 @@
           <aside class="sidebar__right ">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#auth-service-database-mysql">Auth Service Database (MySQL)</a><ul><li><a href="#-table-users">📌 Table: users</a></li><li><a href="#-notes">📘 Notes</a></li></ul></li><li><a href="#-end-of-auth-db-documentation">✔ End of Auth DB Documentation</a></li></ul>
+              <ul class="toc__menu"><li><a href="#theme-verification">Theme Verification</a><ul><li><a href="#typography-test">Typography Test</a></li><li><a href="#ui-components">UI Components</a><ul><li><a href="#buttons">Buttons</a></li><li><a href="#alerts">Alerts</a></li></ul></li><li><a href="#code-block-syntax-highlighting">Code Block Syntax Highlighting</a><ul><li><a href="#java">Java</a></li><li><a href="#python">Python</a></li><li><a href="#scss">SCSS</a></li><li><a href="#inline-code">Inline Code</a></li></ul></li></ul></li></ul>
 
             </nav>
           </aside>
         
-        <h1 id="auth-service-database-mysql">Auth Service Database (MySQL)</h1>
+        <h1 id="theme-verification">Theme Verification</h1>
 
-<p>Database Name: <strong>bookmyshow_auth</strong><br />
-Table: <strong>users</strong></p>
+<p>This page tests the <strong>Red, White, and Black</strong> theme elements.</p>
 
-<p>This table stores all registered users for the BookMyShow system.</p>
+<h2 id="typography-test">Typography Test</h2>
 
-<hr />
+<p>The font should be <strong>Outfit</strong>. 
+<em>This text should be italic.</em>
+<strong>This text should be bold and red on hover.</strong></p>
 
-<h2 id="-table-users">📌 Table: <code class="language-plaintext highlighter-rouge">users</code></h2>
+<h2 id="ui-components">UI Components</h2>
 
-<table>
-  <thead>
-    <tr>
-      <th>Field</th>
-      <th>Type</th>
-      <th>Null</th>
-      <th>Key</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>id</td>
-      <td>bigint</td>
-      <td>NO</td>
-      <td>PRI</td>
-      <td>Auto-increment primary key</td>
-    </tr>
-    <tr>
-      <td>city</td>
-      <td>varchar(255)</td>
-      <td>YES</td>
-      <td> </td>
-      <td>User’s city</td>
-    </tr>
-    <tr>
-      <td>password</td>
-      <td>varchar(255)</td>
-      <td>NO</td>
-      <td> </td>
-      <td>Encrypted password</td>
-    </tr>
-    <tr>
-      <td>phone</td>
-      <td>varchar(255)</td>
-      <td>YES</td>
-      <td> </td>
-      <td>User contact number</td>
-    </tr>
-    <tr>
-      <td>role</td>
-      <td>enum(‘ADMIN’,’SUPER_ADMIN’,’USER’)</td>
-      <td>YES</td>
-      <td> </td>
-      <td>Authorization role</td>
-    </tr>
-    <tr>
-      <td>state</td>
-      <td>varchar(255)</td>
-      <td>YES</td>
-      <td> </td>
-      <td>User state</td>
-    </tr>
-    <tr>
-      <td>username</td>
-      <td>varchar(255)</td>
-      <td>NO</td>
-      <td>UNI</td>
-      <td>Unique login username</td>
-    </tr>
-  </tbody>
-</table>
+<h3 id="buttons">Buttons</h3>
 
-<hr />
+<p><a href="#" class="btn btn--primary">Primary Button</a>
+<a href="#" class="btn">Default Button</a></p>
 
-<h2 id="-notes">📘 Notes</h2>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">username</code> is used for login (not email).</li>
-  <li>Roles are stored directly in DB but validated via JWT.</li>
-  <li>Passwords must be hashed (BCrypt recommended).</li>
-</ul>
+<h3 id="alerts">Alerts</h3>
 
-<hr />
+<blockquote>
+  <p>[!NOTE]
+This is a note.</p>
+</blockquote>
 
-<h1 id="-end-of-auth-db-documentation">✔ End of Auth DB Documentation</h1>
+<blockquote>
+  <p>[!IMPORTANT]
+This block should look distinct.</p>
+</blockquote>
+
+<h2 id="code-block-syntax-highlighting">Code Block Syntax Highlighting</h2>
+
+<h3 id="java">Java</h3>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloWorld</span> <span class="o">{</span>
+    <span class="c1">// This is a comment</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">String</span> <span class="n">greeting</span> <span class="o">=</span> <span class="s">"Hello, Cineverse!"</span><span class="o">;</span>
+        <span class="kt">int</span> <span class="n">number</span> <span class="o">=</span> <span class="mi">42</span><span class="o">;</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">greeting</span> <span class="o">+</span> <span class="s">" "</span> <span class="o">+</span> <span class="n">number</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="python">Python</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">example_function</span><span class="p">():</span>
+    <span class="c1"># This is a python comment
+</span>    <span class="n">message</span> <span class="o">=</span> <span class="s">"Theme Test"</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Status: </span><span class="si">{</span><span class="n">message</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="bp">True</span>
+</code></pre></div></div>
+
+<h3 id="scss">SCSS</h3>
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$red-primary</span><span class="p">:</span> <span class="mh">#D32F2F</span><span class="p">;</span>
+<span class="nc">.test</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="nv">$red-primary</span><span class="p">;</span>
+    <span class="nl">background</span><span class="p">:</span> <span class="mh">#000</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="inline-code">Inline Code</h3>
+<p>Here is some <code class="language-plaintext highlighter-rouge">inline code</code> to test the light red background.</p>
 
         
       </section>
@@ -380,8 +352,6 @@ Table: <strong>users</strong></p>
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2025-12-05">December 5, 2025</time></p>
-
 
       </footer>
 
@@ -390,12 +360,11 @@ Table: <strong>users</strong></p>
       
   <nav class="pagination">
     
-      <a href="/cineverse/docs/backend/theatre-service/" class="pagination--pager" title="Theatre Service
+      <a href="/cineverse/docs/quick-start/" class="pagination--pager" title="Quick Start
 ">Previous</a>
     
     
-      <a href="/cineverse/docs/database/booking-database/" class="pagination--pager" title="Booking Service Database
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 

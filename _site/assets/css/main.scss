@@ -1,52 +1,100 @@
---- # Only the main Sass file needs front matter (the dashes are enough) --- @charset "utf-8";
+--- --- @charset "utf-8";
 
-// Define Brand Colors (Red, White, Black) - LIGHT MODE
-$red-primary: #D32F2F; // Deep, bold red
-$red-accent: #B71C1C; // Darker red for hover states
-$white-base: #FFFFFF; // White for backgrounds
-$white-secondary: #F5F5F5; // Light grey for cards/sidebars
-$black-text: #212121; // Dark text
-$grey-text: #424242; // Secondary text
+// ========================================
+// 1. IMPORTS & TYPOGRAPHY
+// ========================================
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=JetBrains+Mono:wght@400;700&display=swap');
 
-// Override Minimal Mistakes Variables BEFORE importing
-// See: https://mmistakes.github.io/minimal-mistakes/docs/stylesheets/
+// ========================================
+// 2. VARIABLE DEFINITIONS (Before Theme Import)
+// ========================================
 
-// 1. Skin Colors (Light Mode base)
+// Brand Colors
+$red-primary: #D32F2F;
+$red-accent: #B71C1C;
+$red-light: #FFCDD2;
+
+$black-base: #121212;
+$black-text: #212121;
+$grey-text: #424242;
+$grey-light: #757575;
+
+$white-base: #FFFFFF;
+$white-secondary: #F8F9FA;
+$white-off: #F1F3F5;
+
+// Global Typography Override
+$global-font-family: 'Outfit', sans-serif !default;
+$header-font-family: 'Outfit', sans-serif !default;
+$caption-font-family: 'Outfit', sans-serif !default;
+$code-font-family: 'JetBrains Mono', monospace !default;
+
+// Minimal Mistakes Skin overrides
 $background-color: $white-base;
 $text-color: $black-text;
-$muted-text-color: #757575;
+$muted-text-color: $grey-text;
 
 $primary-color: $red-primary; // Links and accents
-
 $border-color: #E0E0E0;
-$code-background-color: $white-secondary;
 
-// 2. Navigation & Header
+// Components
+$code-background-color: $black-base; // Dark background for code
+$code-text-color: #EEEEEE;
+
+// Navigation
 $masthead-link-color: $black-text;
 $masthead-link-color-hover: $red-primary;
-$navicon-link-color-hover: $red-primary;
 
-// 3. Footer
+// Footer
 $footer-background-color: $white-secondary;
-$footer-caption-color: $grey-text;
 
-// 4. Buttons
-$btn-default-color: $black-text !default;
-$btn-default-bg: $white-secondary !default;
-$btn-primary-color: $white-base !default;
-$btn-primary-bg: $red-primary !default;
+// Buttons
+$btn-primary-bg: $red-primary;
+$btn-primary-color: $white-base;
 
-// Import the theme
+// ========================================
+// 3. IMPORT THEME
+// ========================================
 @import "minimal-mistakes";
 
 // ========================================
-// LIGHT MODE OVERRIDES - Complete White Theme
+// 4. CUSTOM OVERRIDES (After Theme Import)
 // ========================================
 
-// Masthead (Header Navigation)
+// --- General UI Polish ---
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// Add depth with shadows
+.archive__item-teaser,
+.sidebar,
+.feature__wrapper .feature__item {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.archive__item-teaser:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+// Rounded Corners for standard elements
+.btn {
+    border-radius: 6px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+// --- Navigation & Header ---
 .masthead {
     background-color: $white-base !important;
     border-bottom: 2px solid $red-primary;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .greedy-nav {
@@ -55,6 +103,7 @@ $btn-primary-bg: $red-primary !default;
 
 .greedy-nav a {
     color: $black-text !important;
+    font-weight: 500;
 }
 
 .greedy-nav a:hover {
@@ -65,138 +114,149 @@ $btn-primary-bg: $red-primary !default;
     background: $red-primary;
 }
 
-// Sidebar
+// --- Sidebar & TOC ---
 .sidebar {
-    background-color: $white-base !important;
-}
-
-.nav__list .nav__items {
-    background-color: $white-base !important;
+    background-color: $white-secondary !important;
+    border: 1px solid #eee;
 }
 
 .nav__sub-title {
-    background-color: $white-secondary !important;
     color: $black-text !important;
+    font-weight: 700;
 }
 
-.toc {
-    background-color: $white-secondary !important;
-}
-
-.toc__menu a {
-    color: $black-text !important;
+.nav__list .nav__items {
+    font-size: 0.95em;
 }
 
 .toc .nav__title {
     background: $red-primary !important;
     color: $white-base !important;
+    border-radius: 8px 8px 0 0;
 }
 
-// Splash Hero Section
-.page__hero--overlay {
-    background-color: $white-secondary !important;
-}
-
-.page__hero--overlay .page__title,
-.page__hero--overlay .page__lead,
-.page__hero--overlay .page__meta {
-    color: $black-text !important;
-    text-shadow: none !important;
-}
-
-// Feature rows
-.feature__wrapper {
-    background-color: $white-base !important;
-}
-
-.archive__item-teaser {
-    border: 1px solid $red-primary;
-    background-color: $white-secondary !important;
-    padding: 10px;
+.toc {
     border-radius: 8px;
+    background-color: $white-secondary !important;
+    border: 1px solid #eee;
 }
 
-.archive__item-title {
-    color: $black-text !important;
-}
-
-.archive__item-excerpt {
-    color: $grey-text !important;
-}
-
-// Page content
-.page__content {
-    background-color: $white-base !important;
-    color: $black-text !important;
-}
-
-// Footer
+// --- Footer ---
 .page__footer {
     background-color: $white-secondary !important;
     border-top: 1px solid $red-primary;
     color: $black-text !important;
 }
 
-.page__footer-follow li {
-    color: $black-text !important;
-}
-
 .page__footer a {
     color: $red-primary !important;
+    font-weight: 500;
 }
 
-// Code blocks
+// ========================================
+// 5. CODE BLOCK STYLING (Dark Theme with Red Accents)
+// ========================================
+
+// Pre/Code Wrapper
 pre,
-code {
-    background-color: $white-secondary !important;
-    color: $black-text !important;
+code,
+.highlight {
+    background-color: $black-base !important;
+    color: $code-text-color !important;
+    border-radius: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9em;
 }
 
-// Tables
-table {
-    background-color: $white-base !important;
+// Inline code
+p>code,
+li>code,
+a>code {
+    color: #D32F2F !important; // Red for inline code to pop against white bg
+    background-color: #FFEBEE !important; // Very light red bg
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
+    border: 1px solid #FFCDD2;
 }
 
-th {
-    background-color: $white-secondary !important;
-    color: $black-text !important;
+// Block Code (Rouge) Highlighting Colors
+// We force overrides on specific span classes used by Rouge
+
+.highlight {
+
+    // Comments
+    .c,
+    .cm,
+    .cp,
+    .c1,
+    .cs {
+        color: #757575 !important;
+        font-style: italic;
+    }
+
+    // Grey
+
+    // Keywords -> RED
+    .k,
+    .kc,
+    .kd,
+    .kp,
+    .kr,
+    .kt,
+    .o {
+        color: #FF5252 !important;
+        font-weight: bold;
+    }
+
+    // Strings -> Off-White / Light Grey
+    .s,
+    .sb,
+    .sc,
+    .sd,
+    .s2,
+    .se,
+    .sh,
+    .si,
+    .sx,
+    .s1 {
+        color: #E0E0E0 !important;
+    }
+
+    // Variables / Attributes -> White or Soft Red
+    .nv,
+    .vc,
+    .vg,
+    .vi {
+        color: #FFCDD2 !important;
+    }
+
+    .na,
+    .nb,
+    .nc,
+    .no,
+    .nd,
+    .ni,
+    .ne,
+    .nf {
+        color: #FF8A80 !important;
+    }
+
+    // Numbers / Constants -> Accent Red
+    .m,
+    .mf,
+    .mh,
+    .mi,
+    .mo,
+    .il {
+        color: #FF5252 !important;
+    }
+
+    // Generic text within code block
+    color: #EEEEEE !important;
 }
 
-// Buttons - ensure visibility
-.btn {
-    color: $black-text;
-    background-color: $white-secondary;
-    border: 1px solid $border-color;
-}
-
-.btn--primary {
-    color: $white-base !important;
-    background-color: $red-primary !important;
-    border-color: $red-primary !important;
-}
-
-.btn--primary:hover {
-    background-color: $red-accent !important;
-}
-
-// Feature item icons
-.feature__item--center img {
-    background: transparent;
-}
-
-// Text selection styling
-::selection {
-    background-color: $red-primary;
-    color: $white-base;
-}
-
-::-moz-selection {
-    background-color: $red-primary;
-    color: $white-base;
-}
-
-// Force body background
-body {
-    background-color: $white-base !important;
-    color: $black-text !important;
+// Refine Copy Button if present (Assuming standard minimal mistakes or custom)
+.code-header {
+    background-color: #212121;
+    border-bottom: 1px solid #333;
 }

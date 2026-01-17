@@ -112,4 +112,10 @@ var store = [{
         "tags": [],
         "url": "/cineverse/docs/quick-start/",
         "teaser": null
+      },{
+        "title": "Theme Test Page",
+        "excerpt":"Theme Verification This page tests the Red, White, and Black theme elements. Typography Test The font should be Outfit. This text should be italic. This text should be bold and red on hover. UI Components Buttons Primary Button Default Button Alerts [!NOTE] This is a note. [!IMPORTANT] This block should...","categories": [],
+        "tags": [],
+        "url": "/cineverse/docs/test-theme/",
+        "teaser": null
       },]
