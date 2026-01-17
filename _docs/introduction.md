@@ -76,6 +76,8 @@ The system ensures **reliability**, **scalability**, and **maintainability** thr
 ## 💻 Technology Stack
 
 ### Backend Services
+
+
 | Component | Technology |
 |-----------|-----------|
 | **Framework** | Spring Boot 3.x |
@@ -89,6 +91,8 @@ The system ensures **reliability**, **scalability**, and **maintainability** thr
 | **Language** | Java 21 |
 
 ### Frontend
+
+
 | Component | Technology |
 |-----------|-----------|
 | **Framework** | React. js |
@@ -367,6 +371,8 @@ cineverse/
 **Purpose**: Unified entry point for all frontend requests
 
 **Routing Rules**:
+
+
 | Route | Service |
 |-------|---------|
 | `/api/auth/**` | Auth Service (8081) |
@@ -874,18 +880,6 @@ Each service exposes Swagger/OpenAPI documentation:
 ## 📄 License
 
 This project is licensed under the **Apache License 2.0** - see the [LICENSE](LICENSE) file for details. 
-
----
-
-## 👥 Team
-
-| Sr. No | Name | GitHub |
-|--------|------|--------|
-| 01 | Aaman Javaed Sayyad | [@Aamanjs](https://github.com/Aamanjs) |
-| 02 | Avadhut Ravindra Joshi | [@AvadhutJoshi012](https://github.com/AvadhutJoshi012) |
-| 03 | Deepak Sanjay Revgade | [@deepakrevgade](https://github.com/deepakrevgade) |
-| 04 | Rishikesh Sukhadev More | [@rushimore17](https://github.com/rushimore17) |
-| 05 | Yadnyesh Rajesh Kolte | [@yadnyeshkolte](https://github.com/yadnyeshkolte) |
 
 ---
 

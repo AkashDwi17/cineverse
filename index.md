@@ -2,8 +2,8 @@
 layout: splash
 title: "Cineverse"
 header:
-  overlay_color: "#000"
-  overlay_filter: "0.5"
+  overlay_color: "#FFFFFF"
+  overlay_filter: "0.85"
   overlay_image: /assets/images/header.png
   actions:
     - label: "Get Started"
