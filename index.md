@@ -1,16 +1,9 @@
 ---
 layout: splash
-title: "Cineverse"
 header:
-  overlay_color: "#000"
-  overlay_filter: "0.5"
+  overlay_color: "#000000"
+  overlay_filter: "0.3"
   overlay_image: /assets/images/header.png
-  actions:
-    - label: "Get Started"
-      url: "/docs/introduction/"
-    - label: "View on GitHub"
-      url: "https://github.com/AkashDwi17/cineverse"
-excerpt: "Complete documentation for the Cineverse"
 feature_row:
   - image_path: /assets/images/database-icon.png
     alt: "Database"
@@ -41,8 +34,8 @@ feature_row:
 
 ## Features
 
-- **Secure Authentication**: JWT-based authentication system
-- **Real-time Voting**: Live vote counting and results
-- **Admin Dashboard**: Comprehensive election management
-- **Responsive Design**: Works on all devices
-- **Audit Trail**: Complete voting history and logs
+- **Secure Authentication**: JWT-based authentication with role-based access
+- **Movie Discovery**: Browse movies by language, genre, and release date
+- **Smart Seat Selection**: Real-time seat availability with temporary locking
+- **Seamless Booking**: Complete booking workflow with instant confirmation
+- **WhatsApp Notifications**: Get your tickets delivered via WhatsApp

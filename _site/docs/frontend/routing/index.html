@@ -1,0 +1,846 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Routing &amp; Navigation - Cineverse</title>
+<meta name="description" content="Routing structure and navigation in Cineverse">
+
+
+  <meta name="author" content="AkashDwi17">
+  
+  <meta property="article:author" content="AkashDwi17">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Cineverse">
+<meta property="og:title" content="Routing &amp; Navigation">
+<meta property="og:url" content="http://localhost:4000/cineverse/docs/frontend/routing/">
+
+
+  <meta property="og:description" content="Routing structure and navigation in Cineverse">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2026-01-18T01:00:39+05:30">
+
+
+
+  <meta property="article:modified_time" content="2026-01-18T00:00:00+05:30">
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/cineverse/docs/frontend/routing/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AkashDwi17",
+      "url": "http://localhost:4000/cineverse/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/cineverse/feed.xml" type="application/atom+xml" rel="alternate" title="Cineverse Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/cineverse/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <link rel="icon" href="/cineverse/assets/images/favicon.svg" type="image/svg+xml">
+
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/cineverse/"><img src="/cineverse/assets/images/favicon.ico" alt="Cineverse"></a>
+        
+        <a class="site-title" href="/cineverse/">
+          Cineverse
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/cineverse/docs/introduction/">Documentation</a>
+            </li><li class="masthead__menu-item">
+              <a href="/cineverse/docs/quick-start/">Getting Started</a>
+            </li><li class="masthead__menu-item">
+              <a href="/cineverse/about/">About</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Getting Started</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/cineverse/docs/introduction/">Introduction</a></li>
+          
+            <li><a href="/cineverse/docs/installation/">Installation</a></li>
+          
+            <li><a href="/cineverse/docs/quick-start/">Quick Start</a></li>
+          
+            <li><a href="/cineverse/docs/diagrams/">Diagrams</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Backend</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/cineverse/docs/backend/api-reference/">API Reference</a></li>
+          
+            <li><a href="/cineverse/docs/backend/configuration/">Configuration</a></li>
+          
+            <li><a href="/cineverse/docs/backend/security/">Security</a></li>
+          
+            <li><a href="/cineverse/docs/backend/error-handling/">Error Handling</a></li>
+          
+            <li><a href="/cineverse/docs/backend/auth-service/">Auth Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/theatre-service/">Theatre Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/movie-service/">Movie Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/show-service/">Show Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/booking-service/">Booking Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/notification-service/">Notification Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/api-gateway-eureka/">API Gateway & Eureka</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Database</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/cineverse/docs/database/auth-database/">Auth Database</a></li>
+          
+            <li><a href="/cineverse/docs/database/theatre-database/">Theatre Database</a></li>
+          
+            <li><a href="/cineverse/docs/database/show-database/">Show Database</a></li>
+          
+            <li><a href="/cineverse/docs/database/booking-database/">Booking Database</a></li>
+          
+            <li><a href="/cineverse/docs/database/movie-database/">Movie Database (Mongo)</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Frontend</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/cineverse/docs/frontend/components/">Components</a></li>
+          
+            <li><a href="/cineverse/docs/frontend/routing/" class="active">Routing & Navigation</a></li>
+          
+            <li><a href="/cineverse/docs/frontend/state-api/">State & API Integration</a></li>
+          
+            <li><a href="/cineverse/docs/frontend/ui-components/">UI Components</a></li>
+          
+            <li><a href="/cineverse/docs/frontend/usereffectvoting/">User Effect Voting</a></li>
+          
+            <li><a href="/cineverse/docs/frontend/feedback/">Feedback System</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Guides</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/cineverse/docs/deployment/">Deployment</a></li>
+          
+            <li><a href="/cineverse/docs/troubleshooting/">Troubleshooting</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Routing &amp; Navigation">
+    <meta itemprop="description" content="Routing structure and navigation in Cineverse">
+    
+    <meta itemprop="dateModified" content="2026-01-18T00:00:00+05:30">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Routing &amp; Navigation
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#routing--navigation">Routing &amp; Navigation</a><ul><li><a href="#route-structure">Route Structure</a></li><li><a href="#router-configuration">Router Configuration</a></li><li><a href="#layouts">Layouts</a><ul><li><a href="#publiclayout">PublicLayout</a></li><li><a href="#adminlayout">AdminLayout</a></li></ul></li><li><a href="#protected-routes">Protected Routes</a><ul><li><a href="#adminroute-component">AdminRoute Component</a></li></ul></li><li><a href="#navigation-methods">Navigation Methods</a><ul><li><a href="#programmatic-navigation">Programmatic Navigation</a></li><li><a href="#declarative-navigation">Declarative Navigation</a></li></ul></li><li><a href="#route-parameters">Route Parameters</a><ul><li><a href="#url-parameters">URL Parameters</a></li><li><a href="#query-parameters">Query Parameters</a></li></ul></li><li><a href="#navigation-state">Navigation State</a></li><li><a href="#booking-flow-navigation">Booking Flow Navigation</a></li><li><a href="#admin-navigation">Admin Navigation</a><ul><li><a href="#sidebar-menu">Sidebar Menu</a></li></ul></li><li><a href="#navigation-guards">Navigation Guards</a><ul><li><a href="#check-authentication">Check Authentication</a></li><li><a href="#check-role">Check Role</a></li></ul></li><li><a href="#breadcrumbs">Breadcrumbs</a></li><li><a href="#404-handling">404 Handling</a></li><li><a href="#navigation-best-practices">Navigation Best Practices</a></li><li><a href="#common-navigation-patterns">Common Navigation Patterns</a><ul><li><a href="#logout-and-redirect">Logout and Redirect</a></li><li><a href="#conditional-redirect">Conditional Redirect</a></li><li><a href="#back-navigation">Back Navigation</a></li></ul></li><li><a href="#summary">Summary</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h1 id="routing--navigation">Routing &amp; Navigation</h1>
+
+<p>Complete guide to routing and navigation in the Cineverse frontend application.</p>
+
+<h2 id="route-structure">Route Structure</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/ (Public Layout)
+├── /login - Login/Signup page
+├── / - Home (Carousel + Movies)
+├── /movie/:id - Movie details
+├── /booking/:id - Show selection
+├── /seat/:id - Seat selection
+├── /payment - Payment processing
+├── /payment-success - Payment confirmation
+└── /confirmation - Booking confirmation
+
+/admin (Admin Layout - Protected)
+├── /admin - Dashboard
+├── /admin/movies - Movie management
+├── /admin/shows - Show management
+├── /admin/theatres - Theatre management
+├── /admin/bookings - Booking management
+└── /admin/users - User management (SUPER_ADMIN only)
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="router-configuration">Router Configuration</h2>
+
+<p><strong>File</strong>: <code class="language-plaintext highlighter-rouge">App.jsx</code></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">BrowserRouter</span><span class="p">,</span> <span class="nx">Routes</span><span class="p">,</span> <span class="nx">Route</span><span class="p">,</span> <span class="nx">Navigate</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">react-router-dom</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">BrowserRouter</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">Routes</span><span class="o">&gt;</span>
+        <span class="p">{</span><span class="cm">/* PUBLIC ROUTES */</span><span class="p">}</span>
+        <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">PublicLayout</span> <span class="o">/&gt;</span><span class="p">}</span><span class="o">&gt;</span>
+          <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/login</span><span class="dl">"</span> <span class="nx">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">Login</span> <span class="o">/&gt;</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>          <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/</span><span class="dl">"</span> <span class="nx">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;&gt;&lt;</span><span class="nx">Carousel</span> <span class="o">/&gt;&lt;</span><span class="nx">CardComponent</span> <span class="o">/&gt;&lt;</span><span class="sr">/&gt;} /</span><span class="o">&gt;</span>
+          <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/movie/:id</span><span class="dl">"</span> <span class="nx">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">MovieDetails</span> <span class="o">/&gt;</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>          <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/booking/:id</span><span class="dl">"</span> <span class="nx">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">Booking</span> <span class="o">/&gt;</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>          <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/seat/:id</span><span class="dl">"</span> <span class="nx">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">SeatLayout</span> <span class="o">/&gt;</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>          <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/payment</span><span class="dl">"</span> <span class="nx">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">Payment</span> <span class="o">/&gt;</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>          <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/payment-success</span><span class="dl">"</span> <span class="nx">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">PaymentSuccess</span> <span class="o">/&gt;</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>          <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/confirmation</span><span class="dl">"</span> <span class="nx">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">Confirmation</span> <span class="o">/&gt;</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="sr">/Route</span><span class="err">&gt;
+</span>
+        <span class="p">{</span><span class="cm">/* ADMIN ROUTES */</span><span class="p">}</span>
+        <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">/admin</span><span class="dl">"</span> <span class="nx">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">AdminRoute</span><span class="o">&gt;&lt;</span><span class="nx">AdminLayout</span> <span class="o">/&gt;&lt;</span><span class="sr">/AdminRoute&gt;}</span><span class="err">&gt;
+</span>          <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">index</span> <span class="nx">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">AdminDashboard</span> <span class="o">/&gt;</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>          <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">movies</span><span class="dl">"</span> <span class="nx">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">MoviesPage</span> <span class="o">/&gt;</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>          <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">shows</span><span class="dl">"</span> <span class="nx">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">ShowsPage</span> <span class="o">/&gt;</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>          <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">theatres</span><span class="dl">"</span> <span class="nx">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">TheatrePage</span> <span class="o">/&gt;</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>          <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">bookings</span><span class="dl">"</span> <span class="nx">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">BookingsPage</span> <span class="o">/&gt;</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>          <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">users</span><span class="dl">"</span> <span class="nx">element</span><span class="o">=</span><span class="p">{</span>
+            <span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="dl">"</span><span class="s2">cineverse_role</span><span class="dl">"</span><span class="p">)</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">SUPER_ADMIN</span><span class="dl">"</span>
+              <span class="p">?</span> <span class="o">&lt;</span><span class="nx">UsersPage</span> <span class="o">/&gt;</span>
+              <span class="p">:</span> <span class="o">&lt;</span><span class="nx">Navigate</span> <span class="nx">to</span><span class="o">=</span><span class="dl">"</span><span class="s2">/admin</span><span class="dl">"</span> <span class="nx">replace</span> <span class="o">/&gt;</span>
+          <span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="sr">/Route</span><span class="err">&gt;
+</span>
+        <span class="p">{</span><span class="cm">/* 404 */</span><span class="p">}</span>
+        <span class="o">&lt;</span><span class="nx">Route</span> <span class="nx">path</span><span class="o">=</span><span class="dl">"</span><span class="s2">*</span><span class="dl">"</span> <span class="nx">element</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">NotFound</span> <span class="o">/&gt;</span><span class="p">}</span> <span class="sr">/</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="sr">/Routes</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/BrowserRouter</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="layouts">Layouts</h2>
+
+<h3 id="publiclayout">PublicLayout</h3>
+
+<p>Wraps public pages with Navbar and Footer:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">PublicLayout</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">location</span> <span class="o">=</span> <span class="nx">useLocation</span><span class="p">();</span>
+  <span class="kd">const</span> <span class="nx">isAdmin</span> <span class="o">=</span> <span class="nx">location</span><span class="p">.</span><span class="nx">pathname</span><span class="p">.</span><span class="nx">startsWith</span><span class="p">(</span><span class="dl">"</span><span class="s2">/admin</span><span class="dl">"</span><span class="p">);</span>
+
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;&gt;</span>
+      <span class="p">{</span><span class="o">!</span><span class="nx">isAdmin</span> <span class="o">&amp;&amp;</span> <span class="o">&lt;</span><span class="nx">Navbar</span> <span class="o">/&gt;</span><span class="p">}</span>
+      <span class="o">&lt;</span><span class="nx">Outlet</span> <span class="o">/&gt;</span>
+      <span class="p">{</span><span class="o">!</span><span class="nx">isAdmin</span> <span class="o">&amp;&amp;</span> <span class="o">&lt;</span><span class="nx">Footer</span> <span class="o">/&gt;</span><span class="p">}</span>
+    <span class="o">&lt;</span><span class="sr">/</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="adminlayout">AdminLayout</h3>
+
+<p>Wraps admin pages with sidebar navigation:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">AdminLayout</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">flex min-h-screen</span><span class="dl">"</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">Sidebar</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="nx">main</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">flex-1 p-8 bg-gray-50</span><span class="dl">"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">Outlet</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="sr">/main</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="protected-routes">Protected Routes</h2>
+
+<h3 id="adminroute-component">AdminRoute Component</h3>
+
+<p>Protects admin routes from unauthorized access:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">AdminRoute</span><span class="p">({</span> <span class="nx">children</span> <span class="p">})</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">token</span> <span class="o">=</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="dl">"</span><span class="s2">cineverse_token</span><span class="dl">"</span><span class="p">);</span>
+  <span class="kd">const</span> <span class="nx">role</span> <span class="o">=</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="dl">"</span><span class="s2">cineverse_role</span><span class="dl">"</span><span class="p">);</span>
+
+  <span class="c1">// Not logged in</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">token</span><span class="p">)</span> <span class="k">return</span> <span class="o">&lt;</span><span class="nx">Navigate</span> <span class="nx">to</span><span class="o">=</span><span class="dl">"</span><span class="s2">/login</span><span class="dl">"</span> <span class="nx">replace</span> <span class="o">/&gt;</span><span class="p">;</span>
+
+  <span class="c1">// Not admin or super_admin</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">role</span> <span class="o">!==</span> <span class="dl">"</span><span class="s2">ADMIN</span><span class="dl">"</span> <span class="o">&amp;&amp;</span> <span class="nx">role</span> <span class="o">!==</span> <span class="dl">"</span><span class="s2">SUPER_ADMIN</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="o">&lt;</span><span class="nx">Navigate</span> <span class="nx">to</span><span class="o">=</span><span class="dl">"</span><span class="s2">/</span><span class="dl">"</span> <span class="nx">replace</span> <span class="o">/&gt;</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="nx">children</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>Access Control</strong>:</p>
+<ul>
+  <li><strong>No token</strong> → Redirect to <code class="language-plaintext highlighter-rouge">/login</code></li>
+  <li><strong>USER role</strong> → Redirect to <code class="language-plaintext highlighter-rouge">/</code> (home)</li>
+  <li><strong>ADMIN/SUPER_ADMIN</strong> → Allow access</li>
+</ul>
+
+<hr />
+
+<h2 id="navigation-methods">Navigation Methods</h2>
+
+<h3 id="programmatic-navigation">Programmatic Navigation</h3>
+
+<p>Use <code class="language-plaintext highlighter-rouge">useNavigate</code> hook:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">useNavigate</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-router-dom</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">navigate</span> <span class="o">=</span> <span class="nx">useNavigate</span><span class="p">();</span>
+
+<span class="c1">// Simple navigation</span>
+<span class="nx">navigate</span><span class="p">(</span><span class="dl">'</span><span class="s1">/movie/123</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="c1">// Navigation with state</span>
+<span class="nx">navigate</span><span class="p">(</span><span class="dl">'</span><span class="s1">/payment</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">state</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nx">movie</span><span class="p">,</span>
+    <span class="nx">show</span><span class="p">,</span>
+    <span class="nx">selectedSeats</span><span class="p">,</span>
+    <span class="na">amount</span><span class="p">:</span> <span class="mi">500</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="c1">// Go back</span>
+<span class="nx">navigate</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+
+<span class="c1">// Replace current entry</span>
+<span class="nx">navigate</span><span class="p">(</span><span class="dl">'</span><span class="s1">/login</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">replace</span><span class="p">:</span> <span class="kc">true</span> <span class="p">});</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="declarative-navigation">Declarative Navigation</h3>
+
+<p>Use <code class="language-plaintext highlighter-rouge">Link</code> component:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Link</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-router-dom</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="o">&lt;</span><span class="nx">Link</span> <span class="nx">to</span><span class="o">=</span><span class="dl">"</span><span class="s2">/movie/123</span><span class="dl">"</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">btn</span><span class="dl">"</span><span class="o">&gt;</span>
+  <span class="nx">View</span> <span class="nx">Movie</span>
+<span class="o">&lt;</span><span class="sr">/Link</span><span class="err">&gt;
+</span>
+<span class="c1">// With state</span>
+<span class="o">&lt;</span><span class="nx">Link</span> 
+  <span class="nx">to</span><span class="o">=</span><span class="dl">"</span><span class="s2">/booking/5</span><span class="dl">"</span> 
+  <span class="nx">state</span><span class="o">=</span>
+<span class="o">&gt;</span>
+  <span class="nx">Book</span> <span class="nx">Tickets</span>
+<span class="o">&lt;</span><span class="sr">/Link</span><span class="err">&gt;
+</span></code></pre></div></div>
+
+<hr />
+
+<h2 id="route-parameters">Route Parameters</h2>
+
+<h3 id="url-parameters">URL Parameters</h3>
+
+<p>Access with <code class="language-plaintext highlighter-rouge">useParams</code>:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">useParams</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-router-dom</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">MovieDetails</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="p">{</span> <span class="nx">id</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">useParams</span><span class="p">();</span> <span class="c1">// /movie/:id</span>
+  
+  <span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">loadMovie</span><span class="p">(</span><span class="nx">id</span><span class="p">);</span>
+  <span class="p">},</span> <span class="p">[</span><span class="nx">id</span><span class="p">]);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="query-parameters">Query Parameters</h3>
+
+<p>Access with <code class="language-plaintext highlighter-rouge">useSearchParams</code>:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">useSearchParams</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-router-dom</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">SearchResults</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="p">[</span><span class="nx">searchParams</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useSearchParams</span><span class="p">();</span>
+  <span class="kd">const</span> <span class="nx">query</span> <span class="o">=</span> <span class="nx">searchParams</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">query</span><span class="dl">'</span><span class="p">);</span>
+  <span class="kd">const</span> <span class="nx">city</span> <span class="o">=</span> <span class="nx">searchParams</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">city</span><span class="dl">'</span><span class="p">);</span>
+  
+  <span class="c1">// URL: /search?query=avengers&amp;city=bangalore</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="navigation-state">Navigation State</h2>
+
+<p>Pass data between routes using <code class="language-plaintext highlighter-rouge">state</code>:</p>
+
+<p><strong>Sender</strong>:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">navigate</span><span class="p">(</span><span class="dl">'</span><span class="s1">/seat/5</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span>
+  <span class="na">state</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">movie</span><span class="p">:</span> <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="dl">'</span><span class="s1">123</span><span class="dl">'</span><span class="p">,</span> <span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Avengers</span><span class="dl">'</span> <span class="p">},</span>
+    <span class="na">show</span><span class="p">:</span> <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="na">time</span><span class="p">:</span> <span class="dl">'</span><span class="s1">18:30</span><span class="dl">'</span> <span class="p">},</span>
+    <span class="na">theatre</span><span class="p">:</span> <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">PVR</span><span class="dl">'</span> <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p><strong>Receiver</strong>:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">useLocation</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-router-dom</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">SeatLayout</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">location</span> <span class="o">=</span> <span class="nx">useLocation</span><span class="p">();</span>
+  <span class="kd">const</span> <span class="p">{</span> <span class="nx">movie</span><span class="p">,</span> <span class="nx">show</span><span class="p">,</span> <span class="nx">theatre</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">location</span><span class="p">.</span><span class="nx">state</span> <span class="o">||</span> <span class="p">{};</span>
+  
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">movie</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">navigate</span><span class="p">(</span><span class="dl">'</span><span class="s1">/</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// Redirect if no state</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="booking-flow-navigation">Booking Flow Navigation</h2>
+
+<p>Complete user journey:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Home (/)
+   ↓ Click movie card
+   
+2. Movie Details (/movie/:id)
+   ↓ Click "Book Tickets"
+   
+3. Booking (/booking/:id)
+   ↓ Select show
+   
+4. Seat Layout (/seat/:showId)
+   ↓ Select seats → Lock seats
+   
+5. Payment (/payment)
+   ↓ Complete payment
+   
+6. Payment Success (/payment-success)
+   ↓ Confirm booking
+   
+7. Confirmation (/confirmation)
+   ↓ View ticket
+</code></pre></div></div>
+
+<p><strong>State Flow</strong>:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Step 2 → 3</span>
+<span class="nx">navigate</span><span class="p">(</span><span class="s2">`/booking/</span><span class="p">${</span><span class="nx">movie</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span><span class="s2">`</span><span class="p">,</span> <span class="p">{</span> <span class="na">state</span><span class="p">:</span> <span class="p">{</span> <span class="nx">movie</span> <span class="p">}</span> <span class="p">});</span>
+
+<span class="c1">// Step 3 → 4</span>
+<span class="nx">navigate</span><span class="p">(</span><span class="s2">`/seat/</span><span class="p">${</span><span class="nx">show</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span><span class="s2">`</span><span class="p">,</span> <span class="p">{</span> <span class="na">state</span><span class="p">:</span> <span class="p">{</span> <span class="nx">movie</span><span class="p">,</span> <span class="nx">show</span><span class="p">,</span> <span class="nx">theatre</span> <span class="p">}</span> <span class="p">});</span>
+
+<span class="c1">// Step 4 → 5</span>
+<span class="nx">navigate</span><span class="p">(</span><span class="dl">'</span><span class="s1">/payment</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">state</span><span class="p">:</span> <span class="p">{</span> <span class="nx">movie</span><span class="p">,</span> <span class="nx">show</span><span class="p">,</span> <span class="nx">theatre</span><span class="p">,</span> <span class="nx">selectedSeats</span><span class="p">,</span> <span class="nx">amount</span> <span class="p">}</span> <span class="p">});</span>
+
+<span class="c1">// Step 5 → 6</span>
+<span class="nx">navigate</span><span class="p">(</span><span class="dl">'</span><span class="s1">/payment-success</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">state</span><span class="p">:</span> <span class="p">{</span> <span class="nx">bookingId</span><span class="p">,</span> <span class="nx">movie</span><span class="p">,</span> <span class="nx">show</span> <span class="p">}</span> <span class="p">});</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="admin-navigation">Admin Navigation</h2>
+
+<h3 id="sidebar-menu">Sidebar Menu</h3>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">menuItems</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">{</span> <span class="na">path</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/admin</span><span class="dl">'</span><span class="p">,</span> <span class="na">label</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Dashboard</span><span class="dl">'</span><span class="p">,</span> <span class="na">icon</span><span class="p">:</span> <span class="dl">'</span><span class="s1">📊</span><span class="dl">'</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="na">path</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/admin/movies</span><span class="dl">'</span><span class="p">,</span> <span class="na">label</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Movies</span><span class="dl">'</span><span class="p">,</span> <span class="na">icon</span><span class="p">:</span> <span class="dl">'</span><span class="s1">🎬</span><span class="dl">'</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="na">path</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/admin/shows</span><span class="dl">'</span><span class="p">,</span> <span class="na">label</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Shows</span><span class="dl">'</span><span class="p">,</span> <span class="na">icon</span><span class="p">:</span> <span class="dl">'</span><span class="s1">🎭</span><span class="dl">'</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="na">path</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/admin/theatres</span><span class="dl">'</span><span class="p">,</span> <span class="na">label</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Theatres</span><span class="dl">'</span><span class="p">,</span> <span class="na">icon</span><span class="p">:</span> <span class="dl">'</span><span class="s1">🏛️</span><span class="dl">'</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="na">path</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/admin/bookings</span><span class="dl">'</span><span class="p">,</span> <span class="na">label</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Bookings</span><span class="dl">'</span><span class="p">,</span> <span class="na">icon</span><span class="p">:</span> <span class="dl">'</span><span class="s1">🎫</span><span class="dl">'</span> <span class="p">},</span>
+<span class="p">];</span>
+
+<span class="c1">// SUPER_ADMIN only</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">role</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">SUPER_ADMIN</span><span class="dl">'</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">menuItems</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span> <span class="na">path</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/admin/users</span><span class="dl">'</span><span class="p">,</span> <span class="na">label</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Users</span><span class="dl">'</span><span class="p">,</span> <span class="na">icon</span><span class="p">:</span> <span class="dl">'</span><span class="s1">👥</span><span class="dl">'</span> <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="navigation-guards">Navigation Guards</h2>
+
+<h3 id="check-authentication">Check Authentication</h3>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">token</span> <span class="o">=</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="dl">'</span><span class="s1">cineverse_token</span><span class="dl">'</span><span class="p">);</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">token</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">navigate</span><span class="p">(</span><span class="dl">'</span><span class="s1">/login</span><span class="dl">'</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">},</span> <span class="p">[]);</span>
+</code></pre></div></div>
+
+<h3 id="check-role">Check Role</h3>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">role</span> <span class="o">=</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="dl">'</span><span class="s1">cineverse_role</span><span class="dl">'</span><span class="p">);</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">role</span> <span class="o">!==</span> <span class="dl">'</span><span class="s1">ADMIN</span><span class="dl">'</span> <span class="o">&amp;&amp;</span> <span class="nx">role</span> <span class="o">!==</span> <span class="dl">'</span><span class="s1">SUPER_ADMIN</span><span class="dl">'</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">navigate</span><span class="p">(</span><span class="dl">'</span><span class="s1">/</span><span class="dl">'</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">},</span> <span class="p">[]);</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="breadcrumbs">Breadcrumbs</h2>
+
+<p>Implement breadcrumbs for better UX:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Breadcrumbs</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">location</span> <span class="o">=</span> <span class="nx">useLocation</span><span class="p">();</span>
+  <span class="kd">const</span> <span class="nx">pathnames</span> <span class="o">=</span> <span class="nx">location</span><span class="p">.</span><span class="nx">pathname</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="dl">'</span><span class="s1">/</span><span class="dl">'</span><span class="p">).</span><span class="nx">filter</span><span class="p">(</span><span class="nx">x</span> <span class="o">=&gt;</span> <span class="nx">x</span><span class="p">);</span>
+  
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">nav</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">flex gap-2 text-sm</span><span class="dl">"</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">Link</span> <span class="nx">to</span><span class="o">=</span><span class="dl">"</span><span class="s2">/</span><span class="dl">"</span><span class="o">&gt;</span><span class="nx">Home</span><span class="o">&lt;</span><span class="sr">/Link</span><span class="err">&gt;
+</span>      <span class="p">{</span><span class="nx">pathnames</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">name</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="kd">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="s2">`/</span><span class="p">${</span><span class="nx">pathnames</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">).</span><span class="nx">join</span><span class="p">(</span><span class="dl">'</span><span class="s1">/</span><span class="dl">'</span><span class="p">)}</span><span class="s2">`</span><span class="p">;</span>
+        <span class="kd">const</span> <span class="nx">isLast</span> <span class="o">=</span> <span class="nx">index</span> <span class="o">===</span> <span class="nx">pathnames</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+        
+        <span class="k">return</span> <span class="nx">isLast</span> <span class="p">?</span> <span class="p">(</span>
+          <span class="o">&lt;</span><span class="nx">span</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">path</span><span class="p">}</span><span class="o">&gt;</span> <span class="sr">/ {name}&lt;/</span><span class="nx">span</span><span class="o">&gt;</span>
+        <span class="p">)</span> <span class="p">:</span> <span class="p">(</span>
+          <span class="o">&lt;</span><span class="nx">Link</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">path</span><span class="p">}</span> <span class="nx">to</span><span class="o">=</span><span class="p">{</span><span class="nx">path</span><span class="p">}</span><span class="o">&gt;</span> <span class="sr">/ {name}&lt;/</span><span class="nx">Link</span><span class="o">&gt;</span>
+        <span class="p">);</span>
+      <span class="p">})}</span>
+    <span class="o">&lt;</span><span class="sr">/nav</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="404-handling">404 Handling</h2>
+
+<p>Custom 404 page:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">NotFound</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">navigate</span> <span class="o">=</span> <span class="nx">useNavigate</span><span class="p">();</span>
+  
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">min-h-screen flex items-center justify-center</span><span class="dl">"</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">text-center</span><span class="dl">"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">h1</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">text-6xl font-bold</span><span class="dl">"</span><span class="o">&gt;</span><span class="mi">404</span><span class="o">&lt;</span><span class="sr">/h1</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">p</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">text-xl mt-4</span><span class="dl">"</span><span class="o">&gt;</span><span class="nx">Page</span> <span class="nx">not</span> <span class="nx">found</span><span class="o">&lt;</span><span class="sr">/p</span><span class="err">&gt;
+</span>        <span class="o">&lt;</span><span class="nx">button</span> 
+          <span class="nx">onClick</span><span class="o">=</span><span class="p">{()</span> <span class="o">=&gt;</span> <span class="nx">navigate</span><span class="p">(</span><span class="dl">'</span><span class="s1">/</span><span class="dl">'</span><span class="p">)}</span>
+          <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">mt-6 btn-primary</span><span class="dl">"</span>
+        <span class="o">&gt;</span>
+          <span class="nx">Go</span> <span class="nx">Home</span>
+        <span class="o">&lt;</span><span class="sr">/button</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="navigation-best-practices">Navigation Best Practices</h2>
+
+<ol>
+  <li><strong>Always handle missing state</strong> - Check if navigation state exists</li>
+  <li><strong>Use replace for redirects</strong> - Prevent back button issues</li>
+  <li><strong>Clear sensitive data</strong> - Remove tokens on logout</li>
+  <li><strong>Validate permissions</strong> - Check roles before rendering admin routes</li>
+  <li><strong>Handle errors gracefully</strong> - Redirect to error page if needed</li>
+  <li><strong>Preserve scroll position</strong> - Use <code class="language-plaintext highlighter-rouge">scrollRestoration</code> if needed</li>
+</ol>
+
+<hr />
+
+<h2 id="common-navigation-patterns">Common Navigation Patterns</h2>
+
+<h3 id="logout-and-redirect">Logout and Redirect</h3>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">handleLogout</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">localStorage</span><span class="p">.</span><span class="nx">removeItem</span><span class="p">(</span><span class="dl">'</span><span class="s1">cineverse_token</span><span class="dl">'</span><span class="p">);</span>
+  <span class="nx">localStorage</span><span class="p">.</span><span class="nx">removeItem</span><span class="p">(</span><span class="dl">'</span><span class="s1">cineverse_role</span><span class="dl">'</span><span class="p">);</span>
+  <span class="nx">localStorage</span><span class="p">.</span><span class="nx">removeItem</span><span class="p">(</span><span class="dl">'</span><span class="s1">cineverse_userId</span><span class="dl">'</span><span class="p">);</span>
+  <span class="nx">navigate</span><span class="p">(</span><span class="dl">'</span><span class="s1">/login</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">replace</span><span class="p">:</span> <span class="kc">true</span> <span class="p">});</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h3 id="conditional-redirect">Conditional Redirect</h3>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">selectedSeats</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">navigate</span><span class="p">(</span><span class="dl">'</span><span class="s1">/</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// Redirect if no seats selected</span>
+  <span class="p">}</span>
+<span class="p">},</span> <span class="p">[</span><span class="nx">selectedSeats</span><span class="p">]);</span>
+</code></pre></div></div>
+
+<h3 id="back-navigation">Back Navigation</h3>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{()</span> <span class="o">=&gt;</span> <span class="nx">navigate</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)}</span><span class="o">&gt;</span>
+  <span class="err">←</span> <span class="nx">Back</span>
+<span class="o">&lt;</span><span class="sr">/button</span><span class="err">&gt;
+</span></code></pre></div></div>
+
+<hr />
+
+<h2 id="summary">Summary</h2>
+
+<p>Cineverse uses <strong>React Router v6</strong> with:</p>
+<ul>
+  <li><strong>Nested routes</strong> for layouts</li>
+  <li><strong>Protected routes</strong> for admin access</li>
+  <li><strong>Navigation state</strong> for data passing</li>
+  <li><strong>Role-based access control</strong></li>
+  <li><strong>404 handling</strong> for invalid routes</li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2026-01-18">January 18, 2026</time></p>
+
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/cineverse/docs/frontend/feedback/" class="pagination--pager" title="Feedback System
+">Previous</a>
+    
+    
+      <a href="/cineverse/docs/frontend/state-api/" class="pagination--pager" title="State Management &amp; API Integration
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+    <ul class="social-icons">
+        
+
+        
+
+        
+        <li><a href="/cineverse/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+        
+    </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2026 YadnyeshKolte. Powered by <a
+        href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a
+        href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+
+    
+  <script src="/cineverse/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

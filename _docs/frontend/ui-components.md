@@ -1,8 +1,8 @@
 ---
 title: "UI Components"
 permalink: /docs/frontend/ui-components/
-excerpt: "Reusable UI components documentation"
-last_modified_at: 2025-11-15
+excerpt: "Reusable UI components documentation for Cineverse"
+last_modified_at: 2025-01-17
 toc: true
 ---
 
@@ -10,7 +10,7 @@ toc: true
 
 ## Component Library
 
-OVS uses a custom component library built with React.
+Cineverse uses a custom component library built with React.
 
 ## Core Components
 
@@ -21,7 +21,7 @@ OVS uses a custom component library built with React.
   size="large"
   onClick={handleClick}
 >
-  Cast Vote
+  Book Tickets
 </Button>
 ```
 
@@ -29,13 +29,13 @@ OVS uses a custom component library built with React.
 ```jsx
 <Card>
   <CardHeader>
-    <h3>Election Title</h3>
+    <h3>Movie Title</h3>
   </CardHeader>
   <CardBody>
-    <p>Election description...</p>
+    <p>Movie description...</p>
   </CardBody>
   <CardFooter>
-    <Button>View Details</Button>
+    <Button>View Shows</Button>
   </CardFooter>
 </Card>
 ```
@@ -43,9 +43,9 @@ OVS uses a custom component library built with React.
 ### Modal
 ```jsx
 <Modal isOpen={isOpen} onClose={handleClose}>
-  <ModalHeader>Confirm Vote</ModalHeader>
+  <ModalHeader>Confirm Booking</ModalHeader>
   <ModalBody>
-    Are you sure you want to vote for this candidate?
+    Are you sure you want to book these seats?
   </ModalBody>
   <ModalFooter>
     <Button onClick={handleConfirm}>Confirm</Button>
@@ -83,11 +83,11 @@ Components use CSS modules for styling:
 }
 
 .button-primary {
-  background-color: #007bff;
+  background-color: #e50914;
   color: white;
 }
 
 .button-primary:hover {
-  background-color: #0056b3;
+  background-color: #b20710;
 }
 ```

@@ -1,62 +1,86 @@
 ---
 title: "Quick Start"
 permalink: /docs/quick-start/
-excerpt: "Get up and running quickly"
-last_modified_at: 2025-11-15
+excerpt: "Get up and running quickly with Cineverse"
+last_modified_at: 2026-01-18
 toc: true
 ---
 
 # Quick Start Guide
 
-This guide will help you verify the application flow by simulating a real-world voting scenario.
+This guide will help you verify the application flow by simulating a real-world movie booking scenario.
 
 ## Prerequisites
-Ensure you have completed the [Installation Guide](INSTALLATION.md) and both the Backend and Frontend servers are running.
+Ensure you have completed the [Installation Guide](/docs/installation/) and all services are running.
 
-*   **Frontend**: http://localhost:5173
-*   **Backend**: http://localhost:8080
+* **Frontend**: http://localhost:5173
+* **API Gateway**: http://localhost:9191
+* **Eureka Dashboard**: http://localhost:8761
 
 ## Walkthrough
 
-### 1. Admin: Create an Election
+### 1. Admin: Add a Theatre
 
-1.  Navigate to **[http://localhost:5173/login](http://localhost:5173/login)**.
-2.  Login with the default Admin credentials:
-    *   **Email**: `admin@voting.com`
-    *   **Password**: `admin123`
-3.  On the **Admin Dashboard**:
-    *   Click "Create Election".
-    *   Enter details (e.g., "General Election 2024").
-    *   Change the election status to `SCHEDULED`, then `ACTIVE` to allow voting.
-    *   *Note: To add candidates, you must first register other users and use their User IDs.*
+1. Login with Admin credentials.
+2. Navigate to the Admin Dashboard.
+3. Click "Add Theatre" and enter:
+   * Name: "PVR Bellandur"
+   * Address: "Bellandur, Bangalore"
+   * City: "Bangalore"
+   * Screen Type: "TWO_D"
+   * Total Seats: 250
 
-### 2. User: Register & Verify
+### 2. Admin: Add a Movie
 
-1.  Log out or open an Incognito window.
-2.  Navigate to **[http://localhost:5173/register](http://localhost:5173/register)**.
-3.  Fill in the registration form using the **Seeded Dummy Data** for verification.
-4.  Click **Register**. If the details match the dummy data, registration will succeed.
+1. Navigate to "Movies" section.
+2. Click "Add Movie" and enter:
+   * Title: "Avengers"
+   * Description: "Superhero movie"
+   * Language: "English"
+   * Genre: "Action"
+   * Duration: 180 minutes
 
-### 3. User: Vote
+### 3. Admin: Create a Show
 
-1.  Login with your newly created user credentials.
-2.  On the **User Dashboard**, locate the Active Election you created earlier.
-3.  Click **Vote Now**.
-4.  Select a candidate and confirm your vote.
-5.  The button will update to "You Voted".
+1. Navigate to "Shows" section.
+2. Click "Create Show" and select:
+   * Movie: "Avengers"
+   * Theatre: "PVR Bellandur"
+   * Date and Time
+   * Ticket Price: ₹200
 
-### 4. Admin: View Results
+### 4. User: Register & Login
 
-1.  Log back in as Admin.
-2.  Navigate to the election card on the dashboard.
-3.  Click **Calc Results** (if required) then **View Results**.
-4.  You will see the updated vote counts.
+1. Open an Incognito window or log out.
+2. Navigate to the Registration page.
+3. Fill in your details and register.
+4. Login with your new credentials.
+
+### 5. User: Book Tickets
+
+1. Browse available movies.
+2. Select "Avengers".
+3. Choose a show time and theatre.
+4. Select your seats (e.g., A1, A2).
+5. Confirm your booking.
+6. Receive WhatsApp ticket notification.
 
 ---
 
 ## Default Accounts
 
-| Role | Email | Password |
-| :--- | :--- | :--- |
-| **Admin** | `admin@voting.com` | `admin123` |
-| **Admin (Backup)** | `admin.secondary@voting.com` | `admin123` |
+| Role | Username | Password |
+|:-----|:---------|:---------|
+| **Admin** | `admin@cineverse.com` | `admin@123` |
+| **User** | `user@cineverse.com` | `user@123` |
+
+## API Access
+
+All backend APIs are accessible through the API Gateway at `http://localhost:9191`:
+
+* `/api/auth/**` - Authentication
+* `/api/movies/**` - Movie management
+* `/api/theatres/**` - Theatre management
+* `/api/shows/**` - Show scheduling
+* `/api/bookings/**` - Bookings
+* `/api/notify/**` - Notifications

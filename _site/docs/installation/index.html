@@ -1,0 +1,548 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Installation - Cineverse</title>
+<meta name="description" content="How to install and set up Cineverse">
+
+
+  <meta name="author" content="AkashDwi17">
+  
+  <meta property="article:author" content="AkashDwi17">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Cineverse">
+<meta property="og:title" content="Installation">
+<meta property="og:url" content="http://localhost:4000/cineverse/docs/installation/">
+
+
+  <meta property="og:description" content="How to install and set up Cineverse">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2026-01-18T01:00:39+05:30">
+
+
+
+  <meta property="article:modified_time" content="2026-01-18T00:00:00+05:30">
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/cineverse/docs/installation/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AkashDwi17",
+      "url": "http://localhost:4000/cineverse/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/cineverse/feed.xml" type="application/atom+xml" rel="alternate" title="Cineverse Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/cineverse/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <link rel="icon" href="/cineverse/assets/images/favicon.svg" type="image/svg+xml">
+
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/cineverse/"><img src="/cineverse/assets/images/favicon.ico" alt="Cineverse"></a>
+        
+        <a class="site-title" href="/cineverse/">
+          Cineverse
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/cineverse/docs/introduction/">Documentation</a>
+            </li><li class="masthead__menu-item">
+              <a href="/cineverse/docs/quick-start/">Getting Started</a>
+            </li><li class="masthead__menu-item">
+              <a href="/cineverse/about/">About</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Getting Started</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/cineverse/docs/introduction/">Introduction</a></li>
+          
+            <li><a href="/cineverse/docs/installation/" class="active">Installation</a></li>
+          
+            <li><a href="/cineverse/docs/quick-start/">Quick Start</a></li>
+          
+            <li><a href="/cineverse/docs/diagrams/">Diagrams</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Backend</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/cineverse/docs/backend/api-reference/">API Reference</a></li>
+          
+            <li><a href="/cineverse/docs/backend/configuration/">Configuration</a></li>
+          
+            <li><a href="/cineverse/docs/backend/security/">Security</a></li>
+          
+            <li><a href="/cineverse/docs/backend/error-handling/">Error Handling</a></li>
+          
+            <li><a href="/cineverse/docs/backend/auth-service/">Auth Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/theatre-service/">Theatre Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/movie-service/">Movie Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/show-service/">Show Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/booking-service/">Booking Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/notification-service/">Notification Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/api-gateway-eureka/">API Gateway & Eureka</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Database</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/cineverse/docs/database/auth-database/">Auth Database</a></li>
+          
+            <li><a href="/cineverse/docs/database/theatre-database/">Theatre Database</a></li>
+          
+            <li><a href="/cineverse/docs/database/show-database/">Show Database</a></li>
+          
+            <li><a href="/cineverse/docs/database/booking-database/">Booking Database</a></li>
+          
+            <li><a href="/cineverse/docs/database/movie-database/">Movie Database (Mongo)</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Frontend</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/cineverse/docs/frontend/components/">Components</a></li>
+          
+            <li><a href="/cineverse/docs/frontend/routing/">Routing & Navigation</a></li>
+          
+            <li><a href="/cineverse/docs/frontend/state-api/">State & API Integration</a></li>
+          
+            <li><a href="/cineverse/docs/frontend/ui-components/">UI Components</a></li>
+          
+            <li><a href="/cineverse/docs/frontend/usereffectvoting/">User Effect Voting</a></li>
+          
+            <li><a href="/cineverse/docs/frontend/feedback/">Feedback System</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Guides</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/cineverse/docs/deployment/">Deployment</a></li>
+          
+            <li><a href="/cineverse/docs/troubleshooting/">Troubleshooting</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Installation">
+    <meta itemprop="description" content="How to install and set up Cineverse">
+    
+    <meta itemprop="dateModified" content="2026-01-18T00:00:00+05:30">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Installation
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#installation-guide">Installation Guide</a><ul><li><a href="#prerequisites">Prerequisites</a></li><li><a href="#service-ports">Service Ports</a></li><li><a href="#1-database-setup">1. Database Setup</a><ul><li><a href="#mysql-databases">MySQL Databases</a></li><li><a href="#mongodb">MongoDB</a></li></ul></li><li><a href="#2-backend-setup">2. Backend Setup</a><ul><li><a href="#start-services-in-order">Start Services in Order</a></li></ul></li><li><a href="#3-frontend-setup">3. Frontend Setup</a></li><li><a href="#troubleshooting">Troubleshooting</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h1 id="installation-guide">Installation Guide</h1>
+
+<p>Follow these steps to set up the Cineverse movie booking platform on your local machine.</p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<p>Ensure you have the following software installed:</p>
+
+<ol>
+  <li><strong>Java 21</strong>: Required for the backend microservices.</li>
+  <li><strong>Node.js (v18+)</strong>: Required for the frontend.</li>
+  <li><strong>MySQL 8.0+</strong>: Required for SQL databases.</li>
+  <li><strong>MongoDB</strong>: Required for the movie database.</li>
+  <li><strong>Git</strong>: To clone the repository.</li>
+</ol>
+
+<h2 id="service-ports">Service Ports</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Service</th>
+      <th>Port</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Service Registry (Eureka)</td>
+      <td>8761</td>
+    </tr>
+    <tr>
+      <td>API Gateway</td>
+      <td>9191</td>
+    </tr>
+    <tr>
+      <td>Auth Service</td>
+      <td>8081</td>
+    </tr>
+    <tr>
+      <td>Theatre Service</td>
+      <td>8082</td>
+    </tr>
+    <tr>
+      <td>Movie Service</td>
+      <td>8083</td>
+    </tr>
+    <tr>
+      <td>Show Service</td>
+      <td>8084</td>
+    </tr>
+    <tr>
+      <td>Booking Service</td>
+      <td>8085</td>
+    </tr>
+    <tr>
+      <td>Notification Service</td>
+      <td>8086</td>
+    </tr>
+    <tr>
+      <td>Config Server</td>
+      <td>8888</td>
+    </tr>
+    <tr>
+      <td>Zipkin (Tracing)</td>
+      <td>9411</td>
+    </tr>
+    <tr>
+      <td>Frontend</td>
+      <td>5173</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="1-database-setup">1. Database Setup</h2>
+
+<h3 id="mysql-databases">MySQL Databases</h3>
+
+<ol>
+  <li>Open your MySQL client (e.g., MySQL Workbench, command line).</li>
+  <li>
+    <p>Create the required databases:</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">CREATE</span> <span class="k">DATABASE</span> <span class="n">bookmyshow_auth</span><span class="p">;</span>
+ <span class="k">CREATE</span> <span class="k">DATABASE</span> <span class="n">bookmyshow_theatre</span><span class="p">;</span>
+ <span class="k">CREATE</span> <span class="k">DATABASE</span> <span class="n">show_db</span><span class="p">;</span>
+ <span class="k">CREATE</span> <span class="k">DATABASE</span> <span class="n">booking_db</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="mongodb">MongoDB</h3>
+
+<ol>
+  <li>Start MongoDB service.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">movie_db</code> database will be created automatically when the Movie Service starts.</li>
+</ol>
+
+<h2 id="2-backend-setup">2. Backend Setup</h2>
+
+<h3 id="start-services-in-order">Start Services in Order</h3>
+
+<ol>
+  <li><strong>Start Eureka Server (Service Registry)</strong>:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">cd </span>backend/service-registry
+ ./mvnw spring-boot:run
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Start API Gateway</strong>:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">cd </span>backend/api-gateway
+ ./mvnw spring-boot:run
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Start Auth Service</strong>:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">cd </span>backend/auth-service
+ ./mvnw spring-boot:run
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Start remaining services</strong> (Theatre, Movie, Show, Booking, Notification):
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">cd </span>backend/&lt;service-name&gt;
+ ./mvnw spring-boot:run
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>For Windows, use <code class="language-plaintext highlighter-rouge">mvnw.cmd spring-boot:run</code> instead.</p>
+
+<h2 id="3-frontend-setup">3. Frontend Setup</h2>
+
+<ol>
+  <li>Navigate to the frontend directory:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">cd </span>frontend
+</code></pre></div>    </div>
+  </li>
+  <li>Install dependencies:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> npm <span class="nb">install</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Start the development server:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> npm run dev
+</code></pre></div>    </div>
+
+    <p><em>The frontend will be accessible at <code class="language-plaintext highlighter-rouge">http://localhost:5173</code>.</em></p>
+  </li>
+</ol>
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+
+<ul>
+  <li><strong>Port Conflicts</strong>: Ensure the required ports are free.</li>
+  <li><strong>Database Connection</strong>: Verify MySQL/MongoDB credentials in each service’s <code class="language-plaintext highlighter-rouge">application.properties</code>.</li>
+  <li><strong>Eureka Issues</strong>: Ensure Service Registry is running before starting other services.</li>
+  <li><strong>Permission Denied (Linux/Mac)</strong>: Run <code class="language-plaintext highlighter-rouge">chmod +x mvnw</code> if the wrapper is not executable.</li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2026-01-18">January 18, 2026</time></p>
+
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/cineverse/docs/frontend/usereffectvoting/" class="pagination--pager" title="Booking Flow
+">Previous</a>
+    
+    
+      <a href="/cineverse/docs/introduction/" class="pagination--pager" title="Introduction
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+    <ul class="social-icons">
+        
+
+        
+
+        
+        <li><a href="/cineverse/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+        
+    </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2026 YadnyeshKolte. Powered by <a
+        href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a
+        href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+
+    
+  <script src="/cineverse/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

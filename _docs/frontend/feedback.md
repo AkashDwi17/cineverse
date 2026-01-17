@@ -1,8 +1,8 @@
 ---
 title: "Feedback System"
 permalink: /docs/frontend/feedback/
-excerpt: "User feedback and rating system"
-last_modified_at: 2025-11-15
+excerpt: "User feedback and rating system for movie booking experience"
+last_modified_at: 2025-01-17
 toc: true
 ---
 
@@ -10,12 +10,12 @@ toc: true
 
 ## Overview
 
-The feedback system allows users to provide feedback about their voting experience and report issues.
+The feedback system allows users to provide feedback about their movie booking experience and report issues.
 
 ## Feedback Types
 
-1. **General Feedback**: Overall experience
-2. **Technical Issues**: Bugs or errors
+1. **General Feedback**: Overall booking experience
+2. **Technical Issues**: Bugs or errors during booking
 3. **Feature Requests**: Suggestions for improvement
 4. **Usability**: UI/UX feedback
 
@@ -45,6 +45,8 @@ function FeedbackForm() {
         <option value="general">General Feedback</option>
         <option value="bug">Report Bug</option>
         <option value="feature">Feature Request</option>
+        <option value="booking">Booking Issue</option>
+        <option value="payment">Payment Issue</option>
       </select>
       
       <div className="rating">
@@ -84,8 +86,8 @@ Users can rate their experience on a scale of 1-5 stars:
 Admins can view:
 
 - All feedback submissions
-- Average ratings
-- Common issues
+- Average ratings per movie/theatre
+- Common booking issues
 - Trend analysis
 
 ## Notifications

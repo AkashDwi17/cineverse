@@ -1,0 +1,606 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Diagrams - Cineverse</title>
+<meta name="description" content="System Architecture Diagrams for Cineverse">
+
+
+  <meta name="author" content="AkashDwi17">
+  
+  <meta property="article:author" content="AkashDwi17">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Cineverse">
+<meta property="og:title" content="Diagrams">
+<meta property="og:url" content="http://localhost:4000/cineverse/docs/diagrams/">
+
+
+  <meta property="og:description" content="System Architecture Diagrams for Cineverse">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2026-01-18T01:00:39+05:30">
+
+
+
+  <meta property="article:modified_time" content="2026-01-18T00:00:00+05:30">
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/cineverse/docs/diagrams/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AkashDwi17",
+      "url": "http://localhost:4000/cineverse/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/cineverse/feed.xml" type="application/atom+xml" rel="alternate" title="Cineverse Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/cineverse/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <link rel="icon" href="/cineverse/assets/images/favicon.svg" type="image/svg+xml">
+
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/cineverse/"><img src="/cineverse/assets/images/favicon.ico" alt="Cineverse"></a>
+        
+        <a class="site-title" href="/cineverse/">
+          Cineverse
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/cineverse/docs/introduction/">Documentation</a>
+            </li><li class="masthead__menu-item">
+              <a href="/cineverse/docs/quick-start/">Getting Started</a>
+            </li><li class="masthead__menu-item">
+              <a href="/cineverse/about/">About</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Getting Started</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/cineverse/docs/introduction/">Introduction</a></li>
+          
+            <li><a href="/cineverse/docs/installation/">Installation</a></li>
+          
+            <li><a href="/cineverse/docs/quick-start/">Quick Start</a></li>
+          
+            <li><a href="/cineverse/docs/diagrams/" class="active">Diagrams</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Backend</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/cineverse/docs/backend/api-reference/">API Reference</a></li>
+          
+            <li><a href="/cineverse/docs/backend/configuration/">Configuration</a></li>
+          
+            <li><a href="/cineverse/docs/backend/security/">Security</a></li>
+          
+            <li><a href="/cineverse/docs/backend/error-handling/">Error Handling</a></li>
+          
+            <li><a href="/cineverse/docs/backend/auth-service/">Auth Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/theatre-service/">Theatre Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/movie-service/">Movie Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/show-service/">Show Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/booking-service/">Booking Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/notification-service/">Notification Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/api-gateway-eureka/">API Gateway & Eureka</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Database</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/cineverse/docs/database/auth-database/">Auth Database</a></li>
+          
+            <li><a href="/cineverse/docs/database/theatre-database/">Theatre Database</a></li>
+          
+            <li><a href="/cineverse/docs/database/show-database/">Show Database</a></li>
+          
+            <li><a href="/cineverse/docs/database/booking-database/">Booking Database</a></li>
+          
+            <li><a href="/cineverse/docs/database/movie-database/">Movie Database (Mongo)</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Frontend</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/cineverse/docs/frontend/components/">Components</a></li>
+          
+            <li><a href="/cineverse/docs/frontend/routing/">Routing & Navigation</a></li>
+          
+            <li><a href="/cineverse/docs/frontend/state-api/">State & API Integration</a></li>
+          
+            <li><a href="/cineverse/docs/frontend/ui-components/">UI Components</a></li>
+          
+            <li><a href="/cineverse/docs/frontend/usereffectvoting/">User Effect Voting</a></li>
+          
+            <li><a href="/cineverse/docs/frontend/feedback/">Feedback System</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Guides</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/cineverse/docs/deployment/">Deployment</a></li>
+          
+            <li><a href="/cineverse/docs/troubleshooting/">Troubleshooting</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Diagrams">
+    <meta itemprop="description" content="System Architecture Diagrams for Cineverse">
+    
+    <meta itemprop="dateModified" content="2026-01-18T00:00:00+05:30">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Diagrams
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#system-architecture-diagrams">System Architecture Diagrams</a><ul><li><a href="#microservices-architecture">Microservices Architecture</a></li><li><a href="#service-flow-diagram">Service Flow Diagram</a></li><li><a href="#booking-flow-sequence">Booking Flow Sequence</a></li><li><a href="#database-schema-overview">Database Schema Overview</a></li><li><a href="#port-summary">Port Summary</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h1 id="system-architecture-diagrams">System Architecture Diagrams</h1>
+
+<h2 id="microservices-architecture">Microservices Architecture</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌─────────────────────────────────────────────────────────────────┐
+│                        CINEVERSE PLATFORM                       │
+└─────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────┐
+│                      FRONTEND LAYER (React.js)                   │
+│  User Interface | Show Listings | Seat Selection | Bookings      │
+│                         Port: 5173                                │
+└──────────────────────────────────────────────────────────────────┘
+                               │
+                               ▼
+┌──────────────────────────────────────────────────────────────────┐
+│              API GATEWAY (Spring Cloud Gateway)                  │
+│                     Port: 9191                                   │
+│  Route Management | Load Balancing | Request Filtering          │
+└──────────────────────────────────────────────────────────────────┘
+                               │
+        ┌──────────────────────┼──────────────────────┐
+        │                      │                      │
+        ▼                      ▼                      ▼
+   ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐
+   │  AUTH SERVICE   │  │ THEATRE SERVICE │  │  MOVIE SERVICE  │
+   │   (Port 8081)   │  │   (Port 8082)   │  │   (Port 8083)   │
+   └─────────────────┘  └─────────────────┘  └─────────────────┘
+        │ (MySQL)           │ (MySQL)           │ (MongoDB)
+        
+        ▼                      ▼                      ▼
+   ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐
+   │  SHOW SERVICE   │  │ BOOKING SERVICE │  │ NOTIFICATION    │
+   │   (Port 8084)   │  │   (Port 8085)   │  │ SERVICE         │
+   └─────────────────┘  └─────────────────┘  │ (Port 8086)     │
+        │ (MySQL)           │ (MySQL)           └─────────────────┘
+        │                   │                        │
+        └───────────────────┴────────────────────────┘
+                      │
+                      ▼
+        ┌─────────────────────────────────┐
+        │   EUREKA SERVICE REGISTRY       │
+        │    (Service Discovery)          │
+        │     Port: 8761                  │
+        └─────────────────────────────────┘
+</code></pre></div></div>
+
+<h2 id="service-flow-diagram">Service Flow Diagram</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>User Request Flow:
+==================
+
+User (Browser)
+     ↓
+Frontend (React - Port 5173)
+     ↓
+API Gateway (Port 9191)
+     ↓
+┌─────────────────────────────────────────────┐
+│              MICROSERVICES                  │
+│                                             │
+│  Auth → Theatre → Movie → Show → Booking   │
+│                                             │
+└─────────────────────────────────────────────┘
+     ↓
+Databases (MySQL + MongoDB)
+     ↓
+Notification Service (WhatsApp)
+</code></pre></div></div>
+
+<h2 id="booking-flow-sequence">Booking Flow Sequence</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌────────┐    ┌─────────┐    ┌──────────┐    ┌─────────┐    ┌─────────┐
+│  User  │    │ Gateway │    │  Shows   │    │ Booking │    │ Notify  │
+└───┬────┘    └────┬────┘    └────┬─────┘    └────┬────┘    └────┬────┘
+    │              │              │               │              │
+    │  Browse      │              │               │              │
+    │  Movies      │              │               │              │
+    │─────────────&gt;│              │               │              │
+    │              │  Get Shows   │               │              │
+    │              │─────────────&gt;│               │              │
+    │              │   Shows      │               │              │
+    │&lt;─────────────│&lt;─────────────│               │              │
+    │              │              │               │              │
+    │  Select Seats│              │               │              │
+    │─────────────&gt;│              │               │              │
+    │              │  Lock Seats  │               │              │
+    │              │──────────────────────────────&gt;              │
+    │              │  Seats Locked│               │              │
+    │&lt;─────────────│&lt;─────────────│───────────────│              │
+    │              │              │               │              │
+    │  Confirm     │              │               │              │
+    │─────────────&gt;│              │               │              │
+    │              │  Create Booking              │              │
+    │              │──────────────────────────────&gt;              │
+    │              │              │               │ Send Ticket  │
+    │              │              │               │─────────────&gt;│
+    │  Booking     │              │               │              │
+    │  Confirmed   │              │               │              │
+    │&lt;─────────────│&lt;─────────────│───────────────│              │
+    │              │              │               │              │
+</code></pre></div></div>
+
+<h2 id="database-schema-overview">Database Schema Overview</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌─────────────────────────────────────────────────────────────────┐
+│                        DATABASES                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                  │
+│  ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐ │
+│  │ bookmyshow_auth │  │bookmyshow_theatre│ │    show_db     │ │
+│  │     (MySQL)     │  │     (MySQL)     │  │    (MySQL)     │ │
+│  ├─────────────────┤  ├─────────────────┤  ├─────────────────┤ │
+│  │ • users         │  │ • theatres      │  │ • shows        │ │
+│  │   - id          │  │   - id          │  │   - id         │ │
+│  │   - username    │  │   - name        │  │   - movie_id   │ │
+│  │   - password    │  │   - address     │  │   - theatre_id │ │
+│  │   - role        │  │   - city        │  │   - show_date  │ │
+│  │   - phone       │  │   - screen_type │  │   - show_time  │ │
+│  │   - city        │  │   - total_seats │  │   - price      │ │
+│  └─────────────────┘  └─────────────────┘  └─────────────────┘ │
+│                                                                  │
+│  ┌─────────────────┐  ┌─────────────────────────────────────┐  │
+│  │   booking_db    │  │           movie_db (MongoDB)        │  │
+│  │     (MySQL)     │  ├─────────────────────────────────────┤  │
+│  ├─────────────────┤  │ • movies (collection)               │  │
+│  │ • bookings      │  │   - _id                             │  │
+│  │   - id          │  │   - title                           │  │
+│  │   - show_id     │  │   - genre                           │  │
+│  │   - user_id     │  │   - language                        │  │
+│  │   - seats       │  │   - durationMinutes                 │  │
+│  │   - amount      │  │   - rating                          │  │
+│  │   - status      │  │   - releaseDate                     │  │
+│  │                 │  │   - posterUrl                       │  │
+│  │ • seat_locks    │  │   - cast                            │  │
+│  │   - seat_number │  │                                     │  │
+│  │   - show_id     │  │                                     │  │
+│  │   - expires_at  │  │                                     │  │
+│  └─────────────────┘  └─────────────────────────────────────┘  │
+│                                                                  │
+└─────────────────────────────────────────────────────────────────┘
+</code></pre></div></div>
+
+<h2 id="port-summary">Port Summary</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Component</th>
+      <th>Port</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Frontend</td>
+      <td>5173</td>
+      <td>React development server</td>
+    </tr>
+    <tr>
+      <td>API Gateway</td>
+      <td>9191</td>
+      <td>Main entry point for all APIs</td>
+    </tr>
+    <tr>
+      <td>Service Registry</td>
+      <td>8761</td>
+      <td>Eureka service discovery</td>
+    </tr>
+    <tr>
+      <td>Auth Service</td>
+      <td>8081</td>
+      <td>User authentication &amp; JWT</td>
+    </tr>
+    <tr>
+      <td>Theatre Service</td>
+      <td>8082</td>
+      <td>Theatre management</td>
+    </tr>
+    <tr>
+      <td>Movie Service</td>
+      <td>8083</td>
+      <td>Movie catalog (MongoDB)</td>
+    </tr>
+    <tr>
+      <td>Show Service</td>
+      <td>8084</td>
+      <td>Show scheduling</td>
+    </tr>
+    <tr>
+      <td>Booking Service</td>
+      <td>8085</td>
+      <td>Booking &amp; seat locking</td>
+    </tr>
+    <tr>
+      <td>Notification Service</td>
+      <td>8086</td>
+      <td>WhatsApp notifications</td>
+    </tr>
+    <tr>
+      <td>Config Server</td>
+      <td>8888</td>
+      <td>Centralized configuration</td>
+    </tr>
+    <tr>
+      <td>Zipkin</td>
+      <td>9411</td>
+      <td>Distributed tracing</td>
+    </tr>
+  </tbody>
+</table>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2026-01-18">January 18, 2026</time></p>
+
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/cineverse/docs/deployment/" class="pagination--pager" title="Deployment Guide
+">Previous</a>
+    
+    
+      <a href="/cineverse/docs/frontend/components/" class="pagination--pager" title="Frontend Components
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+    <ul class="social-icons">
+        
+
+        
+
+        
+        <li><a href="/cineverse/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+        
+    </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2026 YadnyeshKolte. Powered by <a
+        href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a
+        href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+
+    
+  <script src="/cineverse/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
