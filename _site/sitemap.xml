@@ -110,7 +110,7 @@
 </url>
 <url>
 <loc>http://localhost:4000/cineverse/docs/test-theme/</loc>
-<lastmod>2026-01-18T00:46:43+05:30</lastmod>
+<lastmod>2026-01-18T00:55:36+05:30</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/cineverse/docs/troubleshooting/</loc>
@@ -133,8 +133,5 @@
 </url>
 <url>
 <loc>http://localhost:4000/cineverse/user-guide/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/cineverse/backend/auth-service/</loc>
 </url>
 </urlset>
