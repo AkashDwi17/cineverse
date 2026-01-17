@@ -1,16 +1,9 @@
 ---
 layout: splash
-title: "Cineverse"
 header:
-  overlay_color: "#FFFFFF"
-  overlay_filter: "0.85"
+  overlay_color: "#000000"
+  overlay_filter: "0.3"
   overlay_image: /assets/images/header.png
-  actions:
-    - label: "Get Started"
-      url: "/docs/introduction/"
-    - label: "View on GitHub"
-      url: "https://github.com/AkashDwi17/cineverse"
-excerpt: "Complete documentation for the Cineverse"
 feature_row:
   - image_path: /assets/images/database-icon.png
     alt: "Database"
