@@ -1,7 +1,7 @@
 ---
 title: "Introduction"
 permalink: /docs/introduction/
-excerpt: "Introduction to Online Voting System"
+excerpt: "Introduction to Cineverse Movie Booking Platform"
 last_modified_at: 2025-11-15
 toc: true
 ---

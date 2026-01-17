@@ -78,19 +78,19 @@ var store = [{
         "teaser": null
       },{
         "title": "Feedback System",
-        "excerpt":"Feedback System Overview The feedback system allows users to provide feedback about their voting experience and report issues. Feedback Types General Feedback: Overall experience Technical Issues: Bugs or errors Feature Requests: Suggestions for improvement Usability: UI/UX feedback Feedback Component import React, { useState } from 'react'; function FeedbackForm() { const...","categories": [],
+        "excerpt":"Feedback System Overview The feedback system allows users to provide feedback about their movie booking experience and report issues. Feedback Types General Feedback: Overall booking experience Technical Issues: Bugs or errors during booking Feature Requests: Suggestions for improvement Usability: UI/UX feedback Feedback Component import React, { useState } from 'react';...","categories": [],
         "tags": [],
         "url": "/cineverse/docs/frontend/feedback/",
         "teaser": null
       },{
         "title": "UI Components",
-        "excerpt":"UI Components Component Library OVS uses a custom component library built with React. Core Components Button &lt;Button variant=\"primary\" size=\"large\" onClick={handleClick} &gt; Cast Vote &lt;/Button&gt; Card &lt;Card&gt; &lt;CardHeader&gt; &lt;h3&gt;Election Title&lt;/h3&gt; &lt;/CardHeader&gt; &lt;CardBody&gt; &lt;p&gt;Election description...&lt;/p&gt; &lt;/CardBody&gt; &lt;CardFooter&gt; &lt;Button&gt;View Details&lt;/Button&gt; &lt;/CardFooter&gt; &lt;/Card&gt; Modal &lt;Modal isOpen={isOpen} onClose={handleClose}&gt; &lt;ModalHeader&gt;Confirm Vote&lt;/ModalHeader&gt; &lt;ModalBody&gt; Are you sure you...","categories": [],
+        "excerpt":"UI Components Component Library Cineverse uses a custom component library built with React. Core Components Button &lt;Button variant=\"primary\" size=\"large\" onClick={handleClick} &gt; Book Tickets &lt;/Button&gt; Card &lt;Card&gt; &lt;CardHeader&gt; &lt;h3&gt;Movie Title&lt;/h3&gt; &lt;/CardHeader&gt; &lt;CardBody&gt; &lt;p&gt;Movie description...&lt;/p&gt; &lt;/CardBody&gt; &lt;CardFooter&gt; &lt;Button&gt;View Shows&lt;/Button&gt; &lt;/CardFooter&gt; &lt;/Card&gt; Modal &lt;Modal isOpen={isOpen} onClose={handleClose}&gt; &lt;ModalHeader&gt;Confirm Booking&lt;/ModalHeader&gt; &lt;ModalBody&gt; Are you sure you...","categories": [],
         "tags": [],
         "url": "/cineverse/docs/frontend/ui-components/",
         "teaser": null
       },{
-        "title": "User Effect Voting",
-        "excerpt":"User Effect Voting Overview The voting interface provides an intuitive and secure way for users to cast their votes. Voting Flow User logs in to the system Views available elections Selects an election Reviews candidates Casts vote Receives confirmation UI Components Election List import React, { useEffect, useState } from...","categories": [],
+        "title": "Booking Flow",
+        "excerpt":"Booking Flow Overview The booking interface provides an intuitive and seamless way for users to book movie tickets. Booking Flow User logs in to the system Browses available movies Selects a movie Chooses theatre and show time Selects seats Confirms booking Receives WhatsApp ticket UI Components Movie List import React,...","categories": [],
         "tags": [],
         "url": "/cineverse/docs/frontend/usereffectvoting/",
         "teaser": null

@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>UI Components - Cineverse</title>
-<meta name="description" content="Reusable UI components documentation">
+<meta name="description" content="Reusable UI components documentation for Cineverse">
 
 
   <meta name="author" content="AkashDwi17">
@@ -26,7 +26,7 @@
 <meta property="og:url" content="http://localhost:4000/cineverse/docs/frontend/ui-components/">
 
 
-  <meta property="og:description" content="Reusable UI components documentation">
+  <meta property="og:description" content="Reusable UI components documentation for Cineverse">
 
 
 
@@ -34,11 +34,11 @@
 
 
 
-  <meta property="article:published_time" content="2026-01-17T23:51:28+05:30">
+  <meta property="article:published_time" content="2026-01-18T00:00:12+05:30">
 
 
 
-  <meta property="article:modified_time" content="2025-11-15T00:00:00+05:30">
+  <meta property="article:modified_time" content="2025-01-17T00:00:00+05:30">
 
 
 
@@ -258,9 +258,9 @@
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="UI Components">
-    <meta itemprop="description" content="Reusable UI components documentation">
+    <meta itemprop="description" content="Reusable UI components documentation for Cineverse">
     
-    <meta itemprop="dateModified" content="2025-11-15T00:00:00+05:30">
+    <meta itemprop="dateModified" content="2025-01-17T00:00:00+05:30">
 
     <div class="page__inner-wrap">
       
@@ -287,7 +287,7 @@
 
 <h2 id="component-library">Component Library</h2>
 
-<p>OVS uses a custom component library built with React.</p>
+<p>Cineverse uses a custom component library built with React.</p>
 
 <h2 id="core-components">Core Components</h2>
 
@@ -297,29 +297,29 @@
   <span class="na">size</span><span class="p">=</span><span class="s">"large"</span>
   <span class="na">onClick</span><span class="p">=</span><span class="si">{</span><span class="nx">handleClick</span><span class="si">}</span>
 <span class="p">&gt;</span>
-  Cast Vote
+  Book Tickets
 <span class="p">&lt;/</span><span class="nc">Button</span><span class="p">&gt;</span>
 </code></pre></div></div>
 
 <h3 id="card">Card</h3>
 <div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">&lt;</span><span class="nc">Card</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nc">CardHeader</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Election Title<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Movie Title<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nc">CardHeader</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nc">CardBody</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Election description...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Movie description...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nc">CardBody</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nc">CardFooter</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nc">Button</span><span class="p">&gt;</span>View Details<span class="p">&lt;/</span><span class="nc">Button</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nc">Button</span><span class="p">&gt;</span>View Shows<span class="p">&lt;/</span><span class="nc">Button</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nc">CardFooter</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nc">Card</span><span class="p">&gt;</span>
 </code></pre></div></div>
 
 <h3 id="modal">Modal</h3>
 <div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">&lt;</span><span class="nc">Modal</span> <span class="na">isOpen</span><span class="p">=</span><span class="si">{</span><span class="nx">isOpen</span><span class="si">}</span> <span class="na">onClose</span><span class="p">=</span><span class="si">{</span><span class="nx">handleClose</span><span class="si">}</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nc">ModalHeader</span><span class="p">&gt;</span>Confirm Vote<span class="p">&lt;/</span><span class="nc">ModalHeader</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nc">ModalHeader</span><span class="p">&gt;</span>Confirm Booking<span class="p">&lt;/</span><span class="nc">ModalHeader</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nc">ModalBody</span><span class="p">&gt;</span>
-    Are you sure you want to vote for this candidate?
+    Are you sure you want to book these seats?
   <span class="p">&lt;/</span><span class="nc">ModalBody</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nc">ModalFooter</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nc">Button</span> <span class="na">onClick</span><span class="p">=</span><span class="si">{</span><span class="nx">handleConfirm</span><span class="si">}</span><span class="p">&gt;</span>Confirm<span class="p">&lt;/</span><span class="nc">Button</span><span class="p">&gt;</span>
@@ -360,12 +360,12 @@
 <span class="p">}</span>
 
 <span class="nc">.button-primary</span> <span class="p">{</span>
-  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#007bff</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#e50914</span><span class="p">;</span>
   <span class="nl">color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="nc">.button-primary</span><span class="nd">:hover</span> <span class="p">{</span>
-  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#0056b3</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#b20710</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
@@ -379,7 +379,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2025-11-15">November 15, 2025</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2025-01-17">January 17, 2025</time></p>
 
 
       </footer>
@@ -393,7 +393,7 @@
 ">Previous</a>
     
     
-      <a href="/cineverse/docs/frontend/usereffectvoting/" class="pagination--pager" title="User Effect Voting
+      <a href="/cineverse/docs/frontend/usereffectvoting/" class="pagination--pager" title="Booking Flow
 ">Next</a>
     
   </nav>

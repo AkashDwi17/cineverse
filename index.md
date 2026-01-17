@@ -41,8 +41,8 @@ feature_row:
 
 ## Features
 
-- **Secure Authentication**: JWT-based authentication system
-- **Real-time Voting**: Live vote counting and results
-- **Admin Dashboard**: Comprehensive election management
-- **Responsive Design**: Works on all devices
-- **Audit Trail**: Complete voting history and logs
+- **Secure Authentication**: JWT-based authentication with role-based access
+- **Movie Discovery**: Browse movies by language, genre, and release date
+- **Smart Seat Selection**: Real-time seat availability with temporary locking
+- **Seamless Booking**: Complete booking workflow with instant confirmation
+- **WhatsApp Notifications**: Get your tickets delivered via WhatsApp

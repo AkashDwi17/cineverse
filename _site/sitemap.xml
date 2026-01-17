@@ -54,15 +54,15 @@
 </url>
 <url>
 <loc>http://localhost:4000/cineverse/docs/frontend/feedback/</loc>
-<lastmod>2025-11-15T00:00:00+05:30</lastmod>
+<lastmod>2025-01-17T00:00:00+05:30</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/cineverse/docs/frontend/ui-components/</loc>
-<lastmod>2025-11-15T00:00:00+05:30</lastmod>
+<lastmod>2025-01-17T00:00:00+05:30</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/cineverse/docs/frontend/usereffectvoting/</loc>
-<lastmod>2025-11-15T00:00:00+05:30</lastmod>
+<lastmod>2025-01-17T00:00:00+05:30</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/cineverse/docs/installation/</loc>
@@ -93,5 +93,8 @@
 </url>
 <url>
 <loc>http://localhost:4000/cineverse/user-guide/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/cineverse/backend/auth-service/</loc>
 </url>
 </urlset>
