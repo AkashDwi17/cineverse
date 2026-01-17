@@ -1,0 +1,1026 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Frontend Components - Cineverse</title>
+<meta name="description" content="Complete reference for all React components in Cineverse">
+
+
+  <meta name="author" content="AkashDwi17">
+  
+  <meta property="article:author" content="AkashDwi17">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Cineverse">
+<meta property="og:title" content="Frontend Components">
+<meta property="og:url" content="http://localhost:4000/cineverse/docs/frontend/components/">
+
+
+  <meta property="og:description" content="Complete reference for all React components in Cineverse">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2026-01-18T00:43:53+05:30">
+
+
+
+  <meta property="article:modified_time" content="2026-01-18T00:00:00+05:30">
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/cineverse/docs/frontend/components/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AkashDwi17",
+      "url": "http://localhost:4000/cineverse/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/cineverse/feed.xml" type="application/atom+xml" rel="alternate" title="Cineverse Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/cineverse/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <link rel="icon" href="/cineverse/assets/images/favicon.svg" type="image/svg+xml">
+
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/cineverse/"><img src="/cineverse/assets/images/favicon.ico" alt="Cineverse"></a>
+        
+        <a class="site-title" href="/cineverse/">
+          Cineverse
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/cineverse/docs/introduction/">Documentation</a>
+            </li><li class="masthead__menu-item">
+              <a href="/cineverse/docs/quick-start/">Getting Started</a>
+            </li><li class="masthead__menu-item">
+              <a href="/cineverse/about/">About</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Getting Started</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/cineverse/docs/introduction/">Introduction</a></li>
+          
+            <li><a href="/cineverse/docs/installation/">Installation</a></li>
+          
+            <li><a href="/cineverse/docs/quick-start/">Quick Start</a></li>
+          
+            <li><a href="/cineverse/docs/diagrams/">Diagrams</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Backend</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/cineverse/docs/backend/api-reference/">API Reference</a></li>
+          
+            <li><a href="/cineverse/docs/backend/configuration/">Configuration</a></li>
+          
+            <li><a href="/cineverse/docs/backend/security/">Security</a></li>
+          
+            <li><a href="/cineverse/docs/backend/error-handling/">Error Handling</a></li>
+          
+            <li><a href="/cineverse/docs/backend/auth-service/">Auth Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/theatre-service/">Theatre Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/movie-service/">Movie Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/show-service/">Show Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/booking-service/">Booking Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/notification-service/">Notification Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/api-gateway-eureka/">API Gateway & Eureka</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Database</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/cineverse/docs/database/auth-database/">Auth Database</a></li>
+          
+            <li><a href="/cineverse/docs/database/theatre-database/">Theatre Database</a></li>
+          
+            <li><a href="/cineverse/docs/database/show-database/">Show Database</a></li>
+          
+            <li><a href="/cineverse/docs/database/booking-database/">Booking Database</a></li>
+          
+            <li><a href="/cineverse/docs/database/movie-database/">Movie Database (Mongo)</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Frontend</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/cineverse/docs/frontend/components/" class="active">Components</a></li>
+          
+            <li><a href="/cineverse/docs/frontend/routing/">Routing & Navigation</a></li>
+          
+            <li><a href="/cineverse/docs/frontend/state-api/">State & API Integration</a></li>
+          
+            <li><a href="/cineverse/docs/frontend/ui-components/">UI Components</a></li>
+          
+            <li><a href="/cineverse/docs/frontend/usereffectvoting/">User Effect Voting</a></li>
+          
+            <li><a href="/cineverse/docs/frontend/feedback/">Feedback System</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Guides</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/cineverse/docs/deployment/">Deployment</a></li>
+          
+            <li><a href="/cineverse/docs/troubleshooting/">Troubleshooting</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Frontend Components">
+    <meta itemprop="description" content="Complete reference for all React components in Cineverse">
+    
+    <meta itemprop="dateModified" content="2026-01-18T00:00:00+05:30">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Frontend Components
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#frontend-components-reference">Frontend Components Reference</a><ul><li><a href="#component-architecture">Component Architecture</a></li><li><a href="#core-components">Core Components</a><ul><li><a href="#navbar">Navbar</a></li><li><a href="#footer">Footer</a></li></ul></li><li><a href="#home-page-components">Home Page Components</a><ul><li><a href="#carousel">Carousel</a></li><li><a href="#cardcomponent">CardComponent</a></li></ul></li><li><a href="#booking-flow-components">Booking Flow Components</a><ul><li><a href="#moviedetails">MovieDetails</a></li><li><a href="#booking">Booking</a></li><li><a href="#seatlayout">SeatLayout</a></li><li><a href="#payment">Payment</a></li><li><a href="#paymentsuccess">PaymentSuccess</a></li><li><a href="#confirmation">Confirmation</a></li></ul></li><li><a href="#admin-panel-components">Admin Panel Components</a><ul><li><a href="#adminlayout">AdminLayout</a></li><li><a href="#admindashboard">AdminDashboard</a></li><li><a href="#moviespage">MoviesPage</a></li><li><a href="#showspage">ShowsPage</a></li><li><a href="#theatrepage">TheatrePage</a></li><li><a href="#bookingspage">BookingsPage</a></li><li><a href="#userspage">UsersPage</a></li></ul></li><li><a href="#authentication-components">Authentication Components</a><ul><li><a href="#login">Login</a></li></ul></li><li><a href="#utility-components">Utility Components</a><ul><li><a href="#errorpage">Errorpage</a></li></ul></li><li><a href="#component-best-practices">Component Best Practices</a><ul><li><a href="#state-management">State Management</a></li><li><a href="#api-integration">API Integration</a></li><li><a href="#navigation">Navigation</a></li><li><a href="#error-handling">Error Handling</a></li></ul></li><li><a href="#styling">Styling</a><ul><li><a href="#common-tailwind-patterns">Common Tailwind Patterns</a></li></ul></li><li><a href="#responsive-design">Responsive Design</a></li><li><a href="#component-testing">Component Testing</a><ul><li><a href="#manual-testing-checklist">Manual Testing Checklist</a></li></ul></li><li><a href="#common-issues">Common Issues</a><ul><li><a href="#issue-1-token-not-found">Issue 1: Token Not Found</a></li><li><a href="#issue-2-cors-error">Issue 2: CORS Error</a></li><li><a href="#issue-3-seat-already-booked">Issue 3: Seat Already Booked</a></li></ul></li><li><a href="#summary">Summary</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h1 id="frontend-components-reference">Frontend Components Reference</h1>
+
+<p>Complete documentation for all 26 React components in the Cineverse frontend application.</p>
+
+<h2 id="component-architecture">Component Architecture</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>App.jsx (Root)
+├── PublicLayout
+│   ├── Navbar
+│   ├── Carousel
+│   ├── CardComponent
+│   ├── MovieDetails
+│   ├── Booking
+│   ├── SeatLayout
+│   ├── Payment
+│   ├── PaymentSuccess
+│   ├── Confirmation
+│   └── Footer
+└── AdminLayout
+    ├── AdminDashboard
+    ├── MoviesPage
+    ├── ShowsPage
+    ├── TheatrePage
+    ├── BookingsPage
+    └── UsersPage (SUPER_ADMIN only)
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="core-components">Core Components</h2>
+
+<h3 id="navbar">Navbar</h3>
+
+<p><strong>File</strong>: <code class="language-plaintext highlighter-rouge">Navbar.jsx</code></p>
+
+<p><strong>Purpose</strong>: Main navigation bar with search, city selector, and authentication</p>
+
+<p><strong>Features</strong>:</p>
+<ul>
+  <li>Real-time movie search with autocomplete</li>
+  <li>City selection with localStorage persistence</li>
+  <li>Login/Logout functionality</li>
+  <li>Responsive mobile menu</li>
+</ul>
+
+<p><strong>Key State</strong>:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="p">[</span><span class="nx">selectedCity</span><span class="p">,</span> <span class="nx">setSelectedCity</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span>
+  <span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="dl">"</span><span class="s2">cineverse_city</span><span class="dl">"</span><span class="p">)</span> <span class="o">||</span> <span class="dl">"</span><span class="s2">Yelahanka</span><span class="dl">"</span>
+<span class="p">);</span>
+<span class="kd">const</span> <span class="p">[</span><span class="nx">searchText</span><span class="p">,</span> <span class="nx">setSearchText</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="dl">""</span><span class="p">);</span>
+<span class="kd">const</span> <span class="p">[</span><span class="nx">results</span><span class="p">,</span> <span class="nx">setResults</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">([]);</span>
+</code></pre></div></div>
+
+<p><strong>API Calls</strong>:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">GET /api/movies/search?query={searchText}</code> - Search movies</li>
+</ul>
+
+<hr />
+
+<h3 id="footer">Footer</h3>
+
+<p><strong>File</strong>: <code class="language-plaintext highlighter-rouge">Footer.jsx</code></p>
+
+<p><strong>Purpose</strong>: Footer with links and information</p>
+
+<p><strong>Sections</strong>:</p>
+<ul>
+  <li>About Cineverse</li>
+  <li>Quick links</li>
+  <li>Social media</li>
+  <li>Copyright information</li>
+</ul>
+
+<hr />
+
+<h2 id="home-page-components">Home Page Components</h2>
+
+<h3 id="carousel">Carousel</h3>
+
+<p><strong>File</strong>: <code class="language-plaintext highlighter-rouge">Carousel.jsx</code></p>
+
+<p><strong>Purpose</strong>: Hero carousel displaying featured movies</p>
+
+<p><strong>Features</strong>:</p>
+<ul>
+  <li>Auto-rotating slides</li>
+  <li>Manual navigation controls</li>
+  <li>Responsive design</li>
+</ul>
+
+<p><strong>Props</strong>: None (fetches data internally)</p>
+
+<hr />
+
+<h3 id="cardcomponent">CardComponent</h3>
+
+<p><strong>File</strong>: <code class="language-plaintext highlighter-rouge">CardComponent.jsx</code></p>
+
+<p><strong>Purpose</strong>: Display movies grouped by genre</p>
+
+<p><strong>Features</strong>:</p>
+<ul>
+  <li>Horizontal scrollable movie rows</li>
+  <li>Genre-based categorization</li>
+  <li>Movie cards with poster, rating, and booking button</li>
+</ul>
+
+<p><strong>API Calls</strong>:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">GET /api/movies</code> - Fetch all movies</li>
+</ul>
+
+<p><strong>Key Logic</strong>:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Group movies by genre</span>
+<span class="kd">const</span> <span class="nx">categoryMap</span> <span class="o">=</span> <span class="p">{};</span>
+<span class="nx">movies</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">movie</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">genreKey</span> <span class="o">=</span> <span class="nx">movie</span><span class="p">.</span><span class="nx">genre</span><span class="p">?.</span><span class="nx">split</span><span class="p">(</span><span class="dl">"</span><span class="s2">/</span><span class="dl">"</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">||</span> <span class="dl">"</span><span class="s2">Others</span><span class="dl">"</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">categoryMap</span><span class="p">[</span><span class="nx">genreKey</span><span class="p">])</span> <span class="nx">categoryMap</span><span class="p">[</span><span class="nx">genreKey</span><span class="p">]</span> <span class="o">=</span> <span class="p">[];</span>
+  <span class="nx">categoryMap</span><span class="p">[</span><span class="nx">genreKey</span><span class="p">].</span><span class="nx">push</span><span class="p">(</span><span class="nx">movie</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="booking-flow-components">Booking Flow Components</h2>
+
+<h3 id="moviedetails">MovieDetails</h3>
+
+<p><strong>File</strong>: <code class="language-plaintext highlighter-rouge">MovieDetails.jsx</code></p>
+
+<p><strong>Purpose</strong>: Display detailed movie information</p>
+
+<p><strong>Features</strong>:</p>
+<ul>
+  <li>Movie poster, title, description</li>
+  <li>Cast information</li>
+  <li>Show listings by city</li>
+  <li>Book tickets button</li>
+</ul>
+
+<p><strong>Route</strong>: <code class="language-plaintext highlighter-rouge">/movie/:id</code></p>
+
+<p><strong>API Calls</strong>:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">GET /api/movies/{id}</code> - Movie details</li>
+  <li><code class="language-plaintext highlighter-rouge">GET /api/shows/by-movie/{movieId}?city={city}</code> - Shows for movie</li>
+</ul>
+
+<hr />
+
+<h3 id="booking">Booking</h3>
+
+<p><strong>File</strong>: <code class="language-plaintext highlighter-rouge">Booking.jsx</code></p>
+
+<p><strong>Purpose</strong>: Select show and theatre</p>
+
+<p><strong>Features</strong>:</p>
+<ul>
+  <li>Theatre listings</li>
+  <li>Show time selection</li>
+  <li>Date selection</li>
+</ul>
+
+<p><strong>Route</strong>: <code class="language-plaintext highlighter-rouge">/booking/:id</code></p>
+
+<p><strong>State Management</strong>:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="p">[</span><span class="nx">shows</span><span class="p">,</span> <span class="nx">setShows</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">([]);</span>
+<span class="kd">const</span> <span class="p">[</span><span class="nx">selectedDate</span><span class="p">,</span> <span class="nx">setSelectedDate</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="seatlayout">SeatLayout</h3>
+
+<p><strong>File</strong>: <code class="language-plaintext highlighter-rouge">SeatLayout.jsx</code></p>
+
+<p><strong>Purpose</strong>: Interactive seat selection</p>
+
+<p><strong>Features</strong>:</p>
+<ul>
+  <li>13 rows (A-N) × 18 seats per row</li>
+  <li>Real-time seat availability (sold/locked/available)</li>
+  <li>Seat locking on proceed to payment</li>
+  <li>Price calculation</li>
+</ul>
+
+<p><strong>Route</strong>: <code class="language-plaintext highlighter-rouge">/seat/:id</code></p>
+
+<p><strong>Seat Status Colors</strong>:</p>
+<ul>
+  <li><strong>Green</strong>: Available</li>
+  <li><strong>Dark Green</strong>: Selected</li>
+  <li><strong>Red</strong>: Sold</li>
+  <li><strong>Yellow</strong>: Locked (by another user)</li>
+</ul>
+
+<p><strong>API Calls</strong>:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">GET /api/bookings/seat-status/{showId}</code> - Seat availability</li>
+  <li><code class="language-plaintext highlighter-rouge">POST /api/bookings/lock</code> - Lock selected seats</li>
+</ul>
+
+<p><strong>Key Logic</strong>:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">handleSeatToggle</span> <span class="o">=</span> <span class="p">(</span><span class="nx">seat</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">seat</span><span class="p">.</span><span class="nx">status</span> <span class="o">!==</span> <span class="dl">"</span><span class="s2">available</span><span class="dl">"</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+  
+  <span class="nx">setSelectedSeats</span><span class="p">((</span><span class="nx">prev</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">prev</span><span class="p">.</span><span class="nx">some</span><span class="p">((</span><span class="nx">s</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">s</span><span class="p">.</span><span class="nx">id</span> <span class="o">===</span> <span class="nx">seat</span><span class="p">.</span><span class="nx">id</span><span class="p">))</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nx">prev</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">s</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">s</span><span class="p">.</span><span class="nx">id</span> <span class="o">!==</span> <span class="nx">seat</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">prev</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;=</span> <span class="nx">ticketCount</span><span class="p">)</span> <span class="k">return</span> <span class="nx">prev</span><span class="p">;</span>
+    <span class="k">return</span> <span class="p">[...</span><span class="nx">prev</span><span class="p">,</span> <span class="nx">seat</span><span class="p">];</span>
+  <span class="p">});</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="payment">Payment</h3>
+
+<p><strong>File</strong>: <code class="language-plaintext highlighter-rouge">Payment.jsx</code></p>
+
+<p><strong>Purpose</strong>: Payment processing</p>
+
+<p><strong>Features</strong>:</p>
+<ul>
+  <li>Booking summary</li>
+  <li>Payment method selection</li>
+  <li>Stripe integration (optional)</li>
+</ul>
+
+<p><strong>Route</strong>: <code class="language-plaintext highlighter-rouge">/payment</code></p>
+
+<p><strong>State from Navigation</strong>:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="p">{</span> <span class="nx">movie</span><span class="p">,</span> <span class="nx">show</span><span class="p">,</span> <span class="nx">theatre</span><span class="p">,</span> <span class="nx">selectedSeats</span><span class="p">,</span> <span class="nx">amount</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">location</span><span class="p">.</span><span class="nx">state</span><span class="p">;</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="paymentsuccess">PaymentSuccess</h3>
+
+<p><strong>File</strong>: <code class="language-plaintext highlighter-rouge">PaymentSuccess.jsx</code></p>
+
+<p><strong>Purpose</strong>: Confirmation after successful payment</p>
+
+<p><strong>Features</strong>:</p>
+<ul>
+  <li>Booking confirmation</li>
+  <li>Ticket details</li>
+  <li>Download/Share options</li>
+</ul>
+
+<p><strong>Route</strong>: <code class="language-plaintext highlighter-rouge">/payment-success</code></p>
+
+<p><strong>API Calls</strong>:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">POST /api/bookings/confirm</code> - Confirm booking</li>
+</ul>
+
+<hr />
+
+<h3 id="confirmation">Confirmation</h3>
+
+<p><strong>File</strong>: <code class="language-plaintext highlighter-rouge">Confirmation.jsx</code></p>
+
+<p><strong>Purpose</strong>: Booking confirmation page</p>
+
+<p><strong>Features</strong>:</p>
+<ul>
+  <li>Booking details</li>
+  <li>QR code (optional)</li>
+  <li>Print ticket option</li>
+</ul>
+
+<p><strong>Route</strong>: <code class="language-plaintext highlighter-rouge">/confirmation</code></p>
+
+<hr />
+
+<h2 id="admin-panel-components">Admin Panel Components</h2>
+
+<h3 id="adminlayout">AdminLayout</h3>
+
+<p><strong>File</strong>: <code class="language-plaintext highlighter-rouge">AdminLayout.jsx</code></p>
+
+<p><strong>Purpose</strong>: Layout wrapper for admin pages</p>
+
+<p><strong>Features</strong>:</p>
+<ul>
+  <li>Sidebar navigation</li>
+  <li>Admin header</li>
+  <li>Role-based menu items</li>
+</ul>
+
+<p><strong>Navigation Items</strong>:</p>
+<ul>
+  <li>Dashboard</li>
+  <li>Movies</li>
+  <li>Shows</li>
+  <li>Theatres</li>
+  <li>Bookings</li>
+  <li>Users (SUPER_ADMIN only)</li>
+</ul>
+
+<hr />
+
+<h3 id="admindashboard">AdminDashboard</h3>
+
+<p><strong>File</strong>: <code class="language-plaintext highlighter-rouge">AdminDashboard.jsx</code></p>
+
+<p><strong>Purpose</strong>: Admin dashboard with statistics</p>
+
+<p><strong>Features</strong>:</p>
+<ul>
+  <li>Total bookings count</li>
+  <li>Total revenue</li>
+  <li>Recent bookings</li>
+  <li>Quick actions</li>
+</ul>
+
+<p><strong>API Calls</strong>:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">GET /api/bookings/all</code> - All bookings</li>
+</ul>
+
+<hr />
+
+<h3 id="moviespage">MoviesPage</h3>
+
+<p><strong>File</strong>: <code class="language-plaintext highlighter-rouge">MoviesPage.jsx</code></p>
+
+<p><strong>Purpose</strong>: Manage movies (CRUD)</p>
+
+<p><strong>Features</strong>:</p>
+<ul>
+  <li>List all movies</li>
+  <li>Add new movie with poster upload</li>
+  <li>Edit movie details</li>
+  <li>Delete movie</li>
+</ul>
+
+<p><strong>API Calls</strong>:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">GET /api/movies</code> - List movies</li>
+  <li><code class="language-plaintext highlighter-rouge">POST /api/movies</code> - Create movie (multipart/form-data)</li>
+  <li><code class="language-plaintext highlighter-rouge">PUT /api/movies/{id}</code> - Update movie</li>
+  <li><code class="language-plaintext highlighter-rouge">DELETE /api/movies/{id}</code> - Delete movie</li>
+</ul>
+
+<p><strong>Form Fields</strong>:</p>
+<ul>
+  <li>Title, Genre, Language</li>
+  <li>Duration, Rating, Release Date</li>
+  <li>Cast (array), Description</li>
+  <li>Poster image upload</li>
+</ul>
+
+<hr />
+
+<h3 id="showspage">ShowsPage</h3>
+
+<p><strong>File</strong>: <code class="language-plaintext highlighter-rouge">ShowsPage.jsx</code></p>
+
+<p><strong>Purpose</strong>: Manage shows (CRUD)</p>
+
+<p><strong>Features</strong>:</p>
+<ul>
+  <li>List all shows</li>
+  <li>Create show (movie + theatre + time + price)</li>
+  <li>Edit show</li>
+  <li>Delete show</li>
+</ul>
+
+<p><strong>API Calls</strong>:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">GET /api/shows</code> - List all shows</li>
+  <li><code class="language-plaintext highlighter-rouge">POST /api/shows</code> - Create show</li>
+  <li><code class="language-plaintext highlighter-rouge">PUT /api/shows/{id}</code> - Update show</li>
+  <li><code class="language-plaintext highlighter-rouge">DELETE /api/shows/{id}</code> - Delete show</li>
+</ul>
+
+<hr />
+
+<h3 id="theatrepage">TheatrePage</h3>
+
+<p><strong>File</strong>: <code class="language-plaintext highlighter-rouge">TheatrePage.jsx</code></p>
+
+<p><strong>Purpose</strong>: Manage theatres (CRUD)</p>
+
+<p><strong>Features</strong>:</p>
+<ul>
+  <li>List all theatres</li>
+  <li>Add new theatre</li>
+  <li>Edit theatre details</li>
+  <li>Delete theatre</li>
+</ul>
+
+<p><strong>API Calls</strong>:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">GET /api/theatres/list</code> - List theatres</li>
+  <li><code class="language-plaintext highlighter-rouge">POST /api/theatres</code> - Create theatre</li>
+  <li><code class="language-plaintext highlighter-rouge">PUT /api/theatres/{id}</code> - Update theatre</li>
+  <li><code class="language-plaintext highlighter-rouge">DELETE /api/theatres/{id}</code> - Delete theatre</li>
+</ul>
+
+<p><strong>Form Fields</strong>:</p>
+<ul>
+  <li>Name, Address, City</li>
+  <li>Screen Type (2D/3D/IMAX)</li>
+  <li>Total Seats</li>
+</ul>
+
+<hr />
+
+<h3 id="bookingspage">BookingsPage</h3>
+
+<p><strong>File</strong>: <code class="language-plaintext highlighter-rouge">BookingsPage.jsx</code></p>
+
+<p><strong>Purpose</strong>: View all bookings (Admin)</p>
+
+<p><strong>Features</strong>:</p>
+<ul>
+  <li>List all bookings</li>
+  <li>Filter by date/status</li>
+  <li>View booking details</li>
+</ul>
+
+<p><strong>API Calls</strong>:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">GET /api/bookings/all</code> - All bookings</li>
+</ul>
+
+<hr />
+
+<h3 id="userspage">UsersPage</h3>
+
+<p><strong>File</strong>: <code class="language-plaintext highlighter-rouge">UsersPage.jsx</code></p>
+
+<p><strong>Purpose</strong>: User management (SUPER_ADMIN only)</p>
+
+<p><strong>Features</strong>:</p>
+<ul>
+  <li>List all users</li>
+  <li>View user details</li>
+  <li>Manage user roles</li>
+</ul>
+
+<p><strong>Access Control</strong>:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="dl">"</span><span class="s2">cineverse_role</span><span class="dl">"</span><span class="p">)</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">SUPER_ADMIN</span><span class="dl">"</span>
+  <span class="p">?</span> <span class="o">&lt;</span><span class="nx">UsersPage</span> <span class="o">/&gt;</span>
+  <span class="p">:</span> <span class="o">&lt;</span><span class="nx">Navigate</span> <span class="nx">to</span><span class="o">=</span><span class="dl">"</span><span class="s2">/admin</span><span class="dl">"</span> <span class="nx">replace</span> <span class="o">/&gt;</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="authentication-components">Authentication Components</h2>
+
+<h3 id="login">Login</h3>
+
+<p><strong>File</strong>: <code class="language-plaintext highlighter-rouge">Login.jsx</code></p>
+
+<p><strong>Purpose</strong>: User login and signup</p>
+
+<p><strong>Features</strong>:</p>
+<ul>
+  <li>Login form</li>
+  <li>Signup form</li>
+  <li>Toggle between login/signup</li>
+  <li>JWT token storage</li>
+</ul>
+
+<p><strong>API Calls</strong>:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">POST /api/auth/login</code> - User login</li>
+  <li><code class="language-plaintext highlighter-rouge">POST /api/auth/signup</code> - User registration</li>
+</ul>
+
+<p><strong>Token Storage</strong>:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="dl">'</span><span class="s1">cineverse_token</span><span class="dl">'</span><span class="p">,</span> <span class="nx">token</span><span class="p">);</span>
+<span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="dl">'</span><span class="s1">cineverse_role</span><span class="dl">'</span><span class="p">,</span> <span class="nx">role</span><span class="p">);</span>
+<span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="dl">'</span><span class="s1">cineverse_userId</span><span class="dl">'</span><span class="p">,</span> <span class="nx">userId</span><span class="p">);</span>
+<span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="dl">'</span><span class="s1">cineverse_username</span><span class="dl">'</span><span class="p">,</span> <span class="nx">username</span><span class="p">);</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="utility-components">Utility Components</h2>
+
+<h3 id="errorpage">Errorpage</h3>
+
+<p><strong>File</strong>: <code class="language-plaintext highlighter-rouge">Errorpage.jsx</code></p>
+
+<p><strong>Purpose</strong>: 404 error page</p>
+
+<p><strong>Features</strong>:</p>
+<ul>
+  <li>Custom 404 message</li>
+  <li>Navigation back to home</li>
+</ul>
+
+<p><strong>Route</strong>: <code class="language-plaintext highlighter-rouge">*</code> (catch-all)</p>
+
+<hr />
+
+<h2 id="component-best-practices">Component Best Practices</h2>
+
+<h3 id="state-management">State Management</h3>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Use useState for local component state</span>
+<span class="kd">const</span> <span class="p">[</span><span class="nx">movies</span><span class="p">,</span> <span class="nx">setMovies</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">([]);</span>
+
+<span class="c1">// Use useEffect for data fetching</span>
+<span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">loadMovies</span><span class="p">();</span>
+<span class="p">},</span> <span class="p">[]);</span>
+</code></pre></div></div>
+
+<h3 id="api-integration">API Integration</h3>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Use apiClient for authenticated requests</span>
+<span class="k">import</span> <span class="nx">api</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./apiClient</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">api</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">/api/movies</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="navigation">Navigation</h3>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Use useNavigate for programmatic navigation</span>
+<span class="kd">const</span> <span class="nx">navigate</span> <span class="o">=</span> <span class="nx">useNavigate</span><span class="p">();</span>
+<span class="nx">navigate</span><span class="p">(</span><span class="dl">'</span><span class="s1">/movie/123</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span> <span class="na">state</span><span class="p">:</span> <span class="p">{</span> <span class="nx">movie</span> <span class="p">}</span> <span class="p">});</span>
+
+<span class="c1">// Use Link for declarative navigation</span>
+<span class="o">&lt;</span><span class="nx">Link</span> <span class="nx">to</span><span class="o">=</span><span class="dl">"</span><span class="s2">/movie/123</span><span class="dl">"</span><span class="o">&gt;</span><span class="nx">View</span> <span class="nx">Movie</span><span class="o">&lt;</span><span class="sr">/Link</span><span class="err">&gt;
+</span></code></pre></div></div>
+
+<h3 id="error-handling">Error Handling</h3>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">api</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">/api/movies</span><span class="dl">'</span><span class="p">);</span>
+  <span class="nx">setMovies</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="dl">'</span><span class="s1">Error loading movies:</span><span class="dl">'</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">Failed to load movies</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="styling">Styling</h2>
+
+<p>All components use <strong>inline Tailwind CSS</strong> classes:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">bg-white shadow-lg rounded-lg p-4 hover:shadow-xl transition-all</span><span class="dl">"</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="nx">h2</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">text-2xl font-bold text-gray-800</span><span class="dl">"</span><span class="o">&gt;</span><span class="nx">Title</span><span class="o">&lt;</span><span class="sr">/h2</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span></code></pre></div></div>
+
+<h3 id="common-tailwind-patterns">Common Tailwind Patterns</h3>
+
+<ul>
+  <li><strong>Container</strong>: <code class="language-plaintext highlighter-rouge">max-w-screen-2xl mx-auto px-4</code></li>
+  <li><strong>Card</strong>: <code class="language-plaintext highlighter-rouge">bg-white shadow-lg rounded-lg p-6</code></li>
+  <li><strong>Button</strong>: <code class="language-plaintext highlighter-rouge">bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-lg</code></li>
+  <li><strong>Grid</strong>: <code class="language-plaintext highlighter-rouge">grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6</code></li>
+</ul>
+
+<hr />
+
+<h2 id="responsive-design">Responsive Design</h2>
+
+<p>All components are mobile-responsive using Tailwind breakpoints:</p>
+
+<ul>
+  <li><strong>sm</strong>: 640px</li>
+  <li><strong>md</strong>: 768px</li>
+  <li><strong>lg</strong>: 1024px</li>
+  <li><strong>xl</strong>: 1280px</li>
+  <li><strong>2xl</strong>: 1536px</li>
+</ul>
+
+<p>Example:</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">text-sm md:text-base lg:text-lg</span><span class="dl">"</span><span class="o">&gt;</span>
+  <span class="nx">Responsive</span> <span class="nx">text</span>
+<span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span></code></pre></div></div>
+
+<hr />
+
+<h2 id="component-testing">Component Testing</h2>
+
+<h3 id="manual-testing-checklist">Manual Testing Checklist</h3>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Component renders without errors</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />API calls work correctly</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Error states handled gracefully</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Loading states displayed</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Responsive on mobile/tablet/desktop</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Navigation works correctly</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Forms validate input</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Authentication required for protected routes</li>
+</ul>
+
+<hr />
+
+<h2 id="common-issues">Common Issues</h2>
+
+<h3 id="issue-1-token-not-found">Issue 1: Token Not Found</h3>
+
+<p><strong>Solution</strong>: Check localStorage for <code class="language-plaintext highlighter-rouge">cineverse_token</code></p>
+
+<h3 id="issue-2-cors-error">Issue 2: CORS Error</h3>
+
+<p><strong>Solution</strong>: Verify API Gateway CORS configuration</p>
+
+<h3 id="issue-3-seat-already-booked">Issue 3: Seat Already Booked</h3>
+
+<p><strong>Solution</strong>: Refresh seat status before locking</p>
+
+<hr />
+
+<h2 id="summary">Summary</h2>
+
+<p>The Cineverse frontend consists of:</p>
+<ul>
+  <li><strong>26 React components</strong></li>
+  <li><strong>Tailwind CSS</strong> for styling</li>
+  <li><strong>React Router</strong> for navigation</li>
+  <li><strong>Axios</strong> for API calls</li>
+  <li><strong>LocalStorage</strong> for state persistence</li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2026-01-18">January 18, 2026</time></p>
+
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/cineverse/docs/diagrams/" class="pagination--pager" title="Diagrams
+">Previous</a>
+    
+    
+      <a href="/cineverse/docs/frontend/feedback/" class="pagination--pager" title="Feedback System
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+    <ul class="social-icons">
+        
+
+        
+
+        
+        <li><a href="/cineverse/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+        
+    </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2026 YadnyeshKolte. Powered by <a
+        href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a
+        href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+
+    
+  <script src="/cineverse/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

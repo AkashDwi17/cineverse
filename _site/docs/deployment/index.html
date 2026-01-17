@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Movie Service - Cineverse</title>
-<meta name="description" content="Manages movie metadata (title, description, language, genre, release date).">
+<!-- begin _includes/seo.html --><title>Deployment Guide - Cineverse</title>
+<meta name="description" content="Complete deployment guide for Cineverse platform">
 
 
   <meta name="author" content="AkashDwi17">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Cineverse">
-<meta property="og:title" content="Movie Service">
-<meta property="og:url" content="http://localhost:4000/cineverse/docs/backend/movie-service/">
+<meta property="og:title" content="Deployment Guide">
+<meta property="og:url" content="http://localhost:4000/cineverse/docs/deployment/">
 
 
-  <meta property="og:description" content="Manages movie metadata (title, description, language, genre, release date).">
+  <meta property="og:description" content="Complete deployment guide for Cineverse platform">
 
 
 
@@ -38,12 +38,12 @@
 
 
 
-  <meta property="article:modified_time" content="2025-12-05T00:00:00+05:30">
+  <meta property="article:modified_time" content="2026-01-18T00:00:00+05:30">
 
 
 
 
-<link rel="canonical" href="http://localhost:4000/cineverse/docs/backend/movie-service/">
+<link rel="canonical" href="http://localhost:4000/cineverse/docs/deployment/">
 
 
 
@@ -201,7 +201,7 @@
           
             <li><a href="/cineverse/docs/backend/theatre-service/">Theatre Service</a></li>
           
-            <li><a href="/cineverse/docs/backend/movie-service/" class="active">Movie Service</a></li>
+            <li><a href="/cineverse/docs/backend/movie-service/">Movie Service</a></li>
           
             <li><a href="/cineverse/docs/backend/show-service/">Show Service</a></li>
           
@@ -269,7 +269,7 @@
         
         <ul>
           
-            <li><a href="/cineverse/docs/deployment/">Deployment</a></li>
+            <li><a href="/cineverse/docs/deployment/" class="active">Deployment</a></li>
           
             <li><a href="/cineverse/docs/troubleshooting/">Troubleshooting</a></li>
           
@@ -287,15 +287,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Movie Service">
-    <meta itemprop="description" content="Manages movie metadata (title, description, language, genre, release date).">
+    <meta itemprop="headline" content="Deployment Guide">
+    <meta itemprop="description" content="Complete deployment guide for Cineverse platform">
     
-    <meta itemprop="dateModified" content="2025-12-05T00:00:00+05:30">
+    <meta itemprop="dateModified" content="2026-01-18T00:00:00+05:30">
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Movie Service
+          <h1 id="page-title" class="page__title" itemprop="headline">Deployment Guide
 </h1>
           
 
@@ -308,50 +308,154 @@
           <aside class="sidebar__right ">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#movie-service">Movie Service</a><ul><li><a href="#responsibilities">Responsibilities</a></li><li><a href="#data-model">Data model</a></li><li><a href="#apis">APIs</a><ul><li><a href="#get-apimovieslist">GET /api/movies/list</a></li><li><a href="#get-apimoviesviewid">GET /api/movies/view/{id}</a></li><li><a href="#post-apimovies-admin">POST /api/movies (ADMIN)</a></li></ul></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#deployment-guide">Deployment Guide</a><ul><li><a href="#prerequisites">Prerequisites</a></li><li><a href="#development-deployment">Development Deployment</a><ul><li><a href="#1-start-databases">1. Start Databases</a></li><li><a href="#2-start-backend-services-in-order">2. Start Backend Services (in order)</a></li><li><a href="#3-start-frontend">3. Start Frontend</a></li></ul></li><li><a href="#production-deployment">Production Deployment</a><ul><li><a href="#docker-deployment">Docker Deployment</a></li></ul></li><li><a href="#environment-variables">Environment Variables</a></li><li><a href="#health-checks">Health Checks</a></li><li><a href="#summary">Summary</a></li></ul></li></ul>
 
             </nav>
           </aside>
         
-        <h1 id="movie-service">Movie Service</h1>
+        <h1 id="deployment-guide">Deployment Guide</h1>
 
-<p><strong>Port (example):</strong> <code class="language-plaintext highlighter-rouge">8083</code></p>
+<h2 id="prerequisites">Prerequisites</h2>
 
-<h2 id="responsibilities">Responsibilities</h2>
 <ul>
-  <li>CRUD operations for movies</li>
-  <li>Expose movie listings and details used by show service</li>
+  <li>Java 21</li>
+  <li>Node.js 18+</li>
+  <li>MySQL 8.0+</li>
+  <li>MongoDB 4.4+</li>
+  <li>Maven 3.8+</li>
 </ul>
 
-<h2 id="data-model">Data model</h2>
+<hr />
+
+<h2 id="development-deployment">Development Deployment</h2>
+
+<h3 id="1-start-databases">1. Start Databases</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># MySQL</span>
+mysql <span class="nt">-u</span> root <span class="nt">-p</span>
+
+<span class="c"># MongoDB</span>
+mongod
+</code></pre></div></div>
+
+<h3 id="2-start-backend-services-in-order">2. Start Backend Services (in order)</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. Eureka Server</span>
+<span class="nb">cd </span>backend/service-registry
+mvn spring-boot:run
+
+<span class="c"># 2. API Gateway</span>
+<span class="nb">cd </span>backend/api-gateway
+mvn spring-boot:run
+
+<span class="c"># 3-7. Microservices (any order)</span>
+<span class="nb">cd </span>backend/auth-service <span class="o">&amp;&amp;</span> mvn spring-boot:run
+<span class="nb">cd </span>backend/theatre <span class="o">&amp;&amp;</span> mvn spring-boot:run
+<span class="nb">cd </span>backend/movieService <span class="o">&amp;&amp;</span> mvn spring-boot:run
+<span class="nb">cd </span>backend/Show-service <span class="o">&amp;&amp;</span> mvn spring-boot:run
+<span class="nb">cd </span>backend/BookingService <span class="o">&amp;&amp;</span> mvn spring-boot:run
+</code></pre></div></div>
+
+<h3 id="3-start-frontend">3. Start Frontend</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>frontend
+npm <span class="nb">install
+</span>npm run dev
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="production-deployment">Production Deployment</h2>
+
+<h3 id="docker-deployment">Docker Deployment</h3>
+
+<p><strong>Dockerfile</strong> (example for auth-service):</p>
+
+<div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">FROM</span><span class="s"> openjdk:21-jdk-slim</span>
+<span class="k">WORKDIR</span><span class="s"> /app</span>
+<span class="k">COPY</span><span class="s"> target/auth-service-1.0.0.jar app.jar</span>
+<span class="k">EXPOSE</span><span class="s"> 8082</span>
+<span class="k">ENTRYPOINT</span><span class="s"> ["java", "-jar", "app.jar"]</span>
+</code></pre></div></div>
+
+<p><strong>docker-compose.yml</strong>:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">version</span><span class="pi">:</span> <span class="s1">'</span><span class="s">3.8'</span>
+
+<span class="na">services</span><span class="pi">:</span>
+  <span class="na">mysql</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">mysql:8.0</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="na">MYSQL_ROOT_PASSWORD</span><span class="pi">:</span> <span class="s">${DB_PASSWORD}</span>
+    <span class="na">ports</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">3306:3306"</span>
+  
+  <span class="na">mongodb</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">mongo:4.4</span>
+    <span class="na">ports</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">27017:27017"</span>
+  
+  <span class="na">eureka</span><span class="pi">:</span>
+    <span class="na">build</span><span class="pi">:</span> <span class="s">./backend/service-registry</span>
+    <span class="na">ports</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">8761:8761"</span>
+  
+  <span class="na">api-gateway</span><span class="pi">:</span>
+    <span class="na">build</span><span class="pi">:</span> <span class="s">./backend/api-gateway</span>
+    <span class="na">ports</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">9191:9191"</span>
+    <span class="na">depends_on</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">eureka</span>
+  
+  <span class="na">auth-service</span><span class="pi">:</span>
+    <span class="na">build</span><span class="pi">:</span> <span class="s">./backend/auth-service</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="na">DB_PASSWORD</span><span class="pi">:</span> <span class="s">${DB_PASSWORD}</span>
+      <span class="na">JWT_SECRET</span><span class="pi">:</span> <span class="s">${JWT_SECRET}</span>
+    <span class="na">depends_on</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">mysql</span>
+      <span class="pi">-</span> <span class="s">eureka</span>
+  
+  <span class="na">frontend</span><span class="pi">:</span>
+    <span class="na">build</span><span class="pi">:</span> <span class="s">./frontend</span>
+    <span class="na">ports</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">80:80"</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="environment-variables">Environment Variables</h2>
+
+<p>Create <code class="language-plaintext highlighter-rouge">.env</code> file:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">DB_PASSWORD</span><span class="o">=</span>your_secure_password
+<span class="nv">JWT_SECRET</span><span class="o">=</span>your_256bit_secret
+<span class="nv">CLOUDINARY_CLOUD_NAME</span><span class="o">=</span>your_cloud_name
+<span class="nv">CLOUDINARY_API_KEY</span><span class="o">=</span>your_api_key
+<span class="nv">CLOUDINARY_API_SECRET</span><span class="o">=</span>your_api_secret
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="health-checks">Health Checks</h2>
+
+<p>Monitor services at:</p>
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">id</code> (Long)</li>
-  <li><code class="language-plaintext highlighter-rouge">title</code> (String)</li>
-  <li><code class="language-plaintext highlighter-rouge">description</code> (String)</li>
-  <li><code class="language-plaintext highlighter-rouge">language</code> (String)</li>
-  <li><code class="language-plaintext highlighter-rouge">genre</code> (String)</li>
-  <li><code class="language-plaintext highlighter-rouge">releaseDate</code> (Date)</li>
-  <li><code class="language-plaintext highlighter-rouge">duration</code> (Integer)</li>
+  <li>Eureka Dashboard: http://localhost:8761</li>
+  <li>API Gateway: http://localhost:9191/actuator/health</li>
 </ul>
 
-<h2 id="apis">APIs</h2>
+<hr />
 
-<h3 id="get-apimovieslist">GET <code class="language-plaintext highlighter-rouge">/api/movies/list</code></h3>
-<p>List movies.</p>
+<h2 id="summary">Summary</h2>
 
-<h3 id="get-apimoviesviewid">GET <code class="language-plaintext highlighter-rouge">/api/movies/view/{id}</code></h3>
-<p>Get a single movie.</p>
-
-<h3 id="post-apimovies-admin">POST <code class="language-plaintext highlighter-rouge">/api/movies</code> (ADMIN)</h3>
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"title"</span><span class="p">:</span><span class="s2">"Avengers"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"description"</span><span class="p">:</span><span class="s2">"Superhero movie"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"language"</span><span class="p">:</span><span class="s2">"English"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"genre"</span><span class="p">:</span><span class="s2">"Action"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"releaseDate"</span><span class="p">:</span><span class="s2">"2025-11-15"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"duration"</span><span class="p">:</span><span class="mi">180</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
+<ol>
+  <li>Start databases</li>
+  <li>Start Eureka</li>
+  <li>Start API Gateway</li>
+  <li>Start microservices</li>
+  <li>Start frontend</li>
+</ol>
 
         
       </section>
@@ -363,7 +467,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2025-12-05">December 5, 2025</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2026-01-18">January 18, 2026</time></p>
 
 
       </footer>
@@ -373,11 +477,11 @@
       
   <nav class="pagination">
     
-      <a href="/cineverse/docs/backend/error-handling/" class="pagination--pager" title="Error Handling
+      <a href="/cineverse/docs/database/theatre-database/" class="pagination--pager" title="Theatre Service Database
 ">Previous</a>
     
     
-      <a href="/cineverse/docs/backend/notification-service/" class="pagination--pager" title="Notification Service
+      <a href="/cineverse/docs/diagrams/" class="pagination--pager" title="Diagrams
 ">Next</a>
     
   </nav>

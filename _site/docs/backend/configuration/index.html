@@ -1,0 +1,882 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Configuration Guide - Cineverse</title>
+<meta name="description" content="Complete configuration guide for all Cineverse microservices">
+
+
+  <meta name="author" content="AkashDwi17">
+  
+  <meta property="article:author" content="AkashDwi17">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Cineverse">
+<meta property="og:title" content="Configuration Guide">
+<meta property="og:url" content="http://localhost:4000/cineverse/docs/backend/configuration/">
+
+
+  <meta property="og:description" content="Complete configuration guide for all Cineverse microservices">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2026-01-18T00:43:53+05:30">
+
+
+
+  <meta property="article:modified_time" content="2026-01-18T00:00:00+05:30">
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/cineverse/docs/backend/configuration/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AkashDwi17",
+      "url": "http://localhost:4000/cineverse/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/cineverse/feed.xml" type="application/atom+xml" rel="alternate" title="Cineverse Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/cineverse/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <link rel="icon" href="/cineverse/assets/images/favicon.svg" type="image/svg+xml">
+
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/cineverse/"><img src="/cineverse/assets/images/favicon.ico" alt="Cineverse"></a>
+        
+        <a class="site-title" href="/cineverse/">
+          Cineverse
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/cineverse/docs/introduction/">Documentation</a>
+            </li><li class="masthead__menu-item">
+              <a href="/cineverse/docs/quick-start/">Getting Started</a>
+            </li><li class="masthead__menu-item">
+              <a href="/cineverse/about/">About</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Getting Started</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/cineverse/docs/introduction/">Introduction</a></li>
+          
+            <li><a href="/cineverse/docs/installation/">Installation</a></li>
+          
+            <li><a href="/cineverse/docs/quick-start/">Quick Start</a></li>
+          
+            <li><a href="/cineverse/docs/diagrams/">Diagrams</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Backend</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/cineverse/docs/backend/api-reference/">API Reference</a></li>
+          
+            <li><a href="/cineverse/docs/backend/configuration/" class="active">Configuration</a></li>
+          
+            <li><a href="/cineverse/docs/backend/security/">Security</a></li>
+          
+            <li><a href="/cineverse/docs/backend/error-handling/">Error Handling</a></li>
+          
+            <li><a href="/cineverse/docs/backend/auth-service/">Auth Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/theatre-service/">Theatre Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/movie-service/">Movie Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/show-service/">Show Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/booking-service/">Booking Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/notification-service/">Notification Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/api-gateway-eureka/">API Gateway & Eureka</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Database</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/cineverse/docs/database/auth-database/">Auth Database</a></li>
+          
+            <li><a href="/cineverse/docs/database/theatre-database/">Theatre Database</a></li>
+          
+            <li><a href="/cineverse/docs/database/show-database/">Show Database</a></li>
+          
+            <li><a href="/cineverse/docs/database/booking-database/">Booking Database</a></li>
+          
+            <li><a href="/cineverse/docs/database/movie-database/">Movie Database (Mongo)</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Frontend</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/cineverse/docs/frontend/components/">Components</a></li>
+          
+            <li><a href="/cineverse/docs/frontend/routing/">Routing & Navigation</a></li>
+          
+            <li><a href="/cineverse/docs/frontend/state-api/">State & API Integration</a></li>
+          
+            <li><a href="/cineverse/docs/frontend/ui-components/">UI Components</a></li>
+          
+            <li><a href="/cineverse/docs/frontend/usereffectvoting/">User Effect Voting</a></li>
+          
+            <li><a href="/cineverse/docs/frontend/feedback/">Feedback System</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Guides</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/cineverse/docs/deployment/">Deployment</a></li>
+          
+            <li><a href="/cineverse/docs/troubleshooting/">Troubleshooting</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Configuration Guide">
+    <meta itemprop="description" content="Complete configuration guide for all Cineverse microservices">
+    
+    <meta itemprop="dateModified" content="2026-01-18T00:00:00+05:30">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Configuration Guide
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#configuration-guide">Configuration Guide</a><ul><li><a href="#overview">Overview</a></li><li><a href="#service-ports">Service Ports</a></li><li><a href="#auth-service-configuration">Auth Service Configuration</a><ul><li><a href="#key-configuration-points">Key Configuration Points</a></li></ul></li><li><a href="#theatre-service-configuration">Theatre Service Configuration</a></li><li><a href="#movie-service-configuration">Movie Service Configuration</a><ul><li><a href="#cloudinary-setup">Cloudinary Setup</a></li></ul></li><li><a href="#show-service-configuration">Show Service Configuration</a></li><li><a href="#booking-service-configuration">Booking Service Configuration</a></li><li><a href="#api-gateway-configuration">API Gateway Configuration</a><ul><li><a href="#gateway-routing-explanation">Gateway Routing Explanation</a></li></ul></li><li><a href="#service-registry-eureka-configuration">Service Registry (Eureka) Configuration</a></li><li><a href="#environment-variables">Environment Variables</a></li><li><a href="#profile-based-configuration">Profile-Based Configuration</a><ul><li><a href="#development-profile">Development Profile</a></li><li><a href="#production-profile">Production Profile</a></li></ul></li><li><a href="#database-setup">Database Setup</a><ul><li><a href="#mysql-databases">MySQL Databases</a></li><li><a href="#mongodb">MongoDB</a></li></ul></li><li><a href="#generating-jwt-secret">Generating JWT Secret</a></li><li><a href="#cors-configuration">CORS Configuration</a></li><li><a href="#troubleshooting-configuration">Troubleshooting Configuration</a><ul><li><a href="#service-not-registering-with-eureka">Service Not Registering with Eureka</a></li><li><a href="#database-connection-failed">Database Connection Failed</a></li><li><a href="#jwt-token-validation-failed">JWT Token Validation Failed</a></li></ul></li><li><a href="#best-practices">Best Practices</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h1 id="configuration-guide">Configuration Guide</h1>
+
+<p>This guide covers all configuration settings for the Cineverse microservices platform.</p>
+
+<h2 id="overview">Overview</h2>
+
+<p>Each microservice has its own <code class="language-plaintext highlighter-rouge">application.properties</code> file located in <code class="language-plaintext highlighter-rouge">src/main/resources/</code>. Configuration includes:</p>
+<ul>
+  <li>Server ports</li>
+  <li>Database connections</li>
+  <li>Eureka service registry</li>
+  <li>JWT secrets</li>
+  <li>External API keys</li>
+</ul>
+
+<hr />
+
+<h2 id="service-ports">Service Ports</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Service</th>
+      <th>Port</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Service Registry (Eureka)</td>
+      <td>8761</td>
+      <td>Service discovery</td>
+    </tr>
+    <tr>
+      <td>API Gateway</td>
+      <td>9191</td>
+      <td>Unified entry point</td>
+    </tr>
+    <tr>
+      <td>Auth Service</td>
+      <td>8082</td>
+      <td>Authentication</td>
+    </tr>
+    <tr>
+      <td>Theatre Service</td>
+      <td>8083</td>
+      <td>Theatre management</td>
+    </tr>
+    <tr>
+      <td>Movie Service</td>
+      <td>8084</td>
+      <td>Movie catalog</td>
+    </tr>
+    <tr>
+      <td>Show Service</td>
+      <td>8085</td>
+      <td>Show scheduling</td>
+    </tr>
+    <tr>
+      <td>Booking Service</td>
+      <td>8086</td>
+      <td>Booking management</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="auth-service-configuration">Auth Service Configuration</h2>
+
+<p><strong>File</strong>: <code class="language-plaintext highlighter-rouge">backend/auth-service/src/main/resources/application.properties</code></p>
+
+<div class="language-properties highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Application
+</span><span class="py">spring.application.name</span><span class="p">=</span><span class="s">auth-service</span>
+<span class="py">server.port</span><span class="p">=</span><span class="s">8082</span>
+
+<span class="c"># Eureka Service Registry
+</span><span class="py">eureka.client.service-url.defaultZone</span><span class="p">=</span><span class="s">http://localhost:8761/eureka/</span>
+<span class="py">eureka.client.register-with-eureka</span><span class="p">=</span><span class="s">true</span>
+<span class="py">eureka.client.fetch-registry</span><span class="p">=</span><span class="s">true</span>
+<span class="py">eureka.instance.hostname</span><span class="p">=</span><span class="s">localhost</span>
+<span class="py">eureka.instance.prefer-ip-address</span><span class="p">=</span><span class="s">true</span>
+
+<span class="c"># MySQL Database
+</span><span class="py">spring.datasource.url</span><span class="p">=</span><span class="s">jdbc:mysql://localhost:3306/bookmyshow_auth?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=UTC</span>
+<span class="py">spring.datasource.username</span><span class="p">=</span><span class="s">root</span>
+<span class="py">spring.datasource.password</span><span class="p">=</span><span class="s">YOUR_PASSWORD</span>
+<span class="py">spring.datasource.driver-class-name</span><span class="p">=</span><span class="s">com.mysql.cj.jdbc.Driver</span>
+
+<span class="c"># JPA/Hibernate
+</span><span class="py">spring.jpa.hibernate.ddl-auto</span><span class="p">=</span><span class="s">update</span>
+<span class="py">spring.jpa.show-sql</span><span class="p">=</span><span class="s">true</span>
+<span class="py">spring.jpa.properties.hibernate.dialect</span><span class="p">=</span><span class="s">org.hibernate.dialect.MySQLDialect</span>
+
+<span class="c"># JWT Secret (Base64 encoded, 256-bit)
+</span><span class="py">jwt.secret</span><span class="p">=</span><span class="s">Lvnu9OxA/Z1tvC+jXnbo9gcpSFI8BU8pPlgIeC/UyCg=</span>
+
+<span class="c"># Swagger/OpenAPI
+</span><span class="py">springdoc.api-docs.enabled</span><span class="p">=</span><span class="s">true</span>
+<span class="py">springdoc.swagger-ui.enabled</span><span class="p">=</span><span class="s">true</span>
+<span class="py">spring.main.allow-bean-definition-overriding</span><span class="p">=</span><span class="s">true</span>
+
+<span class="c"># Logging
+</span><span class="py">logging.level.org.springframework</span><span class="p">=</span><span class="s">INFO</span>
+</code></pre></div></div>
+
+<h3 id="key-configuration-points">Key Configuration Points</h3>
+
+<ul>
+  <li><strong>Database URL</strong>: Update with your MySQL credentials</li>
+  <li><strong>JWT Secret</strong>: Generate a secure 256-bit key for production</li>
+  <li><strong>Hibernate DDL</strong>: Use <code class="language-plaintext highlighter-rouge">update</code> for development, <code class="language-plaintext highlighter-rouge">validate</code> for production</li>
+</ul>
+
+<hr />
+
+<h2 id="theatre-service-configuration">Theatre Service Configuration</h2>
+
+<p><strong>File</strong>: <code class="language-plaintext highlighter-rouge">backend/theatre/src/main/resources/application.properties</code></p>
+
+<div class="language-properties highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Application
+</span><span class="py">spring.application.name</span><span class="p">=</span><span class="s">theatre-service</span>
+<span class="py">server.port</span><span class="p">=</span><span class="s">8083</span>
+
+<span class="c"># Eureka
+</span><span class="py">eureka.client.service-url.defaultZone</span><span class="p">=</span><span class="s">http://localhost:8761/eureka/</span>
+<span class="py">eureka.client.register-with-eureka</span><span class="p">=</span><span class="s">true</span>
+<span class="py">eureka.client.fetch-registry</span><span class="p">=</span><span class="s">true</span>
+
+<span class="c"># MySQL Database
+</span><span class="py">spring.datasource.url</span><span class="p">=</span><span class="s">jdbc:mysql://localhost:3306/bookmyshow_theatre?createDatabaseIfNotExist=true</span>
+<span class="py">spring.datasource.username</span><span class="p">=</span><span class="s">root</span>
+<span class="py">spring.datasource.password</span><span class="p">=</span><span class="s">YOUR_PASSWORD</span>
+
+<span class="c"># JPA
+</span><span class="py">spring.jpa.hibernate.ddl-auto</span><span class="p">=</span><span class="s">update</span>
+<span class="py">spring.jpa.show-sql</span><span class="p">=</span><span class="s">true</span>
+
+<span class="c"># Swagger
+</span><span class="py">springdoc.swagger-ui.path</span><span class="p">=</span><span class="s">/swagger-ui/index.html</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="movie-service-configuration">Movie Service Configuration</h2>
+
+<p><strong>File</strong>: <code class="language-plaintext highlighter-rouge">backend/movieService/src/main/resources/application.properties</code></p>
+
+<div class="language-properties highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Application
+</span><span class="py">spring.application.name</span><span class="p">=</span><span class="s">movie-service</span>
+<span class="py">server.port</span><span class="p">=</span><span class="s">8084</span>
+
+<span class="c"># Eureka
+</span><span class="py">eureka.client.service-url.defaultZone</span><span class="p">=</span><span class="s">http://localhost:8761/eureka/</span>
+<span class="py">eureka.client.register-with-eureka</span><span class="p">=</span><span class="s">true</span>
+<span class="py">eureka.client.fetch-registry</span><span class="p">=</span><span class="s">true</span>
+
+<span class="c"># MongoDB
+</span><span class="py">spring.data.mongodb.uri</span><span class="p">=</span><span class="s">mongodb://localhost:27017/movie_db</span>
+<span class="py">spring.data.mongodb.database</span><span class="p">=</span><span class="s">movie_db</span>
+
+<span class="c"># Cloudinary (Image Upload)
+</span><span class="py">cloudinary.cloud-name</span><span class="p">=</span><span class="s">YOUR_CLOUD_NAME</span>
+<span class="py">cloudinary.api-key</span><span class="p">=</span><span class="s">YOUR_API_KEY</span>
+<span class="py">cloudinary.api-secret</span><span class="p">=</span><span class="s">YOUR_API_SECRET</span>
+
+<span class="c"># Swagger
+</span><span class="py">springdoc.api-docs.enabled</span><span class="p">=</span><span class="s">true</span>
+<span class="py">springdoc.swagger-ui.enabled</span><span class="p">=</span><span class="s">true</span>
+</code></pre></div></div>
+
+<h3 id="cloudinary-setup">Cloudinary Setup</h3>
+
+<ol>
+  <li>Sign up at <a href="https://cloudinary.com">cloudinary.com</a></li>
+  <li>Get your credentials from the dashboard</li>
+  <li>Update the configuration with your values</li>
+</ol>
+
+<hr />
+
+<h2 id="show-service-configuration">Show Service Configuration</h2>
+
+<p><strong>File</strong>: <code class="language-plaintext highlighter-rouge">backend/Show-service/src/main/resources/application.properties</code></p>
+
+<div class="language-properties highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Application
+</span><span class="py">spring.application.name</span><span class="p">=</span><span class="s">show-service</span>
+<span class="py">server.port</span><span class="p">=</span><span class="s">8085</span>
+
+<span class="c"># Eureka
+</span><span class="py">eureka.client.service-url.defaultZone</span><span class="p">=</span><span class="s">http://localhost:8761/eureka/</span>
+<span class="py">eureka.client.register-with-eureka</span><span class="p">=</span><span class="s">true</span>
+<span class="py">eureka.client.fetch-registry</span><span class="p">=</span><span class="s">true</span>
+
+<span class="c"># MySQL Database
+</span><span class="py">spring.datasource.url</span><span class="p">=</span><span class="s">jdbc:mysql://localhost:3306/show_db?createDatabaseIfNotExist=true</span>
+<span class="py">spring.datasource.username</span><span class="p">=</span><span class="s">root</span>
+<span class="py">spring.datasource.password</span><span class="p">=</span><span class="s">YOUR_PASSWORD</span>
+
+<span class="c"># JPA
+</span><span class="py">spring.jpa.hibernate.ddl-auto</span><span class="p">=</span><span class="s">update</span>
+<span class="py">spring.jpa.show-sql</span><span class="p">=</span><span class="s">true</span>
+
+<span class="c"># JWT Secret (must match auth-service)
+</span><span class="py">jwt.secret</span><span class="p">=</span><span class="s">Lvnu9OxA/Z1tvC+jXnbo9gcpSFI8BU8pPlgIeC/UyCg=</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="booking-service-configuration">Booking Service Configuration</h2>
+
+<p><strong>File</strong>: <code class="language-plaintext highlighter-rouge">backend/BookingService/src/main/resources/application.properties</code></p>
+
+<div class="language-properties highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Application
+</span><span class="py">spring.application.name</span><span class="p">=</span><span class="s">booking-service</span>
+<span class="py">server.port</span><span class="p">=</span><span class="s">8086</span>
+
+<span class="c"># Eureka
+</span><span class="py">eureka.client.service-url.defaultZone</span><span class="p">=</span><span class="s">http://localhost:8761/eureka/</span>
+<span class="py">eureka.client.register-with-eureka</span><span class="p">=</span><span class="s">true</span>
+<span class="py">eureka.client.fetch-registry</span><span class="p">=</span><span class="s">true</span>
+<span class="py">eureka.instance.hostname</span><span class="p">=</span><span class="s">localhost</span>
+<span class="py">eureka.instance.prefer-ip-address</span><span class="p">=</span><span class="s">true</span>
+
+<span class="c"># MySQL Database
+</span><span class="py">spring.datasource.url</span><span class="p">=</span><span class="s">jdbc:mysql://localhost:3306/booking_db?createDatabaseIfNotExist=true</span>
+<span class="py">spring.datasource.username</span><span class="p">=</span><span class="s">root</span>
+<span class="py">spring.datasource.password</span><span class="p">=</span><span class="s">YOUR_PASSWORD</span>
+
+<span class="c"># JPA
+</span><span class="py">spring.jpa.hibernate.ddl-auto</span><span class="p">=</span><span class="s">update</span>
+<span class="py">spring.jpa.show-sql</span><span class="p">=</span><span class="s">true</span>
+
+<span class="c"># JWT Secret (must match auth-service)
+</span><span class="py">jwt.secret</span><span class="p">=</span><span class="s">Lvnu9OxA/Z1tvC+jXnbo9gcpSFI8BU8pPlgIeC/UyCg=</span>
+
+<span class="c"># Swagger
+</span><span class="py">springdoc.swagger-ui.path</span><span class="p">=</span><span class="s">/swagger-ui/index.html</span>
+<span class="py">springdoc.api-docs.enabled</span><span class="p">=</span><span class="s">true</span>
+
+<span class="c"># Stripe Payment (Optional)
+</span><span class="py">stripe.secret.key</span><span class="p">=</span><span class="s">YOUR_STRIPE_SECRET_KEY</span>
+<span class="py">stripe.publishable.key</span><span class="p">=</span><span class="s">YOUR_STRIPE_PUBLISHABLE_KEY</span>
+<span class="py">stripe.success.url</span><span class="p">=</span><span class="s">http://localhost:5173/payment-success</span>
+<span class="py">stripe.cancel.url</span><span class="p">=</span><span class="s">http://localhost:5173/payment-cancel</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="api-gateway-configuration">API Gateway Configuration</h2>
+
+<p><strong>File</strong>: <code class="language-plaintext highlighter-rouge">backend/api-gateway/src/main/resources/application.properties</code></p>
+
+<div class="language-properties highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Application
+</span><span class="py">spring.application.name</span><span class="p">=</span><span class="s">api-gateway</span>
+<span class="py">server.port</span><span class="p">=</span><span class="s">9191</span>
+<span class="py">spring.main.web-application-type</span><span class="p">=</span><span class="s">reactive</span>
+
+<span class="c"># Eureka
+</span><span class="py">eureka.client.register-with-eureka</span><span class="p">=</span><span class="s">true</span>
+<span class="py">eureka.client.fetch-registry</span><span class="p">=</span><span class="s">true</span>
+<span class="py">eureka.client.service-url.defaultZone</span><span class="p">=</span><span class="s">http://localhost:8761/eureka/</span>
+
+<span class="c"># Gateway Discovery
+</span><span class="py">spring.cloud.gateway.discovery.locator.enabled</span><span class="p">=</span><span class="s">false</span>
+
+<span class="c"># HTTP Client Timeouts
+</span><span class="py">spring.cloud.gateway.httpclient.connect-timeout</span><span class="p">=</span><span class="s">10000</span>
+<span class="py">spring.cloud.gateway.httpclient.response-timeout</span><span class="p">=</span><span class="s">10s</span>
+
+<span class="c"># Route 0 - Auth Service
+</span><span class="err">spring.cloud.gateway.routes[0]</span><span class="py">.id</span><span class="p">=</span><span class="s">auth-service</span>
+<span class="err">spring.cloud.gateway.routes[0]</span><span class="py">.uri</span><span class="p">=</span><span class="s">lb://auth-service</span>
+<span class="err">spring.cloud.gateway.routes[0].predicates[0]=</span><span class="py">Path</span><span class="p">=</span><span class="s">/api/auth/**</span>
+
+<span class="c"># Route 1 - Theatre Service
+</span><span class="err">spring.cloud.gateway.routes[1]</span><span class="py">.id</span><span class="p">=</span><span class="s">theatre-service</span>
+<span class="err">spring.cloud.gateway.routes[1]</span><span class="py">.uri</span><span class="p">=</span><span class="s">lb://theatre-service</span>
+<span class="err">spring.cloud.gateway.routes[1].predicates[0]=</span><span class="py">Path</span><span class="p">=</span><span class="s">/api/theatres/**</span>
+
+<span class="c"># Route 2 - Movie Service
+</span><span class="err">spring.cloud.gateway.routes[2]</span><span class="py">.id</span><span class="p">=</span><span class="s">movie-service</span>
+<span class="err">spring.cloud.gateway.routes[2]</span><span class="py">.uri</span><span class="p">=</span><span class="s">lb://movie-service</span>
+<span class="err">spring.cloud.gateway.routes[2].predicates[0]=</span><span class="py">Path</span><span class="p">=</span><span class="s">/api/movies/**</span>
+
+<span class="c"># Route 3 - Show Service
+</span><span class="err">spring.cloud.gateway.routes[3]</span><span class="py">.id</span><span class="p">=</span><span class="s">show-service</span>
+<span class="err">spring.cloud.gateway.routes[3]</span><span class="py">.uri</span><span class="p">=</span><span class="s">lb://show-service</span>
+<span class="err">spring.cloud.gateway.routes[3].predicates[0]=</span><span class="py">Path</span><span class="p">=</span><span class="s">/api/shows/**</span>
+
+<span class="c"># Route 4 - Booking Service
+</span><span class="err">spring.cloud.gateway.routes[4]</span><span class="py">.id</span><span class="p">=</span><span class="s">booking-service</span>
+<span class="err">spring.cloud.gateway.routes[4]</span><span class="py">.uri</span><span class="p">=</span><span class="s">lb://booking-service</span>
+<span class="err">spring.cloud.gateway.routes[4].predicates[0]=</span><span class="py">Path</span><span class="p">=</span><span class="s">/api/bookings/**</span>
+
+<span class="c"># Route 5 - Booking Payments
+</span><span class="err">spring.cloud.gateway.routes[5]</span><span class="py">.id</span><span class="p">=</span><span class="s">booking-payment</span>
+<span class="err">spring.cloud.gateway.routes[5]</span><span class="py">.uri</span><span class="p">=</span><span class="s">lb://booking-service</span>
+<span class="err">spring.cloud.gateway.routes[5].predicates[0]=</span><span class="py">Path</span><span class="p">=</span><span class="s">/api/payments/**</span>
+
+<span class="c"># CORS Configuration
+</span><span class="err">spring.cloud.gateway.globalcors.cors-configurations.[/**]</span><span class="py">.allowedOrigins</span><span class="p">=</span><span class="s">http://localhost:5173</span>
+<span class="err">spring.cloud.gateway.globalcors.cors-configurations.[/**]</span><span class="py">.allowedMethods</span><span class="p">=</span><span class="s">*</span>
+<span class="err">spring.cloud.gateway.globalcors.cors-configurations.[/**]</span><span class="py">.allowedHeaders</span><span class="p">=</span><span class="s">*</span>
+<span class="err">spring.cloud.gateway.globalcors.cors-configurations.[/**]</span><span class="py">.allowCredentials</span><span class="p">=</span><span class="s">true</span>
+<span class="py">spring.cloud.gateway.globalcors.add-to-simple-url-handler-mapping</span><span class="p">=</span><span class="s">true</span>
+</code></pre></div></div>
+
+<h3 id="gateway-routing-explanation">Gateway Routing Explanation</h3>
+
+<ul>
+  <li><strong>lb://</strong> - Load balancer prefix for Eureka service discovery</li>
+  <li><strong>predicates</strong> - URL path matching rules</li>
+  <li><strong>CORS</strong> - Allows frontend at localhost:5173 to make requests</li>
+</ul>
+
+<hr />
+
+<h2 id="service-registry-eureka-configuration">Service Registry (Eureka) Configuration</h2>
+
+<p><strong>File</strong>: <code class="language-plaintext highlighter-rouge">backend/service-registry/src/main/resources/application.properties</code></p>
+
+<div class="language-properties highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Application
+</span><span class="py">spring.application.name</span><span class="p">=</span><span class="s">service-registry</span>
+<span class="py">server.port</span><span class="p">=</span><span class="s">8761</span>
+
+<span class="c"># Eureka Server
+</span><span class="py">eureka.client.register-with-eureka</span><span class="p">=</span><span class="s">false</span>
+<span class="py">eureka.client.fetch-registry</span><span class="p">=</span><span class="s">false</span>
+<span class="py">eureka.server.enable-self-preservation</span><span class="p">=</span><span class="s">false</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="environment-variables">Environment Variables</h2>
+
+<p>For production, use environment variables instead of hardcoding sensitive values:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Database</span>
+<span class="nb">export </span><span class="nv">DB_USERNAME</span><span class="o">=</span>your_username
+<span class="nb">export </span><span class="nv">DB_PASSWORD</span><span class="o">=</span>your_password
+
+<span class="c"># JWT</span>
+<span class="nb">export </span><span class="nv">JWT_SECRET</span><span class="o">=</span>your_secure_256bit_key
+
+<span class="c"># Cloudinary</span>
+<span class="nb">export </span><span class="nv">CLOUDINARY_CLOUD_NAME</span><span class="o">=</span>your_cloud_name
+<span class="nb">export </span><span class="nv">CLOUDINARY_API_KEY</span><span class="o">=</span>your_api_key
+<span class="nb">export </span><span class="nv">CLOUDINARY_API_SECRET</span><span class="o">=</span>your_api_secret
+
+<span class="c"># Stripe</span>
+<span class="nb">export </span><span class="nv">STRIPE_SECRET_KEY</span><span class="o">=</span>your_stripe_secret
+<span class="nb">export </span><span class="nv">STRIPE_PUBLISHABLE_KEY</span><span class="o">=</span>your_stripe_public_key
+</code></pre></div></div>
+
+<p>Update <code class="language-plaintext highlighter-rouge">application.properties</code> to use environment variables:</p>
+
+<div class="language-properties highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="py">spring.datasource.username</span><span class="p">=</span><span class="s">${DB_USERNAME:root}</span>
+<span class="py">spring.datasource.password</span><span class="p">=</span><span class="s">${DB_PASSWORD}</span>
+<span class="py">jwt.secret</span><span class="p">=</span><span class="s">${JWT_SECRET}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="profile-based-configuration">Profile-Based Configuration</h2>
+
+<p>Create environment-specific configurations:</p>
+
+<h3 id="development-profile">Development Profile</h3>
+
+<p><strong>File</strong>: <code class="language-plaintext highlighter-rouge">application-dev.properties</code></p>
+
+<div class="language-properties highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="py">spring.jpa.show-sql</span><span class="p">=</span><span class="s">true</span>
+<span class="py">logging.level.org.springframework</span><span class="p">=</span><span class="s">DEBUG</span>
+<span class="py">logging.level.com.dac</span><span class="p">=</span><span class="s">DEBUG</span>
+</code></pre></div></div>
+
+<h3 id="production-profile">Production Profile</h3>
+
+<p><strong>File</strong>: <code class="language-plaintext highlighter-rouge">application-prod.properties</code></p>
+
+<div class="language-properties highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="py">spring.jpa.show-sql</span><span class="p">=</span><span class="s">false</span>
+<span class="py">spring.jpa.hibernate.ddl-auto</span><span class="p">=</span><span class="s">validate</span>
+<span class="py">logging.level.org.springframework</span><span class="p">=</span><span class="s">WARN</span>
+<span class="py">logging.level.com.dac</span><span class="p">=</span><span class="s">INFO</span>
+</code></pre></div></div>
+
+<p><strong>Run with profile</strong>:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java <span class="nt">-jar</span> <span class="nt">-Dspring</span>.profiles.active<span class="o">=</span>prod service.jar
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="database-setup">Database Setup</h2>
+
+<h3 id="mysql-databases">MySQL Databases</h3>
+
+<p>Create required databases:</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="k">DATABASE</span> <span class="n">bookmyshow_auth</span><span class="p">;</span>
+<span class="k">CREATE</span> <span class="k">DATABASE</span> <span class="n">bookmyshow_theatre</span><span class="p">;</span>
+<span class="k">CREATE</span> <span class="k">DATABASE</span> <span class="n">show_db</span><span class="p">;</span>
+<span class="k">CREATE</span> <span class="k">DATABASE</span> <span class="n">booking_db</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="mongodb">MongoDB</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Start MongoDB</span>
+mongod
+
+<span class="c"># Create database (auto-created on first insert)</span>
+mongosh
+use movie_db
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="generating-jwt-secret">Generating JWT Secret</h2>
+
+<p>Generate a secure 256-bit key:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Using OpenSSL</span>
+openssl rand <span class="nt">-base64</span> 32
+
+<span class="c"># Using Java</span>
+java <span class="nt">-cp</span> auth-service.jar com.dac.auth_service.JwtSecretGenerator
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>Important</strong>: Use the same JWT secret across all services that validate tokens.</p>
+</blockquote>
+
+<hr />
+
+<h2 id="cors-configuration">CORS Configuration</h2>
+
+<p>Update CORS settings in API Gateway for production:</p>
+
+<div class="language-properties highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Production frontend URL
+</span><span class="err">spring.cloud.gateway.globalcors.cors-configurations.[/**]</span><span class="py">.allowedOrigins</span><span class="p">=</span><span class="s">https://your-domain.com</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="troubleshooting-configuration">Troubleshooting Configuration</h2>
+
+<h3 id="service-not-registering-with-eureka">Service Not Registering with Eureka</h3>
+
+<p>Check:</p>
+<ol>
+  <li>Eureka server is running on port 8761</li>
+  <li><code class="language-plaintext highlighter-rouge">eureka.client.service-url.defaultZone</code> is correct</li>
+  <li>Network connectivity between services</li>
+</ol>
+
+<h3 id="database-connection-failed">Database Connection Failed</h3>
+
+<p>Check:</p>
+<ol>
+  <li>MySQL/MongoDB is running</li>
+  <li>Database exists</li>
+  <li>Credentials are correct</li>
+  <li>Port is accessible (MySQL: 3306, MongoDB: 27017)</li>
+</ol>
+
+<h3 id="jwt-token-validation-failed">JWT Token Validation Failed</h3>
+
+<p>Check:</p>
+<ol>
+  <li>JWT secret is identical across all services</li>
+  <li>Secret is Base64 encoded 256-bit key</li>
+  <li>Token is not expired</li>
+</ol>
+
+<hr />
+
+<h2 id="best-practices">Best Practices</h2>
+
+<ol>
+  <li><strong>Never commit secrets</strong> - Use environment variables or secret management tools</li>
+  <li><strong>Use different secrets</strong> for dev and production</li>
+  <li><strong>Enable SSL/TLS</strong> in production</li>
+  <li><strong>Disable SQL logging</strong> in production (<code class="language-plaintext highlighter-rouge">spring.jpa.show-sql=false</code>)</li>
+  <li><strong>Use connection pooling</strong> for database connections</li>
+  <li><strong>Set appropriate timeouts</strong> for HTTP clients</li>
+  <li><strong>Monitor service health</strong> through Eureka dashboard</li>
+</ol>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2026-01-18">January 18, 2026</time></p>
+
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/cineverse/docs/backend/booking-service/" class="pagination--pager" title="Booking Service
+">Previous</a>
+    
+    
+      <a href="/cineverse/docs/backend/error-handling/" class="pagination--pager" title="Error Handling
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+    <ul class="social-icons">
+        
+
+        
+
+        
+        <li><a href="/cineverse/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+        
+    </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2026 YadnyeshKolte. Powered by <a
+        href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a
+        href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+
+    
+  <script src="/cineverse/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -5,6 +5,12 @@ var store = [{
         "url": "/cineverse/docs/backend/api-gateway-eureka/",
         "teaser": null
       },{
+        "title": "API Reference",
+        "excerpt":"Complete API Reference This document provides a comprehensive reference for all REST APIs across the Cineverse microservices platform. Base URLs Service Port Base URL API Gateway 9191 http://localhost:9191 Auth Service 8082 http://localhost:8082 Theatre Service 8083 http://localhost:8083 Movie Service 8084 http://localhost:8084 Show Service 8085 http://localhost:8085 Booking Service 8086 http://localhost:8086 Note: All...","categories": [],
+        "tags": [],
+        "url": "/cineverse/docs/backend/api-reference/",
+        "teaser": null
+      },{
         "title": "Auth Service",
         "excerpt":"Auth Service Purpose: Manage user registration, login and JWT issuance used across other microservices. Typical Port: 8081 (example — change to whatever your app uses) Responsibilities Register new users (signup) Authenticate users (login) Generate JWT tokens with role claims (USER / ADMIN) Password hashing and basic validation Data model id:...","categories": [],
         "tags": [],
@@ -17,6 +23,18 @@ var store = [{
         "url": "/cineverse/docs/backend/booking-service/",
         "teaser": null
       },{
+        "title": "Configuration Guide",
+        "excerpt":"Configuration Guide This guide covers all configuration settings for the Cineverse microservices platform. Overview Each microservice has its own application.properties file located in src/main/resources/. Configuration includes: Server ports Database connections Eureka service registry JWT secrets External API keys Service Ports Service Port Description Service Registry (Eureka) 8761 Service discovery API...","categories": [],
+        "tags": [],
+        "url": "/cineverse/docs/backend/configuration/",
+        "teaser": null
+      },{
+        "title": "Error Handling",
+        "excerpt":"Error Handling Guide This document covers error handling patterns, custom exceptions, validation, and error response formats across the Cineverse platform. Error Response Format All services return consistent error responses: { \"error\": \"Error message description\", \"status\": 404, \"timestamp\": \"2026-01-18T00:35:00\", \"path\": \"/api/movies/invalid-id\" } Global Exception Handler Each service implements a @RestControllerAdvice to...","categories": [],
+        "tags": [],
+        "url": "/cineverse/docs/backend/error-handling/",
+        "teaser": null
+      },{
         "title": "Movie Service",
         "excerpt":"Movie Service Port (example): 8083 Responsibilities CRUD operations for movies Expose movie listings and details used by show service Data model id (Long) title (String) description (String) language (String) genre (String) releaseDate (Date) duration (Integer) APIs GET /api/movies/list List movies. GET /api/movies/view/{id} Get a single movie. POST /api/movies (ADMIN) {...","categories": [],
         "tags": [],
@@ -27,6 +45,12 @@ var store = [{
         "excerpt":"Notification Service (WhatsApp Ticket) Port (example): 8086 Responsibilities Accept a ticket payload and send a WhatsApp message (via Meta/WhatsApp API or simulated) Provide a send-ticket endpoint used by Booking Service Data model (for message) phone (String) bookingId (Long) movie (String) theatre (String) showTime (String) seats (List) API POST /api/notify/send-ticket {...","categories": [],
         "tags": [],
         "url": "/cineverse/docs/backend/notification-service/",
+        "teaser": null
+      },{
+        "title": "Security Guide",
+        "excerpt":"Security Guide This document covers all security implementations in the Cineverse platform, including authentication, authorization, password hashing, and best practices. Security Architecture ┌─────────────────────────────────────────────────────────┐ │ Frontend (React) │ │ - Stores JWT token in localStorage │ │ - Sends token in Authorization header │ └─────────────────────────────────────────────────────────┘ │ ▼ ┌─────────────────────────────────────────────────────────┐ │ API Gateway...","categories": [],
+        "tags": [],
+        "url": "/cineverse/docs/backend/security/",
         "teaser": null
       },{
         "title": "Show Service",
@@ -71,16 +95,40 @@ var store = [{
         "url": "/cineverse/docs/database/theatre-database/",
         "teaser": null
       },{
+        "title": "Deployment Guide",
+        "excerpt":"Deployment Guide Prerequisites Java 21 Node.js 18+ MySQL 8.0+ MongoDB 4.4+ Maven 3.8+ Development Deployment 1. Start Databases # MySQL mysql -u root -p # MongoDB mongod 2. Start Backend Services (in order) # 1. Eureka Server cd backend/service-registry mvn spring-boot:run # 2. API Gateway cd backend/api-gateway mvn spring-boot:run #...","categories": [],
+        "tags": [],
+        "url": "/cineverse/docs/deployment/",
+        "teaser": null
+      },{
         "title": "Diagrams",
         "excerpt":"System Architecture Diagrams Microservices Architecture ┌─────────────────────────────────────────────────────────────────┐ │ CINEVERSE PLATFORM │ └─────────────────────────────────────────────────────────────────┘ ┌──────────────────────────────────────────────────────────────────┐ │ FRONTEND LAYER (React.js) │ │ User Interface | Show Listings | Seat Selection | Bookings │ │ Port: 5173 │ └──────────────────────────────────────────────────────────────────┘ │ ▼ ┌──────────────────────────────────────────────────────────────────┐ │ API GATEWAY (Spring Cloud Gateway) │ │ Port: 9191 │ │ Route...","categories": [],
         "tags": [],
         "url": "/cineverse/docs/diagrams/",
         "teaser": null
       },{
+        "title": "Frontend Components",
+        "excerpt":"Frontend Components Reference Complete documentation for all 26 React components in the Cineverse frontend application. Component Architecture App.jsx (Root) ├── PublicLayout │ ├── Navbar │ ├── Carousel │ ├── CardComponent │ ├── MovieDetails │ ├── Booking │ ├── SeatLayout │ ├── Payment │ ├── PaymentSuccess │ ├── Confirmation │ └──...","categories": [],
+        "tags": [],
+        "url": "/cineverse/docs/frontend/components/",
+        "teaser": null
+      },{
         "title": "Feedback System",
         "excerpt":"Feedback System Overview The feedback system allows users to provide feedback about their movie booking experience and report issues. Feedback Types General Feedback: Overall booking experience Technical Issues: Bugs or errors during booking Feature Requests: Suggestions for improvement Usability: UI/UX feedback Feedback Component import React, { useState } from 'react';...","categories": [],
         "tags": [],
         "url": "/cineverse/docs/frontend/feedback/",
+        "teaser": null
+      },{
+        "title": "Routing & Navigation",
+        "excerpt":"Routing &amp; Navigation Complete guide to routing and navigation in the Cineverse frontend application. Route Structure / (Public Layout) ├── /login - Login/Signup page ├── / - Home (Carousel + Movies) ├── /movie/:id - Movie details ├── /booking/:id - Show selection ├── /seat/:id - Seat selection ├── /payment - Payment...","categories": [],
+        "tags": [],
+        "url": "/cineverse/docs/frontend/routing/",
+        "teaser": null
+      },{
+        "title": "State Management & API Integration",
+        "excerpt":"State Management &amp; API Integration State Management Cineverse uses LocalStorage and React useState for state management. LocalStorage Keys Key Value Purpose cineverse_token JWT token Authentication cineverse_role USER/ADMIN/SUPER_ADMIN Authorization cineverse_userId User ID Booking operations cineverse_username Username/Email User identification cineverse_city City name Location filtering Authentication State // Store after login localStorage.setItem('cineverse_token', token);...","categories": [],
+        "tags": [],
+        "url": "/cineverse/docs/frontend/state-api/",
         "teaser": null
       },{
         "title": "UI Components",
@@ -117,5 +165,11 @@ var store = [{
         "excerpt":"Theme Verification This page tests the Red, White, and Black theme elements. Typography Test The font should be Outfit. This text should be italic. This text should be bold and red on hover. UI Components Buttons Primary Button Default Button Alerts [!NOTE] This is a note. [!IMPORTANT] This block should...","categories": [],
         "tags": [],
         "url": "/cineverse/docs/test-theme/",
+        "teaser": null
+      },{
+        "title": "Troubleshooting Guide",
+        "excerpt":"Troubleshooting Guide Backend Issues Port Already in Use Error: Port 8082 is already in use Solutions: # Windows netstat -ano | findstr :8082 taskkill /PID &lt;PID&gt; /F # Linux/Mac lsof -i :8082 kill -9 &lt;PID&gt; Database Connection Failed Error: Communications link failure Solutions: Check MySQL is running Verify database exists...","categories": [],
+        "tags": [],
+        "url": "/cineverse/docs/troubleshooting/",
         "teaser": null
       },]

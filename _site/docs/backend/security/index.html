@@ -1,0 +1,942 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Security Guide - Cineverse</title>
+<meta name="description" content="Security implementation details for Cineverse platform">
+
+
+  <meta name="author" content="AkashDwi17">
+  
+  <meta property="article:author" content="AkashDwi17">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Cineverse">
+<meta property="og:title" content="Security Guide">
+<meta property="og:url" content="http://localhost:4000/cineverse/docs/backend/security/">
+
+
+  <meta property="og:description" content="Security implementation details for Cineverse platform">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2026-01-18T00:43:53+05:30">
+
+
+
+  <meta property="article:modified_time" content="2026-01-18T00:00:00+05:30">
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/cineverse/docs/backend/security/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AkashDwi17",
+      "url": "http://localhost:4000/cineverse/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/cineverse/feed.xml" type="application/atom+xml" rel="alternate" title="Cineverse Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/cineverse/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <link rel="icon" href="/cineverse/assets/images/favicon.svg" type="image/svg+xml">
+
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/cineverse/"><img src="/cineverse/assets/images/favicon.ico" alt="Cineverse"></a>
+        
+        <a class="site-title" href="/cineverse/">
+          Cineverse
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/cineverse/docs/introduction/">Documentation</a>
+            </li><li class="masthead__menu-item">
+              <a href="/cineverse/docs/quick-start/">Getting Started</a>
+            </li><li class="masthead__menu-item">
+              <a href="/cineverse/about/">About</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Getting Started</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/cineverse/docs/introduction/">Introduction</a></li>
+          
+            <li><a href="/cineverse/docs/installation/">Installation</a></li>
+          
+            <li><a href="/cineverse/docs/quick-start/">Quick Start</a></li>
+          
+            <li><a href="/cineverse/docs/diagrams/">Diagrams</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Backend</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/cineverse/docs/backend/api-reference/">API Reference</a></li>
+          
+            <li><a href="/cineverse/docs/backend/configuration/">Configuration</a></li>
+          
+            <li><a href="/cineverse/docs/backend/security/" class="active">Security</a></li>
+          
+            <li><a href="/cineverse/docs/backend/error-handling/">Error Handling</a></li>
+          
+            <li><a href="/cineverse/docs/backend/auth-service/">Auth Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/theatre-service/">Theatre Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/movie-service/">Movie Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/show-service/">Show Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/booking-service/">Booking Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/notification-service/">Notification Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/api-gateway-eureka/">API Gateway & Eureka</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Database</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/cineverse/docs/database/auth-database/">Auth Database</a></li>
+          
+            <li><a href="/cineverse/docs/database/theatre-database/">Theatre Database</a></li>
+          
+            <li><a href="/cineverse/docs/database/show-database/">Show Database</a></li>
+          
+            <li><a href="/cineverse/docs/database/booking-database/">Booking Database</a></li>
+          
+            <li><a href="/cineverse/docs/database/movie-database/">Movie Database (Mongo)</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Frontend</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/cineverse/docs/frontend/components/">Components</a></li>
+          
+            <li><a href="/cineverse/docs/frontend/routing/">Routing & Navigation</a></li>
+          
+            <li><a href="/cineverse/docs/frontend/state-api/">State & API Integration</a></li>
+          
+            <li><a href="/cineverse/docs/frontend/ui-components/">UI Components</a></li>
+          
+            <li><a href="/cineverse/docs/frontend/usereffectvoting/">User Effect Voting</a></li>
+          
+            <li><a href="/cineverse/docs/frontend/feedback/">Feedback System</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Guides</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/cineverse/docs/deployment/">Deployment</a></li>
+          
+            <li><a href="/cineverse/docs/troubleshooting/">Troubleshooting</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Security Guide">
+    <meta itemprop="description" content="Security implementation details for Cineverse platform">
+    
+    <meta itemprop="dateModified" content="2026-01-18T00:00:00+05:30">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Security Guide
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#security-guide">Security Guide</a><ul><li><a href="#security-architecture">Security Architecture</a></li><li><a href="#jwt-authentication">JWT Authentication</a><ul><li><a href="#overview">Overview</a></li><li><a href="#jwt-token-structure">JWT Token Structure</a></li><li><a href="#jwt-generation-auth-service">JWT Generation (Auth Service)</a></li><li><a href="#jwt-validation">JWT Validation</a></li></ul></li><li><a href="#password-security">Password Security</a><ul><li><a href="#bcrypt-hashing">BCrypt Hashing</a></li></ul></li><li><a href="#role-based-access-control-rbac">Role-Based Access Control (RBAC)</a><ul><li><a href="#user-roles">User Roles</a></li><li><a href="#role-enum">Role Enum</a></li><li><a href="#endpoint-protection">Endpoint Protection</a><ul><li><a href="#public-endpoints-no-authentication">Public Endpoints (No Authentication)</a></li><li><a href="#protected-endpoints-authentication-required">Protected Endpoints (Authentication Required)</a></li><li><a href="#admin-only-endpoints">Admin-Only Endpoints</a></li></ul></li></ul></li><li><a href="#cors-configuration">CORS Configuration</a><ul><li><a href="#api-gateway-cors">API Gateway CORS</a></li><li><a href="#production-cors">Production CORS</a></li></ul></li><li><a href="#frontend-security">Frontend Security</a><ul><li><a href="#token-storage">Token Storage</a></li><li><a href="#axios-interceptor">Axios Interceptor</a></li><li><a href="#protected-routes">Protected Routes</a></li></ul></li><li><a href="#security-best-practices">Security Best Practices</a><ul><li><a href="#1-jwt-secret-management">1. JWT Secret Management</a></li><li><a href="#2-token-expiration">2. Token Expiration</a></li><li><a href="#3-https-in-production">3. HTTPS in Production</a></li><li><a href="#4-password-requirements">4. Password Requirements</a></li><li><a href="#5-rate-limiting">5. Rate Limiting</a></li><li><a href="#6-input-validation">6. Input Validation</a></li><li><a href="#7-sql-injection-prevention">7. SQL Injection Prevention</a></li><li><a href="#8-xss-prevention">8. XSS Prevention</a></li></ul></li><li><a href="#security-checklist">Security Checklist</a></li><li><a href="#common-security-issues">Common Security Issues</a><ul><li><a href="#issue-1-token-exposed-in-url">Issue 1: Token Exposed in URL</a></li><li><a href="#issue-2-storing-sensitive-data-in-jwt">Issue 2: Storing Sensitive Data in JWT</a></li><li><a href="#issue-3-not-validating-token-expiration">Issue 3: Not Validating Token Expiration</a></li></ul></li><li><a href="#security-monitoring">Security Monitoring</a><ul><li><a href="#logging-security-events">Logging Security Events</a></li><li><a href="#failed-login-tracking">Failed Login Tracking</a></li></ul></li><li><a href="#penetration-testing">Penetration Testing</a></li><li><a href="#security-resources">Security Resources</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h1 id="security-guide">Security Guide</h1>
+
+<p>This document covers all security implementations in the Cineverse platform, including authentication, authorization, password hashing, and best practices.</p>
+
+<h2 id="security-architecture">Security Architecture</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌─────────────────────────────────────────────────────────┐
+│                    Frontend (React)                      │
+│  - Stores JWT token in localStorage                     │
+│  - Sends token in Authorization header                  │
+└─────────────────────────────────────────────────────────┘
+                          │
+                          ▼
+┌─────────────────────────────────────────────────────────┐
+│              API Gateway (Port 9191)                     │
+│  - CORS configuration                                    │
+│  - Routes requests to services                          │
+└─────────────────────────────────────────────────────────┘
+                          │
+                          ▼
+┌─────────────────────────────────────────────────────────┐
+│            Microservices (Auth, Movie, etc.)            │
+│  - JWT token validation                                 │
+│  - Role-based access control                            │
+│  - SecurityFilterChain                                  │
+└─────────────────────────────────────────────────────────┘
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="jwt-authentication">JWT Authentication</h2>
+
+<h3 id="overview">Overview</h3>
+
+<p>Cineverse uses <strong>JWT (JSON Web Tokens)</strong> for stateless authentication. Tokens are issued by the Auth Service and validated by all other services.</p>
+
+<h3 id="jwt-token-structure">JWT Token Structure</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Header.Payload.Signature
+</code></pre></div></div>
+
+<p><strong>Header</strong>:</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"alg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HS256"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"typ"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JWT"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p><strong>Payload</strong>:</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"sub"</span><span class="p">:</span><span class="w"> </span><span class="s2">"john.doe@example.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"userId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"authorities"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"USER"</span><span class="p">],</span><span class="w">
+  </span><span class="nl">"iat"</span><span class="p">:</span><span class="w"> </span><span class="mi">1705536000</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"exp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1705622400</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p><strong>Signature</strong>: HMACSHA256(base64UrlEncode(header) + “.” + base64UrlEncode(payload), secret)</p>
+
+<hr />
+
+<h3 id="jwt-generation-auth-service">JWT Generation (Auth Service)</h3>
+
+<p><strong>File</strong>: <code class="language-plaintext highlighter-rouge">auth-service/src/main/java/com/dac/auth_service/services/JwtService.java</code></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Service</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">JwtService</span> <span class="o">{</span>
+    
+    <span class="nd">@Value</span><span class="o">(</span><span class="s">"${jwt.secret}"</span><span class="o">)</span>
+    <span class="kd">private</span> <span class="nc">String</span> <span class="n">secret</span><span class="o">;</span>
+    
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">generateToken</span><span class="o">(</span><span class="nc">User</span> <span class="n">user</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">SecretKey</span> <span class="n">key</span> <span class="o">=</span> <span class="nc">Keys</span><span class="o">.</span><span class="na">hmacShaKeyFor</span><span class="o">(</span><span class="n">secret</span><span class="o">.</span><span class="na">getBytes</span><span class="o">());</span>
+        
+        <span class="k">return</span> <span class="nc">Jwts</span><span class="o">.</span><span class="na">builder</span><span class="o">()</span>
+            <span class="o">.</span><span class="na">subject</span><span class="o">(</span><span class="n">user</span><span class="o">.</span><span class="na">getUsername</span><span class="o">())</span>
+            <span class="o">.</span><span class="na">claim</span><span class="o">(</span><span class="s">"userId"</span><span class="o">,</span> <span class="n">user</span><span class="o">.</span><span class="na">getId</span><span class="o">())</span>
+            <span class="o">.</span><span class="na">claim</span><span class="o">(</span><span class="s">"authorities"</span><span class="o">,</span> <span class="nc">List</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">user</span><span class="o">.</span><span class="na">getRole</span><span class="o">().</span><span class="na">name</span><span class="o">()))</span>
+            <span class="o">.</span><span class="na">issuedAt</span><span class="o">(</span><span class="k">new</span> <span class="nc">Date</span><span class="o">())</span>
+            <span class="o">.</span><span class="na">expiration</span><span class="o">(</span><span class="k">new</span> <span class="nc">Date</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">()</span> <span class="o">+</span> <span class="mi">86400000</span><span class="o">))</span> <span class="c1">// 24 hours</span>
+            <span class="o">.</span><span class="na">signWith</span><span class="o">(</span><span class="n">key</span><span class="o">)</span>
+            <span class="o">.</span><span class="na">compact</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><strong>Key Points</strong>:</p>
+<ul>
+  <li>Token expires in 24 hours</li>
+  <li>Contains user ID and role in claims</li>
+  <li>Signed with HS256 algorithm</li>
+  <li>Uses shared secret across all services</li>
+</ul>
+
+<hr />
+
+<h3 id="jwt-validation">JWT Validation</h3>
+
+<p>All services validate JWT tokens using Spring Security’s OAuth2 Resource Server:</p>
+
+<p><strong>File</strong>: <code class="language-plaintext highlighter-rouge">SecurityConfig.java</code> (in each service)</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Configuration</span>
+<span class="nd">@EnableWebSecurity</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SecurityConfig</span> <span class="o">{</span>
+    
+    <span class="nd">@Bean</span>
+    <span class="kd">public</span> <span class="nc">SecurityFilterChain</span> <span class="nf">filterChain</span><span class="o">(</span>
+        <span class="nc">HttpSecurity</span> <span class="n">http</span><span class="o">,</span>
+        <span class="nd">@Value</span><span class="o">(</span><span class="s">"${jwt.secret}"</span><span class="o">)</span> <span class="nc">String</span> <span class="n">secret</span>
+    <span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+        
+        <span class="n">http</span>
+            <span class="o">.</span><span class="na">csrf</span><span class="o">(</span><span class="n">csrf</span> <span class="o">-&gt;</span> <span class="n">csrf</span><span class="o">.</span><span class="na">disable</span><span class="o">())</span>
+            <span class="o">.</span><span class="na">authorizeHttpRequests</span><span class="o">(</span><span class="n">auth</span> <span class="o">-&gt;</span> <span class="n">auth</span>
+                <span class="o">.</span><span class="na">requestMatchers</span><span class="o">(</span><span class="s">"/api/auth/login"</span><span class="o">,</span> <span class="s">"/api/auth/signup"</span><span class="o">).</span><span class="na">permitAll</span><span class="o">()</span>
+                <span class="o">.</span><span class="na">requestMatchers</span><span class="o">(</span><span class="nc">HttpMethod</span><span class="o">.</span><span class="na">OPTIONS</span><span class="o">,</span> <span class="s">"/**"</span><span class="o">).</span><span class="na">permitAll</span><span class="o">()</span>
+                <span class="o">.</span><span class="na">anyRequest</span><span class="o">().</span><span class="na">authenticated</span><span class="o">()</span>
+            <span class="o">)</span>
+            <span class="o">.</span><span class="na">sessionManagement</span><span class="o">(</span><span class="n">session</span> <span class="o">-&gt;</span>
+                <span class="n">session</span><span class="o">.</span><span class="na">sessionCreationPolicy</span><span class="o">(</span><span class="nc">SessionCreationPolicy</span><span class="o">.</span><span class="na">STATELESS</span><span class="o">)</span>
+            <span class="o">)</span>
+            <span class="o">.</span><span class="na">oauth2ResourceServer</span><span class="o">(</span><span class="n">oauth</span> <span class="o">-&gt;</span> <span class="n">oauth</span>
+                <span class="o">.</span><span class="na">jwt</span><span class="o">(</span><span class="n">jwt</span> <span class="o">-&gt;</span> <span class="n">jwt</span><span class="o">.</span><span class="na">decoder</span><span class="o">(</span><span class="n">jwtDecoder</span><span class="o">(</span><span class="n">secret</span><span class="o">)))</span>
+            <span class="o">);</span>
+        
+        <span class="k">return</span> <span class="n">http</span><span class="o">.</span><span class="na">build</span><span class="o">();</span>
+    <span class="o">}</span>
+    
+    <span class="nd">@Bean</span>
+    <span class="kd">public</span> <span class="nc">JwtDecoder</span> <span class="nf">jwtDecoder</span><span class="o">(</span><span class="nd">@Value</span><span class="o">(</span><span class="s">"${jwt.secret}"</span><span class="o">)</span> <span class="nc">String</span> <span class="n">secret</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">SecretKey</span> <span class="n">key</span> <span class="o">=</span> <span class="nc">Keys</span><span class="o">.</span><span class="na">hmacShaKeyFor</span><span class="o">(</span><span class="n">secret</span><span class="o">.</span><span class="na">getBytes</span><span class="o">());</span>
+        <span class="k">return</span> <span class="nc">NimbusJwtDecoder</span><span class="o">.</span><span class="na">withSecretKey</span><span class="o">(</span><span class="n">key</span><span class="o">).</span><span class="na">build</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="password-security">Password Security</h2>
+
+<h3 id="bcrypt-hashing">BCrypt Hashing</h3>
+
+<p>Passwords are hashed using <strong>BCrypt</strong> with a strength of 10 rounds (default).</p>
+
+<p><strong>Implementation</strong>:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Bean</span>
+<span class="kd">public</span> <span class="nc">PasswordEncoder</span> <span class="nf">passwordEncoder</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">BCryptPasswordEncoder</span><span class="o">();</span>
+<span class="o">}</span>
+
+<span class="c1">// During signup</span>
+<span class="nc">String</span> <span class="n">hashedPassword</span> <span class="o">=</span> <span class="n">passwordEncoder</span><span class="o">.</span><span class="na">encode</span><span class="o">(</span><span class="n">plainPassword</span><span class="o">);</span>
+<span class="n">user</span><span class="o">.</span><span class="na">setPassword</span><span class="o">(</span><span class="n">hashedPassword</span><span class="o">);</span>
+
+<span class="c1">// During login</span>
+<span class="kt">boolean</span> <span class="n">matches</span> <span class="o">=</span> <span class="n">passwordEncoder</span><span class="o">.</span><span class="na">matches</span><span class="o">(</span><span class="n">plainPassword</span><span class="o">,</span> <span class="n">user</span><span class="o">.</span><span class="na">getPassword</span><span class="o">());</span>
+</code></pre></div></div>
+
+<p><strong>BCrypt Properties</strong>:</p>
+<ul>
+  <li><strong>Salt</strong>: Automatically generated and stored with hash</li>
+  <li><strong>Rounds</strong>: 10 (2^10 = 1024 iterations)</li>
+  <li><strong>Output</strong>: 60-character string</li>
+</ul>
+
+<p><strong>Example Hash</strong>:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="role-based-access-control-rbac">Role-Based Access Control (RBAC)</h2>
+
+<h3 id="user-roles">User Roles</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Role</th>
+      <th>Access Level</th>
+      <th>Capabilities</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>USER</strong></td>
+      <td>Standard user</td>
+      <td>View movies, book tickets, manage own bookings</td>
+    </tr>
+    <tr>
+      <td><strong>ADMIN</strong></td>
+      <td>Administrator</td>
+      <td>Manage movies, theatres, shows, view all bookings</td>
+    </tr>
+    <tr>
+      <td><strong>SUPER_ADMIN</strong></td>
+      <td>Super admin</td>
+      <td>Full access including user management</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="role-enum">Role Enum</h3>
+
+<p><strong>File</strong>: <code class="language-plaintext highlighter-rouge">auth-service/src/main/java/com/dac/auth_service/entity/Role.java</code></p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="nc">Role</span> <span class="o">{</span>
+    <span class="no">USER</span><span class="o">,</span>
+    <span class="no">ADMIN</span><span class="o">,</span>
+    <span class="no">SUPER_ADMIN</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h3 id="endpoint-protection">Endpoint Protection</h3>
+
+<h4 id="public-endpoints-no-authentication">Public Endpoints (No Authentication)</h4>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">.</span><span class="na">requestMatchers</span><span class="o">(</span><span class="s">"/api/auth/login"</span><span class="o">,</span> <span class="s">"/api/auth/signup"</span><span class="o">).</span><span class="na">permitAll</span><span class="o">()</span>
+<span class="o">.</span><span class="na">requestMatchers</span><span class="o">(</span><span class="s">"/api/movies"</span><span class="o">,</span> <span class="s">"/api/movies/**"</span><span class="o">).</span><span class="na">permitAll</span><span class="o">()</span>
+<span class="o">.</span><span class="na">requestMatchers</span><span class="o">(</span><span class="s">"/api/theatres/list"</span><span class="o">,</span> <span class="s">"/api/theatres/view/**"</span><span class="o">).</span><span class="na">permitAll</span><span class="o">()</span>
+<span class="o">.</span><span class="na">requestMatchers</span><span class="o">(</span><span class="s">"/api/shows/**"</span><span class="o">).</span><span class="na">permitAll</span><span class="o">()</span>
+</code></pre></div></div>
+
+<h4 id="protected-endpoints-authentication-required">Protected Endpoints (Authentication Required)</h4>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">.</span><span class="na">anyRequest</span><span class="o">().</span><span class="na">authenticated</span><span class="o">()</span>
+</code></pre></div></div>
+
+<h4 id="admin-only-endpoints">Admin-Only Endpoints</h4>
+
+<p>Enforced at service layer or controller level:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Example: Creating a movie (Admin only)</span>
+<span class="nd">@PostMapping</span>
+<span class="kd">public</span> <span class="nc">ResponseEntity</span><span class="o">&lt;</span><span class="nc">MovieResponse</span><span class="o">&gt;</span> <span class="nf">create</span><span class="o">(</span>
+    <span class="nd">@RequestHeader</span><span class="o">(</span><span class="s">"Authorization"</span><span class="o">)</span> <span class="nc">String</span> <span class="n">authHeader</span><span class="o">,</span>
+    <span class="nd">@RequestBody</span> <span class="nc">MovieRequest</span> <span class="n">request</span>
+<span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// Service validates admin role from JWT token</span>
+    <span class="k">return</span> <span class="nc">ResponseEntity</span><span class="o">.</span><span class="na">ok</span><span class="o">(</span><span class="n">service</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="n">request</span><span class="o">));</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="cors-configuration">CORS Configuration</h2>
+
+<h3 id="api-gateway-cors">API Gateway CORS</h3>
+
+<p><strong>File</strong>: <code class="language-plaintext highlighter-rouge">api-gateway/src/main/resources/application.properties</code></p>
+
+<div class="language-properties highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Allow frontend origin
+</span><span class="err">spring.cloud.gateway.globalcors.cors-configurations.[/**]</span><span class="py">.allowedOrigins</span><span class="p">=</span><span class="s">http://localhost:5173</span>
+
+<span class="c"># Allow all HTTP methods
+</span><span class="err">spring.cloud.gateway.globalcors.cors-configurations.[/**]</span><span class="py">.allowedMethods</span><span class="p">=</span><span class="s">*</span>
+
+<span class="c"># Allow all headers
+</span><span class="err">spring.cloud.gateway.globalcors.cors-configurations.[/**]</span><span class="py">.allowedHeaders</span><span class="p">=</span><span class="s">*</span>
+
+<span class="c"># Allow credentials (cookies, authorization headers)
+</span><span class="err">spring.cloud.gateway.globalcors.cors-configurations.[/**]</span><span class="py">.allowCredentials</span><span class="p">=</span><span class="s">true</span>
+
+<span class="c"># Add CORS to simple URL handler
+</span><span class="py">spring.cloud.gateway.globalcors.add-to-simple-url-handler-mapping</span><span class="p">=</span><span class="s">true</span>
+</code></pre></div></div>
+
+<h3 id="production-cors">Production CORS</h3>
+
+<p>For production, restrict origins:</p>
+
+<div class="language-properties highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">spring.cloud.gateway.globalcors.cors-configurations.[/**]</span><span class="py">.allowedOrigins</span><span class="p">=</span><span class="s">https://cineverse.com,https://www.cineverse.com</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="frontend-security">Frontend Security</h2>
+
+<h3 id="token-storage">Token Storage</h3>
+
+<p><strong>File</strong>: <code class="language-plaintext highlighter-rouge">frontend/src/apiClient.js</code></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Store token after login</span>
+<span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="dl">'</span><span class="s1">cineverse_token</span><span class="dl">'</span><span class="p">,</span> <span class="nx">token</span><span class="p">);</span>
+<span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="dl">'</span><span class="s1">cineverse_role</span><span class="dl">'</span><span class="p">,</span> <span class="nx">role</span><span class="p">);</span>
+<span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="dl">'</span><span class="s1">cineverse_userId</span><span class="dl">'</span><span class="p">,</span> <span class="nx">userId</span><span class="p">);</span>
+
+<span class="c1">// Retrieve token for API calls</span>
+<span class="kd">const</span> <span class="nx">token</span> <span class="o">=</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="dl">'</span><span class="s1">cineverse_token</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="axios-interceptor">Axios Interceptor</h3>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">api</span><span class="p">.</span><span class="nx">interceptors</span><span class="p">.</span><span class="nx">request</span><span class="p">.</span><span class="nx">use</span><span class="p">((</span><span class="nx">config</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">token</span> <span class="o">=</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="dl">'</span><span class="s1">cineverse_token</span><span class="dl">'</span><span class="p">);</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">token</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">config</span><span class="p">.</span><span class="nx">headers</span><span class="p">.</span><span class="nx">Authorization</span> <span class="o">=</span> <span class="s2">`Bearer </span><span class="p">${</span><span class="nx">token</span><span class="p">}</span><span class="s2">`</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">config</span><span class="p">;</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<h3 id="protected-routes">Protected Routes</h3>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">AdminRoute</span><span class="p">({</span> <span class="nx">children</span> <span class="p">})</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">token</span> <span class="o">=</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="dl">"</span><span class="s2">cineverse_token</span><span class="dl">"</span><span class="p">);</span>
+  <span class="kd">const</span> <span class="nx">role</span> <span class="o">=</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="dl">"</span><span class="s2">cineverse_role</span><span class="dl">"</span><span class="p">);</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">token</span><span class="p">)</span> <span class="k">return</span> <span class="o">&lt;</span><span class="nx">Navigate</span> <span class="nx">to</span><span class="o">=</span><span class="dl">"</span><span class="s2">/login</span><span class="dl">"</span> <span class="nx">replace</span> <span class="o">/&gt;</span><span class="p">;</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="nx">role</span> <span class="o">!==</span> <span class="dl">"</span><span class="s2">ADMIN</span><span class="dl">"</span> <span class="o">&amp;&amp;</span> <span class="nx">role</span> <span class="o">!==</span> <span class="dl">"</span><span class="s2">SUPER_ADMIN</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="o">&lt;</span><span class="nx">Navigate</span> <span class="nx">to</span><span class="o">=</span><span class="dl">"</span><span class="s2">/</span><span class="dl">"</span> <span class="nx">replace</span> <span class="o">/&gt;</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="nx">children</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="security-best-practices">Security Best Practices</h2>
+
+<h3 id="1-jwt-secret-management">1. JWT Secret Management</h3>
+
+<p><strong>Development</strong>:</p>
+<div class="language-properties highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="py">jwt.secret</span><span class="p">=</span><span class="s">Lvnu9OxA/Z1tvC+jXnbo9gcpSFI8BU8pPlgIeC/UyCg=</span>
+</code></pre></div></div>
+
+<p><strong>Production</strong> (use environment variables):</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">JWT_SECRET</span><span class="o">=</span><span class="si">$(</span>openssl rand <span class="nt">-base64</span> 32<span class="si">)</span>
+</code></pre></div></div>
+
+<div class="language-properties highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="py">jwt.secret</span><span class="p">=</span><span class="s">${JWT_SECRET}</span>
+</code></pre></div></div>
+
+<h3 id="2-token-expiration">2. Token Expiration</h3>
+
+<p>Set appropriate expiration times:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Short-lived tokens (1 hour)</span>
+<span class="o">.</span><span class="na">expiration</span><span class="o">(</span><span class="k">new</span> <span class="nc">Date</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">()</span> <span class="o">+</span> <span class="mi">3600000</span><span class="o">))</span>
+
+<span class="c1">// Medium-lived tokens (24 hours) - Current</span>
+<span class="o">.</span><span class="na">expiration</span><span class="o">(</span><span class="k">new</span> <span class="nc">Date</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">()</span> <span class="o">+</span> <span class="mi">86400000</span><span class="o">))</span>
+
+<span class="c1">// Long-lived tokens (7 days)</span>
+<span class="o">.</span><span class="na">expiration</span><span class="o">(</span><span class="k">new</span> <span class="nc">Date</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">()</span> <span class="o">+</span> <span class="mi">604800000</span><span class="o">))</span>
+</code></pre></div></div>
+
+<h3 id="3-https-in-production">3. HTTPS in Production</h3>
+
+<p>Always use HTTPS in production:</p>
+
+<div class="language-properties highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="py">server.ssl.enabled</span><span class="p">=</span><span class="s">true</span>
+<span class="py">server.ssl.key-store</span><span class="p">=</span><span class="s">classpath:keystore.p12</span>
+<span class="py">server.ssl.key-store-password</span><span class="p">=</span><span class="s">${SSL_PASSWORD}</span>
+<span class="py">server.ssl.key-store-type</span><span class="p">=</span><span class="s">PKCS12</span>
+</code></pre></div></div>
+
+<h3 id="4-password-requirements">4. Password Requirements</h3>
+
+<p>Enforce strong passwords at application level:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isStrongPassword</span><span class="o">(</span><span class="nc">String</span> <span class="n">password</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">password</span><span class="o">.</span><span class="na">length</span><span class="o">()</span> <span class="o">&gt;=</span> <span class="mi">8</span> <span class="o">&amp;&amp;</span>
+           <span class="n">password</span><span class="o">.</span><span class="na">matches</span><span class="o">(</span><span class="s">".*[A-Z].*"</span><span class="o">)</span> <span class="o">&amp;&amp;</span>  <span class="c1">// Uppercase</span>
+           <span class="n">password</span><span class="o">.</span><span class="na">matches</span><span class="o">(</span><span class="s">".*[a-z].*"</span><span class="o">)</span> <span class="o">&amp;&amp;</span>  <span class="c1">// Lowercase</span>
+           <span class="n">password</span><span class="o">.</span><span class="na">matches</span><span class="o">(</span><span class="s">".*\\d.*"</span><span class="o">);</span>      <span class="c1">// Digit</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="5-rate-limiting">5. Rate Limiting</h3>
+
+<p>Implement rate limiting to prevent brute force attacks:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Example using Bucket4j</span>
+<span class="nd">@RateLimiter</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">"login"</span><span class="o">,</span> <span class="n">fallbackMethod</span> <span class="o">=</span> <span class="s">"loginFallback"</span><span class="o">)</span>
+<span class="nd">@PostMapping</span><span class="o">(</span><span class="s">"/login"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="nc">ResponseEntity</span><span class="o">&lt;?&gt;</span> <span class="n">login</span><span class="o">(</span><span class="nd">@RequestBody</span> <span class="nc">LoginRequest</span> <span class="n">request</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// Login logic</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="6-input-validation">6. Input Validation</h3>
+
+<p>Always validate and sanitize user input:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Valid</span> <span class="nd">@RequestBody</span> <span class="nc">SignupRequest</span> <span class="n">request</span>
+</code></pre></div></div>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="n">record</span> <span class="nf">SignupRequest</span><span class="o">(</span>
+    <span class="nd">@NotBlank</span> <span class="nd">@Email</span> <span class="nc">String</span> <span class="n">username</span><span class="o">,</span>
+    <span class="nd">@NotBlank</span> <span class="nd">@Size</span><span class="o">(</span><span class="n">min</span> <span class="o">=</span> <span class="mi">8</span><span class="o">)</span> <span class="nc">String</span> <span class="n">password</span><span class="o">,</span>
+    <span class="nd">@Pattern</span><span class="o">(</span><span class="n">regexp</span> <span class="o">=</span> <span class="s">"^\\+?[1-9]\\d{1,14}$"</span><span class="o">)</span> <span class="nc">String</span> <span class="n">phone</span>
+<span class="o">)</span> <span class="o">{}</span>
+</code></pre></div></div>
+
+<h3 id="7-sql-injection-prevention">7. SQL Injection Prevention</h3>
+
+<p>Use parameterized queries (JPA does this automatically):</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Safe - JPA uses parameterized queries</span>
+<span class="nd">@Query</span><span class="o">(</span><span class="s">"SELECT u FROM User u WHERE u.username = :username"</span><span class="o">)</span>
+<span class="nc">Optional</span><span class="o">&lt;</span><span class="nc">User</span><span class="o">&gt;</span> <span class="nf">findByUsername</span><span class="o">(</span><span class="nd">@Param</span><span class="o">(</span><span class="s">"username"</span><span class="o">)</span> <span class="nc">String</span> <span class="n">username</span><span class="o">);</span>
+</code></pre></div></div>
+
+<h3 id="8-xss-prevention">8. XSS Prevention</h3>
+
+<p>Frontend should sanitize user-generated content:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">DOMPurify</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">dompurify</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">clean</span> <span class="o">=</span> <span class="nx">DOMPurify</span><span class="p">.</span><span class="nx">sanitize</span><span class="p">(</span><span class="nx">userInput</span><span class="p">);</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="security-checklist">Security Checklist</h2>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />JWT secret is strong and environment-specific</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Passwords are hashed with BCrypt</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />HTTPS enabled in production</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />CORS properly configured</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Input validation on all endpoints</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Rate limiting implemented</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Sensitive data not logged</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Database credentials in environment variables</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Token expiration set appropriately</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Admin endpoints properly protected</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />SQL injection prevention (parameterized queries)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />XSS prevention on frontend</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />CSRF protection (not needed for stateless JWT)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Regular security audits</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Dependency vulnerability scanning</li>
+</ul>
+
+<hr />
+
+<h2 id="common-security-issues">Common Security Issues</h2>
+
+<h3 id="issue-1-token-exposed-in-url">Issue 1: Token Exposed in URL</h3>
+
+<p><strong>Bad</strong>:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /api/movies?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+</code></pre></div></div>
+
+<p><strong>Good</strong>:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /api/movies
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+</code></pre></div></div>
+
+<h3 id="issue-2-storing-sensitive-data-in-jwt">Issue 2: Storing Sensitive Data in JWT</h3>
+
+<p><strong>Bad</strong>:</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"sub"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user@example.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"secret123"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"creditCard"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1234-5678-9012-3456"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p><strong>Good</strong>:</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"sub"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user@example.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"userId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"authorities"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"USER"</span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="issue-3-not-validating-token-expiration">Issue 3: Not Validating Token Expiration</h3>
+
+<p>Always check token expiration on the backend. Spring Security does this automatically.</p>
+
+<hr />
+
+<h2 id="security-monitoring">Security Monitoring</h2>
+
+<h3 id="logging-security-events">Logging Security Events</h3>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Slf4j</span>
+<span class="nd">@RestController</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">AuthController</span> <span class="o">{</span>
+    
+    <span class="nd">@PostMapping</span><span class="o">(</span><span class="s">"/login"</span><span class="o">)</span>
+    <span class="kd">public</span> <span class="nc">ResponseEntity</span><span class="o">&lt;?&gt;</span> <span class="n">login</span><span class="o">(</span><span class="nd">@RequestBody</span> <span class="nc">LoginRequest</span> <span class="n">request</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">log</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="s">"Login attempt for user: {}"</span><span class="o">,</span> <span class="n">request</span><span class="o">.</span><span class="na">username</span><span class="o">());</span>
+        
+        <span class="c1">// Login logic</span>
+        
+        <span class="k">if</span> <span class="o">(</span><span class="n">success</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">log</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="s">"Successful login for user: {}"</span><span class="o">,</span> <span class="n">request</span><span class="o">.</span><span class="na">username</span><span class="o">());</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="n">log</span><span class="o">.</span><span class="na">warn</span><span class="o">(</span><span class="s">"Failed login attempt for user: {}"</span><span class="o">,</span> <span class="n">request</span><span class="o">.</span><span class="na">username</span><span class="o">());</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="failed-login-tracking">Failed Login Tracking</h3>
+
+<p>Implement account lockout after multiple failed attempts:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">private</span> <span class="nc">Map</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">failedAttempts</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ConcurrentHashMap</span><span class="o">&lt;&gt;();</span>
+
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">recordFailedLogin</span><span class="o">(</span><span class="nc">String</span> <span class="n">username</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">attempts</span> <span class="o">=</span> <span class="n">failedAttempts</span><span class="o">.</span><span class="na">getOrDefault</span><span class="o">(</span><span class="n">username</span><span class="o">,</span> <span class="mi">0</span><span class="o">)</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span>
+    <span class="n">failedAttempts</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">username</span><span class="o">,</span> <span class="n">attempts</span><span class="o">);</span>
+    
+    <span class="k">if</span> <span class="o">(</span><span class="n">attempts</span> <span class="o">&gt;=</span> <span class="mi">5</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// Lock account or implement delay</span>
+        <span class="k">throw</span> <span class="k">new</span> <span class="nf">AccountLockedException</span><span class="o">(</span><span class="s">"Too many failed attempts"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="penetration-testing">Penetration Testing</h2>
+
+<p>Regular security testing should include:</p>
+
+<ol>
+  <li><strong>Authentication bypass attempts</strong></li>
+  <li><strong>SQL injection testing</strong></li>
+  <li><strong>XSS vulnerability scanning</strong></li>
+  <li><strong>CSRF testing</strong> (though not applicable for stateless JWT)</li>
+  <li><strong>Authorization bypass attempts</strong></li>
+  <li><strong>Token manipulation testing</strong></li>
+  <li><strong>Brute force attack simulation</strong></li>
+</ol>
+
+<hr />
+
+<h2 id="security-resources">Security Resources</h2>
+
+<ul>
+  <li><a href="https://owasp.org/www-project-top-ten/">OWASP Top 10</a></li>
+  <li><a href="https://tools.ietf.org/html/rfc8725">JWT Best Practices</a></li>
+  <li><a href="https://spring.io/projects/spring-security">Spring Security Documentation</a></li>
+  <li><a href="https://bcrypt-generator.com/">BCrypt Calculator</a></li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2026-01-18">January 18, 2026</time></p>
+
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/cineverse/docs/backend/notification-service/" class="pagination--pager" title="Notification Service
+">Previous</a>
+    
+    
+      <a href="/cineverse/docs/backend/show-service/" class="pagination--pager" title="Show Service
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+    <ul class="social-icons">
+        
+
+        
+
+        
+        <li><a href="/cineverse/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+        
+    </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2026 YadnyeshKolte. Powered by <a
+        href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a
+        href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+
+    
+  <script src="/cineverse/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

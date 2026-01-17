@@ -22,6 +22,14 @@ docs:
 
   - title: Backend
     children:
+      - title: "API Reference"
+        url: /docs/backend/api-reference/
+      - title: "Configuration"
+        url: /docs/backend/configuration/
+      - title: "Security"
+        url: /docs/backend/security/
+      - title: "Error Handling"
+        url: /docs/backend/error-handling/
       - title: "Auth Service"
         url: /docs/backend/auth-service/
       - title: "Theatre Service"
@@ -39,8 +47,6 @@ docs:
 
   - title: Database
     children:
-
-      # --- NEW BookMyShow Database Files ---
       - title: "Auth Database"
         url: /docs/database/auth-database/
       - title: "Theatre Database"
@@ -54,9 +60,22 @@ docs:
 
   - title: Frontend
     children:
+      - title: "Components"
+        url: /docs/frontend/components/
+      - title: "Routing & Navigation"
+        url: /docs/frontend/routing/
+      - title: "State & API Integration"
+        url: /docs/frontend/state-api/
+      - title: "UI Components"
+        url: /docs/frontend/ui-components/
       - title: "User Effect Voting"
         url: /docs/frontend/usereffectvoting/
       - title: "Feedback System"
         url: /docs/frontend/feedback/
-      - title: "UI Components"
-        url: /docs/frontend/ui-components/
+
+  - title: Guides
+    children:
+      - title: "Deployment"
+        url: /docs/deployment/
+      - title: "Troubleshooting"
+        url: /docs/troubleshooting/
