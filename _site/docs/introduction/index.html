@@ -1,0 +1,1414 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Introduction - Cineverse</title>
+<meta name="description" content="Introduction to Online Voting System">
+
+
+  <meta name="author" content="AkashDwi17">
+  
+  <meta property="article:author" content="AkashDwi17">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Cineverse">
+<meta property="og:title" content="Introduction">
+<meta property="og:url" content="http://localhost:4000/cineverse/docs/introduction/">
+
+
+  <meta property="og:description" content="Introduction to Online Voting System">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2026-01-17T23:37:02+05:30">
+
+
+
+  <meta property="article:modified_time" content="2025-11-15T00:00:00+05:30">
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/cineverse/docs/introduction/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "AkashDwi17",
+      "url": "http://localhost:4000/cineverse/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/cineverse/feed.xml" type="application/atom+xml" rel="alternate" title="Cineverse Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/cineverse/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <link rel="icon" href="/cineverse/assets/images/favicon.svg" type="image/svg+xml">
+
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/cineverse/"><img src="/cineverse/assets/images/favicon.ico" alt="Cineverse"></a>
+        
+        <a class="site-title" href="/cineverse/">
+          Cineverse
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/cineverse/docs/introduction/">Documentation</a>
+            </li><li class="masthead__menu-item">
+              <a href="/cineverse/docs/quick-start/">Getting Started</a>
+            </li><li class="masthead__menu-item">
+              <a href="/cineverse/about/">About</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Getting Started</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/cineverse/docs/introduction/" class="active">Introduction</a></li>
+          
+            <li><a href="/cineverse/docs/installation/">Installation</a></li>
+          
+            <li><a href="/cineverse/docs/quick-start/">Quick Start</a></li>
+          
+            <li><a href="/cineverse/docs/diagrams/">Diagrams</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Backend</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/cineverse/docs/backend/auth-service/">Auth Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/theatre-service/">Theatre Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/movie-service/">Movie Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/show-service/">Show Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/booking-service/">Booking Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/notification-service/">Notification Service</a></li>
+          
+            <li><a href="/cineverse/docs/backend/api-gateway-eureka/">API Gateway & Eureka</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Database</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/cineverse/docs/database/auth-database/">Auth Database</a></li>
+          
+            <li><a href="/cineverse/docs/database/theatre-database/">Theatre Database</a></li>
+          
+            <li><a href="/cineverse/docs/database/show-database/">Show Database</a></li>
+          
+            <li><a href="/cineverse/docs/database/booking-database/">Booking Database</a></li>
+          
+            <li><a href="/cineverse/docs/database/movie-database/">Movie Database (Mongo)</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Frontend</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/cineverse/docs/frontend/usereffectvoting/">User Effect Voting</a></li>
+          
+            <li><a href="/cineverse/docs/frontend/feedback/">Feedback System</a></li>
+          
+            <li><a href="/cineverse/docs/frontend/ui-components/">UI Components</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Introduction">
+    <meta itemprop="description" content="Introduction to Online Voting System">
+    
+    <meta itemprop="dateModified" content="2025-11-15T00:00:00+05:30">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Introduction
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#-cineverse---bookmyshow-microservices-platform">🎬 Cineverse - BookMyShow Microservices Platform</a><ul><li><a href="#-table-of-contents">📋 Table of Contents</a></li><li><a href="#-overview">🎯 Overview</a></li><li><a href="#-key-features">✨ Key Features</a><ul><li><a href="#-for-users-customers">🎫 For Users (Customers)</a></li><li><a href="#-for-administrators">🔐 For Administrators</a></li><li><a href="#️-security-features">🛡️ Security Features</a></li></ul></li><li><a href="#-technology-stack">💻 Technology Stack</a><ul><li><a href="#backend-services">Backend Services</a></li><li><a href="#frontend">Frontend</a></li><li><a href="#devops--tools">DevOps &amp; Tools</a></li></ul></li><li><a href="#️-system-architecture">🏗️ System Architecture</a><ul><li><a href="#architecture-diagram">Architecture Diagram</a></li><li><a href="#service-interactions">Service Interactions</a></li></ul></li><li><a href="#-project-structure">📁 Project Structure</a></li><li><a href="#-services-overview">🔧 Services Overview</a><ul><li><a href="#1️⃣-auth-service-port-8081">1️⃣ Auth Service (Port: 8081)</a></li><li><a href="#2️⃣-theatre-service-port-8082">2️⃣ Theatre Service (Port: 8082)</a></li><li><a href="#3️⃣-movie-service-port-8083">3️⃣ Movie Service (Port: 8083)</a></li><li><a href="#4️⃣-show-service-port-8084">4️⃣ Show Service (Port: 8084)</a></li><li><a href="#5️⃣-booking-service-port-8085">5️⃣ Booking Service (Port: 8085)</a></li><li><a href="#6️⃣-notification-service-port-8086">6️⃣ Notification Service (Port: 8086)</a></li><li><a href="#-eureka-service-registry-port-8761">🔄 Eureka Service Registry (Port: 8761)</a></li><li><a href="#-api-gateway-port-9191">🚪 API Gateway (Port: 9191)</a></li></ul></li><li><a href="#️-database-architecture">🗄️ Database Architecture</a><ul><li><a href="#sql-databases-mysql">SQL Databases (MySQL)</a><ul><li><a href="#1-auth-database-bookmyshow_auth">1. Auth Database (bookmyshow_auth)</a></li><li><a href="#2-theatre-database-bookmyshow_theatre">2. Theatre Database (bookmyshow_theatre)</a></li><li><a href="#3--show-database-show_db">3.  Show Database (show_db)</a></li><li><a href="#4--booking-database-booking_db">4.  Booking Database (booking_db)</a></li></ul></li><li><a href="#nosql-database-mongodb">NoSQL Database (MongoDB)</a><ul><li><a href="#movie-database-movie_db">Movie Database (movie_db)</a></li></ul></li></ul></li><li><a href="#️-installation--setup">⚙️ Installation &amp; Setup</a><ul><li><a href="#prerequisites">Prerequisites</a></li><li><a href="#step-1-clone-repository">Step 1: Clone Repository</a></li><li><a href="#step-2-database-setup">Step 2: Database Setup</a><ul><li><a href="#mysql-databases">MySQL Databases</a></li><li><a href="#mongodb">MongoDB</a></li></ul></li><li><a href="#step-3-backend-setup">Step 3: Backend Setup</a><ul><li><a href="#configure-database-credentials">Configure Database Credentials</a></li><li><a href="#build-and-run-services">Build and Run Services</a></li></ul></li><li><a href="#step-4-frontend-setup">Step 4: Frontend Setup</a></li></ul></li><li><a href="#-quick-start-guide">🚀 Quick Start Guide</a><ul><li><a href="#access-the-application">Access the Application</a></li><li><a href="#default-accounts">Default Accounts</a></li><li><a href="#sample-workflow">Sample Workflow</a><ul><li><a href="#1-admin-add-theatre">1. Admin: Add Theatre</a></li><li><a href="#2-admin-add-movie">2. Admin: Add Movie</a></li><li><a href="#3-admin-create-show">3. Admin: Create Show</a></li><li><a href="#4-user-book-tickets">4. User: Book Tickets</a></li><li><a href="#5-user-receives-notification">5. User Receives Notification</a></li></ul></li></ul></li><li><a href="#‍-development">👨‍💻 Development</a><ul><li><a href="#project-structure-best-practices">Project Structure Best Practices</a></li><li><a href="#code-conventions">Code Conventions</a></li><li><a href="#running-tests">Running Tests</a></li><li><a href="#building-for-production">Building for Production</a></li></ul></li><li><a href="#-monitoring--troubleshooting">📊 Monitoring &amp; Troubleshooting</a><ul><li><a href="#eureka-dashboard">Eureka Dashboard</a></li><li><a href="#common-issues--solutions">Common Issues &amp; Solutions</a></li><li><a href="#logs">Logs</a></li></ul></li><li><a href="#-security-considerations">🔐 Security Considerations</a></li><li><a href="#-performance-optimization">📈 Performance Optimization</a></li><li><a href="#-testing">🧪 Testing</a><ul><li><a href="#unit-tests">Unit Tests</a></li><li><a href="#integration-tests">Integration Tests</a></li></ul></li><li><a href="#-api-documentation">📝 API Documentation</a></li><li><a href="#-contributing">🤝 Contributing</a><ul><li><a href="#code-review-checklist">Code Review Checklist</a></li></ul></li><li><a href="#-license">📄 License</a></li><li><a href="#-team">👥 Team</a></li><li><a href="#-support--contact">📞 Support &amp; Contact</a></li><li><a href="#-learning-resources">🎓 Learning Resources</a></li><li><a href="#️-project-roadmap">🗺️ Project Roadmap</a><ul><li><a href="#phase-1-current-">Phase 1 (Current) ✅</a></li><li><a href="#phase-2-planned">Phase 2 (Planned)</a></li><li><a href="#phase-3-future">Phase 3 (Future)</a></li></ul></li><li><a href="#-show-your-support">⭐ Show Your Support</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h1 id="-cineverse---bookmyshow-microservices-platform">🎬 Cineverse - BookMyShow Microservices Platform</h1>
+
+<blockquote>
+  <p><strong>A Comprehensive Online Movie Booking &amp; Ticket Management System</strong><br />
+Built with modern microservices architecture, implementing Spring Boot, MySQL, MongoDB, and Eureka service discovery.</p>
+</blockquote>
+
+<hr />
+
+<h2 id="-table-of-contents">📋 Table of Contents</h2>
+
+<ul>
+  <li><a href="#overview">Overview</a></li>
+  <li><a href="#key-features">Key Features</a></li>
+  <li><a href="#technology-stack">Technology Stack</a></li>
+  <li><a href="#system-architecture">System Architecture</a></li>
+  <li><a href="#project-structure">Project Structure</a></li>
+  <li><a href="#services-overview">Services Overview</a></li>
+  <li><a href="#database-architecture">Database Architecture</a></li>
+  <li><a href="#installation--setup">Installation &amp; Setup</a></li>
+  <li><a href="#quick-start-guide">Quick Start Guide</a></li>
+  <li><a href="#api-gateway-routes">API Gateway Routes</a></li>
+  <li><a href="#development">Development</a></li>
+  <li><a href="#team">Team</a></li>
+</ul>
+
+<hr />
+
+<h2 id="-overview">🎯 Overview</h2>
+
+<p><strong>Cineverse</strong> is an enterprise-grade, scalable movie booking platform inspired by BookMyShow.  It leverages a distributed microservices architecture to handle complex operations like:</p>
+
+<ul>
+  <li>User authentication and authorization</li>
+  <li>Movie catalog management</li>
+  <li>Theatre and screen information</li>
+  <li>Show scheduling and pricing</li>
+  <li>Real-time seat booking and locking</li>
+  <li>Ticket generation and WhatsApp notifications</li>
+  <li>Service discovery and dynamic routing</li>
+</ul>
+
+<p>The system ensures <strong>reliability</strong>, <strong>scalability</strong>, and <strong>maintainability</strong> through service isolation and independent deployment capabilities.</p>
+
+<hr />
+
+<h2 id="-key-features">✨ Key Features</h2>
+
+<h3 id="-for-users-customers">🎫 For Users (Customers)</h3>
+<ul>
+  <li>✅ <strong>Secure Registration &amp; Authentication</strong> - JWT-based authentication with role-based access</li>
+  <li>✅ <strong>Movie Discovery</strong> - Browse movies by language, genre, release date</li>
+  <li>✅ <strong>Show Listings</strong> - Filter shows by theatre, date, and time</li>
+  <li>✅ <strong>Smart Seat Selection</strong> - Real-time seat availability with temporary locking</li>
+  <li>✅ <strong>Seamless Booking</strong> - Complete booking workflow with payment simulation</li>
+  <li>✅ <strong>Instant Notifications</strong> - WhatsApp ticket delivery with booking details</li>
+  <li>✅ <strong>Booking History</strong> - Track and manage all bookings</li>
+</ul>
+
+<h3 id="-for-administrators">🔐 For Administrators</h3>
+<ul>
+  <li>✅ <strong>Movie Management</strong> - Add, update, delete movie metadata</li>
+  <li>✅ <strong>Theatre Management</strong> - Manage theatres, screens, and seat configurations</li>
+  <li>✅ <strong>Show Scheduling</strong> - Create shows with pricing and timings</li>
+  <li>✅ <strong>Booking Oversight</strong> - Monitor and manage customer bookings</li>
+  <li>✅ <strong>Analytics Dashboard</strong> - Real-time booking statistics and reports</li>
+</ul>
+
+<h3 id="️-security-features">🛡️ Security Features</h3>
+<ul>
+  <li>🔒 <strong>Password Encryption</strong> - BCrypt hashing for secure password storage</li>
+  <li>🔒 <strong>JWT Token Authentication</strong> - Stateless, secure API authentication</li>
+  <li>🔒 <strong>Role-Based Access Control</strong> - USER and ADMIN role separation</li>
+  <li>🔒 <strong>Seat Lock Mechanism</strong> - Prevents double-booking with TTL-based locks</li>
+  <li>🔒 <strong>Data Validation</strong> - Comprehensive input validation across services</li>
+</ul>
+
+<hr />
+
+<h2 id="-technology-stack">💻 Technology Stack</h2>
+
+<h3 id="backend-services">Backend Services</h3>
+<p>| Component | Technology |
+|———–|———–|
+| <strong>Framework</strong> | Spring Boot 3.x |
+| <strong>Security</strong> | Spring Security + JWT |
+| <strong>Service Discovery</strong> | Netflix Eureka |
+| <strong>API Gateway</strong> | Spring Cloud Gateway |
+| <strong>Database (SQL)</strong> | MySQL 8.0+ |
+| <strong>Database (NoSQL)</strong> | MongoDB |
+| <strong>ORM</strong> | Spring Data JPA |
+| <strong>Build Tool</strong> | Maven |
+| <strong>Language</strong> | Java 21 |</p>
+
+<h3 id="frontend">Frontend</h3>
+<p>| Component | Technology |
+|———–|———–|
+| <strong>Framework</strong> | React. js |
+| <strong>Styling</strong> | CSS3, Responsive Design |
+| <strong>Language</strong> | JavaScript (ES6+) |
+| <strong>Package Manager</strong> | npm |
+| <strong>Development Server</strong> | Vite |</p>
+
+<h3 id="devops--tools">DevOps &amp; Tools</h3>
+<ul>
+  <li><strong>Version Control</strong> - Git &amp; GitHub</li>
+  <li><strong>API Testing</strong> - Postman</li>
+  <li><strong>Development IDEs</strong> - IntelliJ IDEA, VS Code</li>
+  <li><strong>Container Ready</strong> - Docker compatible</li>
+</ul>
+
+<hr />
+
+<h2 id="️-system-architecture">🏗️ System Architecture</h2>
+
+<h3 id="architecture-diagram">Architecture Diagram</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌─────────────────────────────────────────────────────────────────┐
+│                        CINEVERSE PLATFORM                       │
+└─────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────┐
+│                      FRONTEND LAYER (React.js)                   │
+│  User Interface | Show Listings | Seat Selection | Bookings      │
+└──────────────────────────────────────────────────────────────────┘
+                               │
+                               ▼
+┌──────────────────────────────────────────────────────────────────┐
+│              API GATEWAY (Spring Cloud Gateway)                  │
+│                     Port: 9191                                   │
+│  Route Management | Load Balancing | Request Filtering          │
+└──────────────────────────────────────────────────────────────────┘
+                               │
+        ┌──────────────────────┼──────────────────────┐
+        │                      │                      │
+        ▼                      ▼                      ▼
+   ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐
+   │  AUTH SERVICE   │  │ THEATRE SERVICE │  │  MOVIE SERVICE  │
+   │   (Port 8081)   │  │   (Port 8082)   │  │   (Port 8083)   │
+   └─────────────────┘  └─────────────────┘  └─────────────────┘
+        │ (MySQL)           │ (MySQL)           │ (MongoDB)
+        
+        ▼                      ▼                      ▼
+   ┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐
+   │  SHOW SERVICE   │  │ BOOKING SERVICE │  │ NOTIFICATION    │
+   │   (Port 8084)   │  │   (Port 8085)   │  │ SERVICE         │
+   └─────────────────┘  └─────────────────┘  │ (Port 8086)     │
+        │ (MySQL)           │ (MySQL)           └─────────────────┘
+        │                   │                        │
+        └───────────────────┴────────────────────────┘
+                      │
+                      ▼
+        ┌─────────────────────────────────┐
+        │   EUREKA SERVICE REGISTRY       │
+        │    (Service Discovery)          │
+        │     Port: 8761                  │
+        └─────────────────────────────────┘
+</code></pre></div></div>
+
+<h3 id="service-interactions">Service Interactions</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>User Request
+    ↓
+API Gateway (9191)
+    ↓
+Route to Microservice
+    ↓
+Service Logic (Validate, Process)
+    ↓
+Database/External Service
+    ↓
+Response to Client
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-project-structure">📁 Project Structure</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cineverse/
+├── _docs/
+│   ├── backend/
+│   │   ├── api-gateway-eureka.md      # Gateway and Eureka config
+│   │   ├── auth-service.md            # Authentication endpoints
+│   │   ├── booking-service.md         # Booking API details
+│   │   ├── movie-service.md           # Movie management
+│   │   ├── notification-service.md    # WhatsApp notifications
+│   │   ├── show-service.md            # Show scheduling
+│   │   └── theatre-service.md         # Theatre management
+│   │
+│   ├── database/
+│   │   ├── auth-database.md           # Auth DB schema (MySQL)
+│   │   ├── booking-database.md        # Booking DB schema (MySQL)
+│   │   ├── movie-database.md          # Movie DB schema (MongoDB)
+│   │   ├── show-database.md           # Show DB schema (MySQL)
+│   │   └── theatre-database.md        # Theatre DB schema (MySQL)
+│   │
+│   ├── frontend/
+│   │   ├── ui-components.md           # React components
+│   │   ├── feedback.md                # Feedback system
+│   │   └── usereffectvoting.md        # User interaction effects
+│   │
+│   ├── diagram. md                     # System architecture diagrams
+│   ├── installation.md                # Setup instructions
+│   ├── introduction.md                # Project overview
+│   ├── quick-start.md                 # Quick start guide
+│   └── README.md                      # Documentation index
+│
+├── frontend/                          # React application
+│   ├── src/
+│   ├── public/
+│   ├── package.json
+│   └── ... 
+│
+├── backend/                           # Spring Boot microservices
+│   ├── api-gateway/
+│   ├── auth-service/
+│   ├── theatre-service/
+│   ├── movie-service/
+│   ├── show-service/
+│   ├── booking-service/
+│   ├── notification-service/
+│   ├── eureka-server/
+│   └── ...
+│
+├── README.md                          # Main README
+├── LICENSE                            # Apache 2.0 License
+└── ... 
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-services-overview">🔧 Services Overview</h2>
+
+<h3 id="1️⃣-auth-service-port-8081">1️⃣ <strong>Auth Service</strong> (Port: 8081)</h3>
+<p><strong>Purpose</strong>: User authentication and JWT token generation</p>
+
+<p><strong>Responsibilities</strong>:</p>
+<ul>
+  <li>User registration (signup)</li>
+  <li>User login with credentials</li>
+  <li>JWT token generation with role claims</li>
+  <li>Password hashing and validation</li>
+</ul>
+
+<p><strong>Key Endpoints</strong>:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">POST /api/auth/signup</code> - Register new user</li>
+  <li><code class="language-plaintext highlighter-rouge">POST /api/auth/login</code> - Authenticate and get JWT token</li>
+  <li><code class="language-plaintext highlighter-rouge">GET /api/auth/validate</code> - Validate JWT token</li>
+</ul>
+
+<p><strong>Database</strong>: MySQL (<code class="language-plaintext highlighter-rouge">bookmyshow_auth. users</code>)</p>
+
+<hr />
+
+<h3 id="2️⃣-theatre-service-port-8082">2️⃣ <strong>Theatre Service</strong> (Port: 8082)</h3>
+<p><strong>Purpose</strong>: Manage theatres, screens, and seat information</p>
+
+<p><strong>Responsibilities</strong>:</p>
+<ul>
+  <li>CRUD operations for theatres</li>
+  <li>Store screen types (2D, 3D, IMAX)</li>
+  <li>Manage seat capacities</li>
+</ul>
+
+<p><strong>Key Endpoints</strong>:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">GET /api/theatres/list</code> - List all theatres</li>
+  <li><code class="language-plaintext highlighter-rouge">GET /api/theatres/view/{id}</code> - Get theatre details</li>
+  <li><code class="language-plaintext highlighter-rouge">POST /api/theatres</code> - Create new theatre (ADMIN)</li>
+</ul>
+
+<p><strong>Database</strong>: MySQL (<code class="language-plaintext highlighter-rouge">bookmyshow_theatre.theatres</code>)</p>
+
+<hr />
+
+<h3 id="3️⃣-movie-service-port-8083">3️⃣ <strong>Movie Service</strong> (Port: 8083)</h3>
+<p><strong>Purpose</strong>: Movie catalog and metadata management</p>
+
+<p><strong>Responsibilities</strong>:</p>
+<ul>
+  <li>CRUD operations for movies</li>
+  <li>Store movie metadata (title, genre, language, duration, cast)</li>
+  <li>Provide movie listings</li>
+</ul>
+
+<p><strong>Key Endpoints</strong>:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">GET /api/movies/list</code> - List all movies</li>
+  <li><code class="language-plaintext highlighter-rouge">GET /api/movies/view/{id}</code> - Get movie details</li>
+  <li><code class="language-plaintext highlighter-rouge">POST /api/movies</code> - Add new movie (ADMIN)</li>
+</ul>
+
+<p><strong>Database</strong>: MongoDB (<code class="language-plaintext highlighter-rouge">movie_db.movies</code>)</p>
+
+<hr />
+
+<h3 id="4️⃣-show-service-port-8084">4️⃣ <strong>Show Service</strong> (Port: 8084)</h3>
+<p><strong>Purpose</strong>: Map movies to theatres with date, time, and pricing</p>
+
+<p><strong>Responsibilities</strong>:</p>
+<ul>
+  <li>Create/update show schedules</li>
+  <li>Provide shows by movie or theatre</li>
+  <li>Manage show pricing and timings</li>
+</ul>
+
+<p><strong>Key Endpoints</strong>:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">GET /api/shows/by-movie/{movieId}</code> - Shows for a movie</li>
+  <li><code class="language-plaintext highlighter-rouge">GET /api/shows/by-theatre/{theatreId}</code> - Shows for a theatre</li>
+  <li><code class="language-plaintext highlighter-rouge">POST /api/shows</code> - Create new show (ADMIN)</li>
+</ul>
+
+<p><strong>Database</strong>: MySQL (<code class="language-plaintext highlighter-rouge">show_db.shows</code>)</p>
+
+<p><strong>Dependencies</strong>: Movie Service, Theatre Service</p>
+
+<hr />
+
+<h3 id="5️⃣-booking-service-port-8085">5️⃣ <strong>Booking Service</strong> (Port: 8085)</h3>
+<p><strong>Purpose</strong>: Complete booking lifecycle management</p>
+
+<p><strong>Responsibilities</strong>:</p>
+<ul>
+  <li>Lock seats temporarily during booking</li>
+  <li>Confirm bookings after payment</li>
+  <li>Cancel bookings and release seats</li>
+  <li>Maintain booking history</li>
+</ul>
+
+<p><strong>Key Endpoints</strong>:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">POST /api/bookings</code> - Create new booking</li>
+  <li><code class="language-plaintext highlighter-rouge">GET /api/bookings/{id}</code> - Get booking details</li>
+  <li><code class="language-plaintext highlighter-rouge">PUT /api/bookings/{id}/confirm</code> - Confirm booking</li>
+  <li><code class="language-plaintext highlighter-rouge">DELETE /api/bookings/{id}</code> - Cancel booking</li>
+</ul>
+
+<p><strong>Database</strong>: MySQL (<code class="language-plaintext highlighter-rouge">booking_db.bookings</code>, <code class="language-plaintext highlighter-rouge">booking_db.seat_locks</code>)</p>
+
+<p><strong>Seat Locking Mechanism</strong>:</p>
+<ul>
+  <li>Seats locked when user starts selection</li>
+  <li>Lock expires after TTL (prevents double-booking)</li>
+  <li>Lock removed when booking confirmed or cancelled</li>
+</ul>
+
+<p><strong>Dependencies</strong>: Show Service, Auth Service, Notification Service</p>
+
+<hr />
+
+<h3 id="6️⃣-notification-service-port-8086">6️⃣ <strong>Notification Service</strong> (Port: 8086)</h3>
+<p><strong>Purpose</strong>: Send booking tickets via WhatsApp</p>
+
+<p><strong>Responsibilities</strong>:</p>
+<ul>
+  <li>Accept booking details and send WhatsApp messages</li>
+  <li>Format ticket information</li>
+  <li>Integrate with WhatsApp API or simulate sending</li>
+</ul>
+
+<p><strong>Key Endpoints</strong>:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">POST /api/notify/send-ticket</code> - Send booking ticket</li>
+</ul>
+
+<p><strong>Payload</strong>:</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+91XXXXXXXX"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"bookingId"</span><span class="p">:</span><span class="w"> </span><span class="mi">55</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"movie"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Avengers"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"theatre"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PVR Bellandur"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"showTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6:30 PM"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"seats"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"A1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"A2"</span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p><strong>Dependencies</strong>: None (called by Booking Service)</p>
+
+<hr />
+
+<h3 id="-eureka-service-registry-port-8761">🔄 <strong>Eureka Service Registry</strong> (Port: 8761)</h3>
+<p><strong>Purpose</strong>: Service discovery and registration</p>
+
+<p><strong>Features</strong>:</p>
+<ul>
+  <li>Auto-registration of all microservices</li>
+  <li>Health check monitoring</li>
+  <li>Service instance lookup</li>
+  <li>Load balancing support</li>
+</ul>
+
+<hr />
+
+<h3 id="-api-gateway-port-9191">🚪 <strong>API Gateway</strong> (Port: 9191)</h3>
+<p><strong>Purpose</strong>: Unified entry point for all frontend requests</p>
+
+<p><strong>Routing Rules</strong>:
+| Route | Service |
+|——-|———|
+| <code class="language-plaintext highlighter-rouge">/api/auth/**</code> | Auth Service (8081) |
+| <code class="language-plaintext highlighter-rouge">/api/theatres/**</code> | Theatre Service (8082) |
+| <code class="language-plaintext highlighter-rouge">/api/movies/**</code> | Movie Service (8083) |
+| <code class="language-plaintext highlighter-rouge">/api/shows/**</code> | Show Service (8084) |
+| <code class="language-plaintext highlighter-rouge">/api/bookings/**</code> | Booking Service (8085) |
+| <code class="language-plaintext highlighter-rouge">/api/notify/**</code> | Notification Service (8086) |</p>
+
+<p><strong>Features</strong>:</p>
+<ul>
+  <li>Request routing</li>
+  <li>Load balancing</li>
+  <li>Request filtering</li>
+  <li>Response transformation</li>
+</ul>
+
+<hr />
+
+<h2 id="️-database-architecture">🗄️ Database Architecture</h2>
+
+<h3 id="sql-databases-mysql">SQL Databases (MySQL)</h3>
+
+<h4 id="1-auth-database-bookmyshow_auth">1. <strong>Auth Database</strong> (<code class="language-plaintext highlighter-rouge">bookmyshow_auth</code>)</h4>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- users table</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">users</span> <span class="p">(</span>
+  <span class="n">id</span> <span class="nb">BIGINT</span> <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="n">AUTO_INCREMENT</span><span class="p">,</span>
+  <span class="n">username</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="k">UNIQUE</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="n">password</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="p">(</span><span class="n">hashed</span><span class="p">),</span>
+  <span class="n">phone</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+  <span class="n">city</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+  <span class="k">state</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+  <span class="k">role</span> <span class="nb">ENUM</span><span class="p">(</span><span class="s1">'USER'</span><span class="p">,</span> <span class="s1">'ADMIN'</span><span class="p">,</span> <span class="s1">'SUPER_ADMIN'</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<h4 id="2-theatre-database-bookmyshow_theatre">2. <strong>Theatre Database</strong> (<code class="language-plaintext highlighter-rouge">bookmyshow_theatre</code>)</h4>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- theatres table</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">theatres</span> <span class="p">(</span>
+  <span class="n">id</span> <span class="nb">BIGINT</span> <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="n">AUTO_INCREMENT</span><span class="p">,</span>
+  <span class="n">name</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+  <span class="n">address</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+  <span class="n">city</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+  <span class="n">screen_type</span> <span class="nb">ENUM</span><span class="p">(</span><span class="s1">'TWO_D'</span><span class="p">,</span> <span class="s1">'THREE_D'</span><span class="p">,</span> <span class="s1">'IMAX'</span><span class="p">),</span>
+  <span class="n">total_seats</span> <span class="nb">INT</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<h4 id="3--show-database-show_db">3.  <strong>Show Database</strong> (<code class="language-plaintext highlighter-rouge">show_db</code>)</h4>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- shows table</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">shows</span> <span class="p">(</span>
+  <span class="n">id</span> <span class="nb">BIGINT</span> <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="n">AUTO_INCREMENT</span><span class="p">,</span>
+  <span class="n">movie_id</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="c1">-- MongoDB ObjectId as string</span>
+  <span class="n">theatre_id</span> <span class="nb">BIGINT</span><span class="p">,</span>
+  <span class="n">show_date</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+  <span class="n">show_time</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+  <span class="n">price</span> <span class="nb">DOUBLE</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<h4 id="4--booking-database-booking_db">4.  <strong>Booking Database</strong> (<code class="language-plaintext highlighter-rouge">booking_db</code>)</h4>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- bookings table</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">bookings</span> <span class="p">(</span>
+  <span class="n">id</span> <span class="nb">BIGINT</span> <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="n">AUTO_INCREMENT</span><span class="p">,</span>
+  <span class="n">show_id</span> <span class="nb">BIGINT</span><span class="p">,</span>
+  <span class="n">user_id</span> <span class="nb">BIGINT</span><span class="p">,</span>
+  <span class="n">theatre_id</span> <span class="nb">BIGINT</span><span class="p">,</span>
+  <span class="n">movie_id</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+  <span class="n">seats</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="c1">-- Comma-separated seat numbers</span>
+  <span class="n">amount</span> <span class="nb">DOUBLE</span><span class="p">,</span>
+  <span class="n">booking_time</span> <span class="nb">DATETIME</span><span class="p">(</span><span class="mi">6</span><span class="p">),</span>
+  <span class="n">status</span> <span class="nb">ENUM</span><span class="p">(</span><span class="s1">'PENDING'</span><span class="p">,</span> <span class="s1">'CONFIRMED'</span><span class="p">,</span> <span class="s1">'CANCELLED'</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="c1">-- seat_locks table (for temporary seat locking)</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">seat_locks</span> <span class="p">(</span>
+  <span class="n">id</span> <span class="nb">BIGINT</span> <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="n">AUTO_INCREMENT</span><span class="p">,</span>
+  <span class="n">show_id</span> <span class="nb">BIGINT</span><span class="p">,</span>
+  <span class="n">user_id</span> <span class="nb">BIGINT</span><span class="p">,</span>
+  <span class="n">seat_number</span> <span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span>
+  <span class="n">created_at</span> <span class="nb">DATETIME</span><span class="p">(</span><span class="mi">6</span><span class="p">),</span>
+  <span class="n">expires_at</span> <span class="nb">DATETIME</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="nosql-database-mongodb">NoSQL Database (MongoDB)</h3>
+
+<h4 id="movie-database-movie_db"><strong>Movie Database</strong> (<code class="language-plaintext highlighter-rouge">movie_db</code>)</h4>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"69246514c412948190c5fb80"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Avengers"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"genre"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Action"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"English"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"durationMinutes"</span><span class="p">:</span><span class="w"> </span><span class="mi">180</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rating"</span><span class="p">:</span><span class="w"> </span><span class="mf">9.2</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"releaseDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-04-26"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"posterUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://.. ."</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"cast"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Robert Downey Jr."</span><span class="p">,</span><span class="w"> </span><span class="s2">"Chris Evans"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Scarlett Johansson"</span><span class="p">],</span><span class="w">
+  </span><span class="nl">"_class"</span><span class="p">:</span><span class="w"> </span><span class="s2">"com. dac.movieService.model.Movie"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<hr />
+
+<h2 id="️-installation--setup">⚙️ Installation &amp; Setup</h2>
+
+<h3 id="prerequisites">Prerequisites</h3>
+
+<p>Ensure you have the following installed:</p>
+
+<ul>
+  <li><strong>Java 21</strong> - JDK for backend services</li>
+  <li><strong>Node.js (v18+)</strong> - For frontend</li>
+  <li><strong>MySQL 8.0+</strong> - Relational database</li>
+  <li><strong>MongoDB</strong> - NoSQL database for movies</li>
+  <li><strong>Git</strong> - Version control</li>
+  <li><strong>Maven</strong> - Build tool for Java projects</li>
+  <li><strong>npm</strong> - Package manager for Node.js</li>
+</ul>
+
+<h3 id="step-1-clone-repository">Step 1: Clone Repository</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/AkashDwi17/cineverse. git
+<span class="nb">cd </span>cineverse
+</code></pre></div></div>
+
+<h3 id="step-2-database-setup">Step 2: Database Setup</h3>
+
+<h4 id="mysql-databases">MySQL Databases</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Open MySQL client</span>
+mysql <span class="nt">-u</span> root <span class="nt">-p</span>
+
+<span class="c"># Create databases</span>
+CREATE DATABASE bookmyshow_auth<span class="p">;</span>
+CREATE DATABASE bookmyshow_theatre<span class="p">;</span>
+CREATE DATABASE show_db<span class="p">;</span>
+CREATE DATABASE booking_db<span class="p">;</span>
+
+<span class="c"># Import schema files (if provided)</span>
+<span class="c"># use bookmyshow_auth;</span>
+<span class="c"># source path/to/auth-schema.sql;</span>
+<span class="c"># ...  repeat for other databases</span>
+</code></pre></div></div>
+
+<h4 id="mongodb">MongoDB</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Start MongoDB service</span>
+<span class="c"># Then create movie_db database</span>
+mongosh
+use movie_db
+</code></pre></div></div>
+
+<h3 id="step-3-backend-setup">Step 3: Backend Setup</h3>
+
+<h4 id="configure-database-credentials">Configure Database Credentials</h4>
+
+<p>Update <code class="language-plaintext highlighter-rouge">backend/application.properties</code> for each service:</p>
+
+<div class="language-properties highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Database Configuration
+</span><span class="py">spring.datasource.url</span><span class="p">=</span><span class="s">jdbc:mysql://localhost:3306/database_name</span>
+<span class="err">spring.datasource.</span> <span class="py">username</span><span class="p">=</span><span class="s">root</span>
+<span class="py">spring.datasource.password</span><span class="p">=</span><span class="s">your_password</span>
+<span class="py">spring.datasource.driver-class-name</span><span class="p">=</span><span class="s">com.mysql.cj.jdbc.Driver</span>
+
+<span class="c"># JPA Configuration
+</span><span class="err">spring.jpa.</span> <span class="py">hibernate.ddl-auto</span><span class="p">=</span><span class="s">update</span>
+<span class="py">spring.jpa.show-sql</span><span class="p">=</span><span class="s">false</span>
+<span class="err">spring.jpa.properties.</span> <span class="py">hibernate.dialect</span><span class="p">=</span><span class="s">org.hibernate. dialect.MySQL8Dialect</span>
+
+<span class="c"># For MongoDB (Movie Service)
+</span><span class="py">spring.data.mongodb.uri</span><span class="p">=</span><span class="s">mongodb://localhost:27017/movie_db</span>
+</code></pre></div></div>
+
+<h4 id="build-and-run-services">Build and Run Services</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. Start Eureka Server</span>
+<span class="nb">cd </span>backend/eureka-server
+./mvnw spring-boot:run
+
+<span class="c"># 2. Start API Gateway</span>
+<span class="nb">cd </span>backend/api-gateway
+./mvnw spring-boot:run
+
+<span class="c"># 3. Start Auth Service</span>
+<span class="nb">cd </span>backend/auth-service
+./mvnw spring-boot:run
+
+<span class="c"># 4.  Start Theatre Service</span>
+<span class="nb">cd </span>backend/theatre-service
+./mvnw spring-boot:run
+
+<span class="c"># 5. Start Movie Service</span>
+<span class="nb">cd </span>backend/movie-service
+./mvnw spring-boot:run
+
+<span class="c"># 6. Start Show Service</span>
+<span class="nb">cd </span>backend/show-service
+./mvnw spring-boot:run
+
+<span class="c"># 7. Start Booking Service</span>
+<span class="nb">cd </span>backend/booking-service
+./mvnw spring-boot:run
+
+<span class="c"># 8. Start Notification Service</span>
+<span class="nb">cd </span>backend/notification-service
+./mvnw spring-boot:run
+</code></pre></div></div>
+
+<p>Or use Maven wrapper:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Linux/Mac</span>
+./mvnw spring-boot:run
+
+<span class="c"># Windows</span>
+mvnw. cmd spring-boot:run
+</code></pre></div></div>
+
+<h3 id="step-4-frontend-setup">Step 4: Frontend Setup</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>frontend
+
+<span class="c"># Install dependencies</span>
+npm <span class="nb">install</span>
+
+<span class="c"># Start development server</span>
+npm run dev
+</code></pre></div></div>
+
+<p>Frontend will be available at: <code class="language-plaintext highlighter-rouge">http://localhost:5173</code></p>
+
+<hr />
+
+<h2 id="-quick-start-guide">🚀 Quick Start Guide</h2>
+
+<h3 id="access-the-application">Access the Application</h3>
+
+<ul>
+  <li><strong>Frontend</strong>: http://localhost:5173</li>
+  <li><strong>Backend API Gateway</strong>: http://localhost:9191</li>
+  <li><strong>Eureka Dashboard</strong>: http://localhost:8761</li>
+</ul>
+
+<h3 id="default-accounts">Default Accounts</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Role</th>
+      <th>Username</th>
+      <th>Password</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Admin</td>
+      <td>admin@cineverse. com</td>
+      <td>admin@123</td>
+    </tr>
+    <tr>
+      <td>User</td>
+      <td>user@cineverse.com</td>
+      <td>user@123</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="sample-workflow">Sample Workflow</h3>
+
+<h4 id="1-admin-add-theatre">1. Admin: Add Theatre</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST http://localhost:9191/api/theatres
+Content-Type: application/json
+Authorization: Bearer <span class="o">{</span>JWT_TOKEN<span class="o">}</span>
+
+<span class="o">{</span>
+  <span class="s2">"name"</span>: <span class="s2">"PVR Bellandur"</span>,
+  <span class="s2">"address"</span>: <span class="s2">"Bellandur, Bangalore"</span>,
+  <span class="s2">"city"</span>: <span class="s2">"Bangalore"</span>,
+  <span class="s2">"screenType"</span>: <span class="s2">"TWO_D"</span>,
+  <span class="s2">"totalSeats"</span>: 250
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h4 id="2-admin-add-movie">2. Admin: Add Movie</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST http://localhost:9191/api/movies
+Content-Type: application/json
+Authorization: Bearer <span class="o">{</span>JWT_TOKEN<span class="o">}</span>
+
+<span class="o">{</span>
+  <span class="s2">"title"</span>: <span class="s2">"Avengers"</span>,
+  <span class="s2">"description"</span>: <span class="s2">"Superhero movie"</span>,
+  <span class="s2">"language"</span>: <span class="s2">"English"</span>,
+  <span class="s2">"genre"</span>: <span class="s2">"Action"</span>,
+  <span class="s2">"releaseDate"</span>: <span class="s2">"2025-11-15"</span>,
+  <span class="s2">"duration"</span>: 180
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h4 id="3-admin-create-show">3. Admin: Create Show</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST http://localhost:9191/api/shows
+Content-Type: application/json
+Authorization: Bearer <span class="o">{</span>JWT_TOKEN<span class="o">}</span>
+
+<span class="o">{</span>
+  <span class="s2">"movieId"</span>: <span class="s2">"69246514c412948190c5fb80"</span>,
+  <span class="s2">"theatreId"</span>: 1,
+  <span class="s2">"showDate"</span>: <span class="s2">"2025-11-25"</span>,
+  <span class="s2">"showTime"</span>: <span class="s2">"18:30"</span>,
+  <span class="s2">"price"</span>: 200
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h4 id="4-user-book-tickets">4. User: Book Tickets</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST http://localhost:9191/api/bookings
+Content-Type: application/json
+Authorization: Bearer <span class="o">{</span>JWT_TOKEN<span class="o">}</span>
+
+<span class="o">{</span>
+  <span class="s2">"showId"</span>: 5,
+  <span class="s2">"userId"</span>: 20,
+  <span class="s2">"seats"</span>: <span class="o">[</span><span class="s2">"A1"</span>, <span class="s2">"A2"</span><span class="o">]</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h4 id="5-user-receives-notification">5. User Receives Notification</h4>
+
+<ul>
+  <li>WhatsApp message sent with booking details</li>
+  <li>Includes movie name, theatre, time, and seat numbers</li>
+</ul>
+
+<hr />
+
+<h2 id="‍-development">👨‍💻 Development</h2>
+
+<h3 id="project-structure-best-practices">Project Structure Best Practices</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>src/main/
+├── java/
+│   └── com/cineverse/
+│       ├── model/        # Entity classes
+│       ├── dto/          # Data Transfer Objects
+│       ├── controller/   # REST endpoints
+│       ├── service/      # Business logic
+│       ├── repository/   # Database access
+│       ├── exception/    # Custom exceptions
+│       └── config/       # Application configuration
+│
+└── resources/
+    ├── application.properties  # Configuration
+    ├── application-dev.properties
+    └── application-prod.properties
+</code></pre></div></div>
+
+<h3 id="code-conventions">Code Conventions</h3>
+
+<ul>
+  <li><strong>Naming</strong>: camelCase for variables/methods, PascalCase for classes</li>
+  <li><strong>Comments</strong>: Clear, concise, document complex logic</li>
+  <li><strong>Error Handling</strong>: Custom exceptions with meaningful messages</li>
+  <li><strong>Testing</strong>: Unit tests for services, integration tests for endpoints</li>
+</ul>
+
+<h3 id="running-tests">Running Tests</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Run all tests</span>
+mvn <span class="nb">test</span>
+
+<span class="c"># Run specific test class</span>
+mvn <span class="nb">test</span> <span class="nt">-Dtest</span><span class="o">=</span>ServiceTest
+
+<span class="c"># Run with coverage</span>
+mvn <span class="nb">test </span>jacoco:report
+</code></pre></div></div>
+
+<h3 id="building-for-production">Building for Production</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Build JAR files</span>
+mvn clean package
+
+<span class="c"># Run JAR</span>
+java <span class="nt">-jar</span> target/service-name-1.0.0.jar
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-monitoring--troubleshooting">📊 Monitoring &amp; Troubleshooting</h2>
+
+<h3 id="eureka-dashboard">Eureka Dashboard</h3>
+<p>Visit: http://localhost:8761</p>
+
+<p>Shows:</p>
+<ul>
+  <li>All registered services</li>
+  <li>Service instances</li>
+  <li>Health status</li>
+  <li>Last heartbeat</li>
+</ul>
+
+<h3 id="common-issues--solutions">Common Issues &amp; Solutions</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Issue</th>
+      <th>Solution</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Port already in use</td>
+      <td>Change port in <code class="language-plaintext highlighter-rouge">application.properties</code> or kill process</td>
+    </tr>
+    <tr>
+      <td>Database connection failed</td>
+      <td>Verify credentials and database existence</td>
+    </tr>
+    <tr>
+      <td>Service not registering in Eureka</td>
+      <td>Check Eureka URL in service config</td>
+    </tr>
+    <tr>
+      <td>CORS errors</td>
+      <td>Configure CORS in API Gateway</td>
+    </tr>
+    <tr>
+      <td>JWT token expired</td>
+      <td>Request new token from Auth Service</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="logs">Logs</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># View logs for specific service</span>
+<span class="nb">tail</span> <span class="nt">-f</span> logs/service-name.log
+
+<span class="c"># Enable debug logging (in application.properties)</span>
+logging.level. <span class="nv">root</span><span class="o">=</span>DEBUG
+logging.level.com.cineverse<span class="o">=</span>DEBUG
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-security-considerations">🔐 Security Considerations</h2>
+
+<ol>
+  <li><strong>Never commit credentials</strong> - Use environment variables</li>
+  <li><strong>JWT Expiration</strong> - Set appropriate token expiration times</li>
+  <li><strong>Password Hashing</strong> - Always use BCrypt for passwords</li>
+  <li><strong>Database Backups</strong> - Regular backups of all databases</li>
+  <li><strong>API Rate Limiting</strong> - Implement rate limiting in gateway</li>
+  <li><strong>Input Validation</strong> - Sanitize all user inputs</li>
+  <li><strong>HTTPS</strong> - Use HTTPS in production</li>
+  <li><strong>Secrets Management</strong> - Use Spring Vault or similar tools</li>
+</ol>
+
+<hr />
+
+<h2 id="-performance-optimization">📈 Performance Optimization</h2>
+
+<ul>
+  <li><strong>Caching</strong>: Implement Redis for frequently accessed data</li>
+  <li><strong>Database Indexing</strong>: Create indexes on frequently queried columns</li>
+  <li><strong>Pagination</strong>: Implement pagination for large data sets</li>
+  <li><strong>Async Processing</strong>: Use async for notification sending</li>
+  <li><strong>Load Balancing</strong>: Distribute load across service instances</li>
+  <li><strong>Connection Pooling</strong>: Use HikariCP for database connections</li>
+</ul>
+
+<hr />
+
+<h2 id="-testing">🧪 Testing</h2>
+
+<h3 id="unit-tests">Unit Tests</h3>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@SpringBootTest</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">BookingServiceTest</span> <span class="o">{</span>
+    <span class="nd">@MockBean</span>
+    <span class="kd">private</span> <span class="nc">BookingRepository</span> <span class="n">bookingRepository</span><span class="o">;</span>
+    
+    <span class="nd">@InjectMocks</span>
+    <span class="kd">private</span> <span class="nc">BookingService</span> <span class="n">bookingService</span><span class="o">;</span>
+    
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testCreateBooking</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// Test implementation</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="integration-tests">Integration Tests</h3>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@SpringBootTest</span><span class="o">(</span><span class="n">webEnvironment</span> <span class="o">=</span> <span class="nc">SpringBootTest</span><span class="o">.</span> <span class="nc">WebEnvironment</span><span class="o">.</span><span class="na">RANDOM_PORT</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">BookingControllerIntegrationTest</span> <span class="o">{</span>
+    <span class="nd">@LocalServerPort</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">port</span><span class="o">;</span>
+    
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testBookingEndpoint</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// Test implementation</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-api-documentation">📝 API Documentation</h2>
+
+<p>Each service exposes Swagger/OpenAPI documentation:</p>
+
+<ul>
+  <li><strong>Auth Service</strong>: http://localhost:8081/swagger-ui.html</li>
+  <li><strong>Theatre Service</strong>: http://localhost:8082/swagger-ui.html</li>
+  <li><strong>Movie Service</strong>: http://localhost:8083/swagger-ui.html</li>
+  <li><strong>Show Service</strong>: http://localhost:8084/swagger-ui.html</li>
+  <li><strong>Booking Service</strong>: http://localhost:8085/swagger-ui.html</li>
+  <li><strong>Notification Service</strong>: http://localhost:8086/swagger-ui.html</li>
+</ul>
+
+<hr />
+
+<h2 id="-contributing">🤝 Contributing</h2>
+
+<ol>
+  <li>Fork the repository</li>
+  <li>Create a feature branch (<code class="language-plaintext highlighter-rouge">git checkout -b feature/amazing-feature</code>)</li>
+  <li>Commit changes (<code class="language-plaintext highlighter-rouge">git commit -m 'Add amazing feature'</code>)</li>
+  <li>Push to branch (<code class="language-plaintext highlighter-rouge">git push origin feature/amazing-feature</code>)</li>
+  <li>Open a Pull Request</li>
+</ol>
+
+<h3 id="code-review-checklist">Code Review Checklist</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Code follows project conventions</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Tests added/updated</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Documentation updated</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />No breaking changes</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />All tests passing</li>
+</ul>
+
+<hr />
+
+<h2 id="-license">📄 License</h2>
+
+<p>This project is licensed under the <strong>Apache License 2.0</strong> - see the <a href="LICENSE">LICENSE</a> file for details.</p>
+
+<hr />
+
+<h2 id="-team">👥 Team</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sr. No</th>
+      <th>Name</th>
+      <th>GitHub</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>01</td>
+      <td>Aaman Javaed Sayyad</td>
+      <td><a href="https://github.com/Aamanjs">@Aamanjs</a></td>
+    </tr>
+    <tr>
+      <td>02</td>
+      <td>Avadhut Ravindra Joshi</td>
+      <td><a href="https://github.com/AvadhutJoshi012">@AvadhutJoshi012</a></td>
+    </tr>
+    <tr>
+      <td>03</td>
+      <td>Deepak Sanjay Revgade</td>
+      <td><a href="https://github.com/deepakrevgade">@deepakrevgade</a></td>
+    </tr>
+    <tr>
+      <td>04</td>
+      <td>Rishikesh Sukhadev More</td>
+      <td><a href="https://github.com/rushimore17">@rushimore17</a></td>
+    </tr>
+    <tr>
+      <td>05</td>
+      <td>Yadnyesh Rajesh Kolte</td>
+      <td><a href="https://github.com/yadnyeshkolte">@yadnyeshkolte</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="-support--contact">📞 Support &amp; Contact</h2>
+
+<p>For issues, questions, or suggestions:</p>
+
+<ol>
+  <li>Check existing GitHub issues</li>
+  <li>Create a new GitHub issue with detailed description</li>
+  <li>Contact team members on GitHub</li>
+</ol>
+
+<hr />
+
+<h2 id="-learning-resources">🎓 Learning Resources</h2>
+
+<ul>
+  <li><a href="https://spring.io/projects/spring-boot">Spring Boot Documentation</a></li>
+  <li><a href="https://spring.io/projects/spring-cloud">Spring Cloud Documentation</a></li>
+  <li><a href="https://react.dev">React Documentation</a></li>
+  <li><a href="https://docs.mongodb. com">MongoDB Documentation</a></li>
+  <li><a href="https://jwt.io">JWT Authentication</a></li>
+</ul>
+
+<hr />
+
+<h2 id="️-project-roadmap">🗺️ Project Roadmap</h2>
+
+<h3 id="phase-1-current-">Phase 1 (Current) ✅</h3>
+<ul>
+  <li>Core microservices</li>
+  <li>Basic booking functionality</li>
+  <li>User authentication</li>
+</ul>
+
+<h3 id="phase-2-planned">Phase 2 (Planned)</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Payment gateway integration</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Email notifications</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Analytics dashboard</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Mobile app</li>
+</ul>
+
+<h3 id="phase-3-future">Phase 3 (Future)</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Multi-language support</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Recommendation engine</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Social features</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Admin portal enhancement</li>
+</ul>
+
+<hr />
+
+<h2 id="-show-your-support">⭐ Show Your Support</h2>
+
+<p>If you found this project helpful, please give it a star!  ⭐</p>
+
+<hr />
+
+<p><strong>Last Updated</strong>: 2025-12-05<br />
+<strong>Version</strong>: 1.0.0<br />
+<strong>Status</strong>: Active Development</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2025-11-15">November 15, 2025</time></p>
+
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/cineverse/docs/installation/" class="pagination--pager" title="Installation
+">Previous</a>
+    
+    
+      <a href="/cineverse/docs/quick-start/" class="pagination--pager" title="Quick Start
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+
+    
+      <li><a href="/cineverse/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2026 AkashDwi17. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/cineverse/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

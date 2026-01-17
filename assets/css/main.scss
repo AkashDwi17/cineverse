@@ -1,0 +1,66 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+// Define Brand Colors (Red, White, Black)
+$red-primary:       #D32F2F; // Deep, bold red
+$red-accent:        #FF5252; // Brighter red for highlights
+$black-base:        #121212; // Very dark grey/black for backgrounds
+$black-secondary:   #1E1E1E; // Slightly lighter black for cards/sidebars
+$white-text:        #FFFFFF;
+$grey-text:         #E0E0E0;
+
+// Override Minimal Mistakes Variables BEFORE importing
+// See: https://mmistakes.github.io/minimal-mistakes/docs/stylesheets/
+
+// 1. Skin Colors (Dark Mode base)
+$background-color:        $black-base;
+$text-color:              $grey-text;
+$muted-text-color:        #9E9E9E;
+
+$primary-color:           $red-primary; // Links and accents
+
+$border-color:            mix($white-text, $black-base, 10%);
+$code-background-color:   $black-secondary;
+
+// 2. Navigation & Header
+$masthead-link-color:              $white-text;
+$masthead-link-color-hover:        $red-accent;
+$navicon-link-color-hover:         $red-accent;
+
+// 3. Footer
+$footer-background-color: $black-secondary;
+$footer-caption-color:    $muted-text-color;
+
+// 4. Buttons
+$btn-default-color:       $grey-text !default;
+$btn-default-bg:          $black-secondary !default;
+$btn-primary-color:       $white-text !default;
+$btn-primary-bg:          $red-primary !default;
+
+// Import the theme
+@import "minimal-mistakes";
+
+// Custom Overrides (CSS that depends on the imports or strictly additive)
+.masthead {
+  border-bottom: 2px solid $red-primary;
+}
+
+.page__footer {
+  border-top: 1px solid $red-primary;
+}
+
+// Enhance feature rows with red accents
+.archive__item-teaser {
+   border: 1px solid $red-primary;
+   background-color: $black-secondary;
+   padding: 10px;
+   border-radius: 8px;
+}
+
+// Ensure database/backend/frontend icons have a nice background if they are transparent
+.feature__item--center img {
+    background: transparent;
+}
