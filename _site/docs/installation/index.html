@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Installation - Cineverse</title>
-<meta name="description" content="How to install Online Voting System">
+<meta name="description" content="How to install and set up Cineverse">
 
 
   <meta name="author" content="AkashDwi17">
@@ -26,7 +26,7 @@
 <meta property="og:url" content="http://localhost:4000/cineverse/docs/installation/">
 
 
-  <meta property="og:description" content="How to install Online Voting System">
+  <meta property="og:description" content="How to install and set up Cineverse">
 
 
 
@@ -34,11 +34,11 @@
 
 
 
-  <meta property="article:published_time" content="2026-01-18T00:00:12+05:30">
+  <meta property="article:published_time" content="2026-01-18T00:17:23+05:30">
 
 
 
-  <meta property="article:modified_time" content="2025-11-15T00:00:00+05:30">
+  <meta property="article:modified_time" content="2026-01-18T00:00:00+05:30">
 
 
 
@@ -258,9 +258,9 @@
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Installation">
-    <meta itemprop="description" content="How to install Online Voting System">
+    <meta itemprop="description" content="How to install and set up Cineverse">
     
-    <meta itemprop="dateModified" content="2025-11-15T00:00:00+05:30">
+    <meta itemprop="dateModified" content="2026-01-18T00:00:00+05:30">
 
     <div class="page__inner-wrap">
       
@@ -278,86 +278,150 @@
           <aside class="sidebar__right ">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#installation-guide">Installation Guide</a><ul><li><a href="#prerequisites">Prerequisites</a></li><li><a href="#1-database-setup">1. Database Setup</a></li><li><a href="#2-backend-setup">2. Backend Setup</a></li><li><a href="#3-frontend-setup">3. Frontend Setup</a></li><li><a href="#troubleshooting">Troubleshooting</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#installation-guide">Installation Guide</a><ul><li><a href="#prerequisites">Prerequisites</a></li><li><a href="#service-ports">Service Ports</a></li><li><a href="#1-database-setup">1. Database Setup</a><ul><li><a href="#mysql-databases">MySQL Databases</a></li><li><a href="#mongodb">MongoDB</a></li></ul></li><li><a href="#2-backend-setup">2. Backend Setup</a><ul><li><a href="#start-services-in-order">Start Services in Order</a></li></ul></li><li><a href="#3-frontend-setup">3. Frontend Setup</a></li><li><a href="#troubleshooting">Troubleshooting</a></li></ul></li></ul>
 
             </nav>
           </aside>
         
         <h1 id="installation-guide">Installation Guide</h1>
 
-<p>Follow these steps to set up the Online Voting System on your local machine.</p>
+<p>Follow these steps to set up the Cineverse movie booking platform on your local machine.</p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 
 <p>Ensure you have the following software installed:</p>
 
 <ol>
-  <li><strong>Java 21</strong>: Required for the backend.</li>
+  <li><strong>Java 21</strong>: Required for the backend microservices.</li>
   <li><strong>Node.js (v18+)</strong>: Required for the frontend.</li>
-  <li><strong>MySQL</strong>: Required for the database.</li>
+  <li><strong>MySQL 8.0+</strong>: Required for SQL databases.</li>
+  <li><strong>MongoDB</strong>: Required for the movie database.</li>
   <li><strong>Git</strong>: To clone the repository.</li>
 </ol>
 
+<h2 id="service-ports">Service Ports</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Service</th>
+      <th>Port</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Service Registry (Eureka)</td>
+      <td>8761</td>
+    </tr>
+    <tr>
+      <td>API Gateway</td>
+      <td>9191</td>
+    </tr>
+    <tr>
+      <td>Auth Service</td>
+      <td>8081</td>
+    </tr>
+    <tr>
+      <td>Theatre Service</td>
+      <td>8082</td>
+    </tr>
+    <tr>
+      <td>Movie Service</td>
+      <td>8083</td>
+    </tr>
+    <tr>
+      <td>Show Service</td>
+      <td>8084</td>
+    </tr>
+    <tr>
+      <td>Booking Service</td>
+      <td>8085</td>
+    </tr>
+    <tr>
+      <td>Notification Service</td>
+      <td>8086</td>
+    </tr>
+    <tr>
+      <td>Config Server</td>
+      <td>8888</td>
+    </tr>
+    <tr>
+      <td>Zipkin (Tracing)</td>
+      <td>9411</td>
+    </tr>
+    <tr>
+      <td>Frontend</td>
+      <td>5173</td>
+    </tr>
+  </tbody>
+</table>
+
 <h2 id="1-database-setup">1. Database Setup</h2>
+
+<h3 id="mysql-databases">MySQL Databases</h3>
 
 <ol>
   <li>Open your MySQL client (e.g., MySQL Workbench, command line).</li>
   <li>
-    <p>Create a new database named <code class="language-plaintext highlighter-rouge">devovs</code>:</p>
+    <p>Create the required databases:</p>
 
-    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="k">DATABASE</span> <span class="n">devovs</span><span class="p">;</span>
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">CREATE</span> <span class="k">DATABASE</span> <span class="n">bookmyshow_auth</span><span class="p">;</span>
+ <span class="k">CREATE</span> <span class="k">DATABASE</span> <span class="n">bookmyshow_theatre</span><span class="p">;</span>
+ <span class="k">CREATE</span> <span class="k">DATABASE</span> <span class="n">show_db</span><span class="p">;</span>
+ <span class="k">CREATE</span> <span class="k">DATABASE</span> <span class="n">booking_db</span><span class="p">;</span>
 </code></pre></div>    </div>
   </li>
-  <li>
-    <p><strong>Configure Credentials</strong>:
-The backend connects to the database using the credentials defined in <code class="language-plaintext highlighter-rouge">backend/onlinevotingsystem/src/main/resources/application.properties</code>.</p>
+</ol>
 
-    <ul>
-      <li><strong>Default Username</strong>: <code class="language-plaintext highlighter-rouge">root</code></li>
-      <li><strong>Default Password</strong>: <code class="language-plaintext highlighter-rouge">password</code></li>
-    </ul>
+<h3 id="mongodb">MongoDB</h3>
 
-    <p>If your local MySQL password differs, open <code class="language-plaintext highlighter-rouge">backend/onlinevotingsystem/src/main/resources/application.properties</code> and update the <code class="language-plaintext highlighter-rouge">spring.datasource.password</code> field.</p>
-  </li>
+<ol>
+  <li>Start MongoDB service.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">movie_db</code> database will be created automatically when the Movie Service starts.</li>
 </ol>
 
 <h2 id="2-backend-setup">2. Backend Setup</h2>
 
+<h3 id="start-services-in-order">Start Services in Order</h3>
+
 <ol>
-  <li>Navigate to the backend directory:
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>backend/onlinevotingsystem
+  <li><strong>Start Eureka Server (Service Registry)</strong>:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">cd </span>backend/service-registry
+ ./mvnw spring-boot:run
 </code></pre></div>    </div>
   </li>
-  <li>Run the application using the Maven wrapper:
-    <ul>
-      <li><strong>Linux/Mac</strong>:
-        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./mvnw spring-boot:run
-</code></pre></div>        </div>
-      </li>
-      <li><strong>Windows</strong>:
-        <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mvnw spring-boot:run
-</code></pre></div>        </div>
-      </li>
-    </ul>
-
-    <p><em>The backend server will start on port <code class="language-plaintext highlighter-rouge">8080</code>.</em></p>
+  <li><strong>Start API Gateway</strong>:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">cd </span>backend/api-gateway
+ ./mvnw spring-boot:run
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Start Auth Service</strong>:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">cd </span>backend/auth-service
+ ./mvnw spring-boot:run
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Start remaining services</strong> (Theatre, Movie, Show, Booking, Notification):
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">cd </span>backend/&lt;service-name&gt;
+ ./mvnw spring-boot:run
+</code></pre></div>    </div>
   </li>
 </ol>
+
+<p>For Windows, use <code class="language-plaintext highlighter-rouge">mvnw.cmd spring-boot:run</code> instead.</p>
 
 <h2 id="3-frontend-setup">3. Frontend Setup</h2>
 
 <ol>
-  <li>Open a new terminal window.</li>
   <li>Navigate to the frontend directory:
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>frontend
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">cd </span>frontend
 </code></pre></div>    </div>
   </li>
   <li>Install dependencies:
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install</span>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> npm <span class="nb">install</span>
 </code></pre></div>    </div>
   </li>
   <li>Start the development server:
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm run dev
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> npm run dev
 </code></pre></div>    </div>
 
     <p><em>The frontend will be accessible at <code class="language-plaintext highlighter-rouge">http://localhost:5173</code>.</em></p>
@@ -367,9 +431,10 @@ The backend connects to the database using the credentials defined in <code clas
 <h2 id="troubleshooting">Troubleshooting</h2>
 
 <ul>
-  <li><strong>Port Conflicts</strong>: Ensure ports <code class="language-plaintext highlighter-rouge">8080</code> (Backend) and <code class="language-plaintext highlighter-rouge">5173</code> (Frontend) are free.</li>
-  <li><strong>Database Connection</strong>: If the backend fails to start, double-check your MySQL username and password in <code class="language-plaintext highlighter-rouge">application.properties</code> and ensure the <code class="language-plaintext highlighter-rouge">devovs</code> database exists.</li>
-  <li><strong>Permission Denied (Linux/Mac)</strong>: If <code class="language-plaintext highlighter-rouge">./mvnw</code> is not executable, run <code class="language-plaintext highlighter-rouge">chmod +x mvnw</code>.</li>
+  <li><strong>Port Conflicts</strong>: Ensure the required ports are free.</li>
+  <li><strong>Database Connection</strong>: Verify MySQL/MongoDB credentials in each service’s <code class="language-plaintext highlighter-rouge">application.properties</code>.</li>
+  <li><strong>Eureka Issues</strong>: Ensure Service Registry is running before starting other services.</li>
+  <li><strong>Permission Denied (Linux/Mac)</strong>: Run <code class="language-plaintext highlighter-rouge">chmod +x mvnw</code> if the wrapper is not executable.</li>
 </ul>
 
         
@@ -382,7 +447,7 @@ The backend connects to the database using the credentials defined in <code clas
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2025-11-15">November 15, 2025</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2026-01-18">January 18, 2026</time></p>
 
 
       </footer>

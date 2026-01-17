@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Quick Start - Cineverse</title>
-<meta name="description" content="Get up and running quickly">
+<meta name="description" content="Get up and running quickly with Cineverse">
 
 
   <meta name="author" content="AkashDwi17">
@@ -26,7 +26,7 @@
 <meta property="og:url" content="http://localhost:4000/cineverse/docs/quick-start/">
 
 
-  <meta property="og:description" content="Get up and running quickly">
+  <meta property="og:description" content="Get up and running quickly with Cineverse">
 
 
 
@@ -34,11 +34,11 @@
 
 
 
-  <meta property="article:published_time" content="2026-01-18T00:00:12+05:30">
+  <meta property="article:published_time" content="2026-01-18T00:17:23+05:30">
 
 
 
-  <meta property="article:modified_time" content="2025-11-15T00:00:00+05:30">
+  <meta property="article:modified_time" content="2026-01-18T00:00:00+05:30">
 
 
 
@@ -258,9 +258,9 @@
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Quick Start">
-    <meta itemprop="description" content="Get up and running quickly">
+    <meta itemprop="description" content="Get up and running quickly with Cineverse">
     
-    <meta itemprop="dateModified" content="2025-11-15T00:00:00+05:30">
+    <meta itemprop="dateModified" content="2026-01-18T00:00:00+05:30">
 
     <div class="page__inner-wrap">
       
@@ -278,71 +278,89 @@
           <aside class="sidebar__right ">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#quick-start-guide">Quick Start Guide</a><ul><li><a href="#prerequisites">Prerequisites</a></li><li><a href="#walkthrough">Walkthrough</a><ul><li><a href="#1-admin-create-an-election">1. Admin: Create an Election</a></li><li><a href="#2-user-register--verify">2. User: Register &amp; Verify</a></li><li><a href="#3-user-vote">3. User: Vote</a></li><li><a href="#4-admin-view-results">4. Admin: View Results</a></li></ul></li><li><a href="#default-accounts">Default Accounts</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#quick-start-guide">Quick Start Guide</a><ul><li><a href="#prerequisites">Prerequisites</a></li><li><a href="#walkthrough">Walkthrough</a><ul><li><a href="#1-admin-add-a-theatre">1. Admin: Add a Theatre</a></li><li><a href="#2-admin-add-a-movie">2. Admin: Add a Movie</a></li><li><a href="#3-admin-create-a-show">3. Admin: Create a Show</a></li><li><a href="#4-user-register--login">4. User: Register &amp; Login</a></li><li><a href="#5-user-book-tickets">5. User: Book Tickets</a></li></ul></li><li><a href="#default-accounts">Default Accounts</a></li><li><a href="#api-access">API Access</a></li></ul></li></ul>
 
             </nav>
           </aside>
         
         <h1 id="quick-start-guide">Quick Start Guide</h1>
 
-<p>This guide will help you verify the application flow by simulating a real-world voting scenario.</p>
+<p>This guide will help you verify the application flow by simulating a real-world movie booking scenario.</p>
 
 <h2 id="prerequisites">Prerequisites</h2>
-<p>Ensure you have completed the <a href="INSTALLATION.md">Installation Guide</a> and both the Backend and Frontend servers are running.</p>
+<p>Ensure you have completed the <a href="/docs/installation/">Installation Guide</a> and all services are running.</p>
 
 <ul>
   <li><strong>Frontend</strong>: http://localhost:5173</li>
-  <li><strong>Backend</strong>: http://localhost:8080</li>
+  <li><strong>API Gateway</strong>: http://localhost:9191</li>
+  <li><strong>Eureka Dashboard</strong>: http://localhost:8761</li>
 </ul>
 
 <h2 id="walkthrough">Walkthrough</h2>
 
-<h3 id="1-admin-create-an-election">1. Admin: Create an Election</h3>
+<h3 id="1-admin-add-a-theatre">1. Admin: Add a Theatre</h3>
 
 <ol>
-  <li>Navigate to <strong><a href="http://localhost:5173/login">http://localhost:5173/login</a></strong>.</li>
-  <li>Login with the default Admin credentials:
+  <li>Login with Admin credentials.</li>
+  <li>Navigate to the Admin Dashboard.</li>
+  <li>Click “Add Theatre” and enter:
     <ul>
-      <li><strong>Email</strong>: <code class="language-plaintext highlighter-rouge">admin@voting.com</code></li>
-      <li><strong>Password</strong>: <code class="language-plaintext highlighter-rouge">admin123</code></li>
-    </ul>
-  </li>
-  <li>On the <strong>Admin Dashboard</strong>:
-    <ul>
-      <li>Click “Create Election”.</li>
-      <li>Enter details (e.g., “General Election 2024”).</li>
-      <li>Change the election status to <code class="language-plaintext highlighter-rouge">SCHEDULED</code>, then <code class="language-plaintext highlighter-rouge">ACTIVE</code> to allow voting.</li>
-      <li><em>Note: To add candidates, you must first register other users and use their User IDs.</em></li>
+      <li>Name: “PVR Bellandur”</li>
+      <li>Address: “Bellandur, Bangalore”</li>
+      <li>City: “Bangalore”</li>
+      <li>Screen Type: “TWO_D”</li>
+      <li>Total Seats: 250</li>
     </ul>
   </li>
 </ol>
 
-<h3 id="2-user-register--verify">2. User: Register &amp; Verify</h3>
+<h3 id="2-admin-add-a-movie">2. Admin: Add a Movie</h3>
 
 <ol>
-  <li>Log out or open an Incognito window.</li>
-  <li>Navigate to <strong><a href="http://localhost:5173/register">http://localhost:5173/register</a></strong>.</li>
-  <li>Fill in the registration form using the <strong>Seeded Dummy Data</strong> for verification.</li>
-  <li>Click <strong>Register</strong>. If the details match the dummy data, registration will succeed.</li>
+  <li>Navigate to “Movies” section.</li>
+  <li>Click “Add Movie” and enter:
+    <ul>
+      <li>Title: “Avengers”</li>
+      <li>Description: “Superhero movie”</li>
+      <li>Language: “English”</li>
+      <li>Genre: “Action”</li>
+      <li>Duration: 180 minutes</li>
+    </ul>
+  </li>
 </ol>
 
-<h3 id="3-user-vote">3. User: Vote</h3>
+<h3 id="3-admin-create-a-show">3. Admin: Create a Show</h3>
 
 <ol>
-  <li>Login with your newly created user credentials.</li>
-  <li>On the <strong>User Dashboard</strong>, locate the Active Election you created earlier.</li>
-  <li>Click <strong>Vote Now</strong>.</li>
-  <li>Select a candidate and confirm your vote.</li>
-  <li>The button will update to “You Voted”.</li>
+  <li>Navigate to “Shows” section.</li>
+  <li>Click “Create Show” and select:
+    <ul>
+      <li>Movie: “Avengers”</li>
+      <li>Theatre: “PVR Bellandur”</li>
+      <li>Date and Time</li>
+      <li>Ticket Price: ₹200</li>
+    </ul>
+  </li>
 </ol>
 
-<h3 id="4-admin-view-results">4. Admin: View Results</h3>
+<h3 id="4-user-register--login">4. User: Register &amp; Login</h3>
 
 <ol>
-  <li>Log back in as Admin.</li>
-  <li>Navigate to the election card on the dashboard.</li>
-  <li>Click <strong>Calc Results</strong> (if required) then <strong>View Results</strong>.</li>
-  <li>You will see the updated vote counts.</li>
+  <li>Open an Incognito window or log out.</li>
+  <li>Navigate to the Registration page.</li>
+  <li>Fill in your details and register.</li>
+  <li>Login with your new credentials.</li>
+</ol>
+
+<h3 id="5-user-book-tickets">5. User: Book Tickets</h3>
+
+<ol>
+  <li>Browse available movies.</li>
+  <li>Select “Avengers”.</li>
+  <li>Choose a show time and theatre.</li>
+  <li>Select your seats (e.g., A1, A2).</li>
+  <li>Confirm your booking.</li>
+  <li>Receive WhatsApp ticket notification.</li>
 </ol>
 
 <hr />
@@ -353,23 +371,36 @@
   <thead>
     <tr>
       <th style="text-align: left">Role</th>
-      <th style="text-align: left">Email</th>
+      <th style="text-align: left">Username</th>
       <th style="text-align: left">Password</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align: left"><strong>Admin</strong></td>
-      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">admin@voting.com</code></td>
-      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">admin123</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">admin@cineverse.com</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">admin@123</code></td>
     </tr>
     <tr>
-      <td style="text-align: left"><strong>Admin (Backup)</strong></td>
-      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">admin.secondary@voting.com</code></td>
-      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">admin123</code></td>
+      <td style="text-align: left"><strong>User</strong></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">user@cineverse.com</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">user@123</code></td>
     </tr>
   </tbody>
 </table>
+
+<h2 id="api-access">API Access</h2>
+
+<p>All backend APIs are accessible through the API Gateway at <code class="language-plaintext highlighter-rouge">http://localhost:9191</code>:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">/api/auth/**</code> - Authentication</li>
+  <li><code class="language-plaintext highlighter-rouge">/api/movies/**</code> - Movie management</li>
+  <li><code class="language-plaintext highlighter-rouge">/api/theatres/**</code> - Theatre management</li>
+  <li><code class="language-plaintext highlighter-rouge">/api/shows/**</code> - Show scheduling</li>
+  <li><code class="language-plaintext highlighter-rouge">/api/bookings/**</code> - Bookings</li>
+  <li><code class="language-plaintext highlighter-rouge">/api/notify/**</code> - Notifications</li>
+</ul>
 
         
       </section>
@@ -381,7 +412,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2025-11-15">November 15, 2025</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2026-01-18">January 18, 2026</time></p>
 
 
       </footer>

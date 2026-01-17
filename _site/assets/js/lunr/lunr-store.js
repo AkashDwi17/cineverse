@@ -72,7 +72,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Diagrams",
-        "excerpt":"Level 0 DFD (Data Flow Diagram)      Level 1 DFD (Data Flow Diagram)      Deployment Diagram      Activity Diagram      System Diagrams      ","categories": [],
+        "excerpt":"System Architecture Diagrams Microservices Architecture ┌─────────────────────────────────────────────────────────────────┐ │ CINEVERSE PLATFORM │ └─────────────────────────────────────────────────────────────────┘ ┌──────────────────────────────────────────────────────────────────┐ │ FRONTEND LAYER (React.js) │ │ User Interface | Show Listings | Seat Selection | Bookings │ │ Port: 5173 │ └──────────────────────────────────────────────────────────────────┘ │ ▼ ┌──────────────────────────────────────────────────────────────────┐ │ API GATEWAY (Spring Cloud Gateway) │ │ Port: 9191 │ │ Route...","categories": [],
         "tags": [],
         "url": "/cineverse/docs/diagrams/",
         "teaser": null
@@ -96,7 +96,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Installation",
-        "excerpt":"Installation Guide Follow these steps to set up the Online Voting System on your local machine. Prerequisites Ensure you have the following software installed: Java 21: Required for the backend. Node.js (v18+): Required for the frontend. MySQL: Required for the database. Git: To clone the repository. 1. Database Setup Open...","categories": [],
+        "excerpt":"Installation Guide Follow these steps to set up the Cineverse movie booking platform on your local machine. Prerequisites Ensure you have the following software installed: Java 21: Required for the backend microservices. Node.js (v18+): Required for the frontend. MySQL 8.0+: Required for SQL databases. MongoDB: Required for the movie database....","categories": [],
         "tags": [],
         "url": "/cineverse/docs/installation/",
         "teaser": null
@@ -108,7 +108,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Quick Start",
-        "excerpt":"Quick Start Guide This guide will help you verify the application flow by simulating a real-world voting scenario. Prerequisites Ensure you have completed the Installation Guide and both the Backend and Frontend servers are running. Frontend: http://localhost:5173 Backend: http://localhost:8080 Walkthrough 1. Admin: Create an Election Navigate to http://localhost:5173/login. Login with...","categories": [],
+        "excerpt":"Quick Start Guide This guide will help you verify the application flow by simulating a real-world movie booking scenario. Prerequisites Ensure you have completed the Installation Guide and all services are running. Frontend: http://localhost:5173 API Gateway: http://localhost:9191 Eureka Dashboard: http://localhost:8761 Walkthrough 1. Admin: Add a Theatre Login with Admin credentials....","categories": [],
         "tags": [],
         "url": "/cineverse/docs/quick-start/",
         "teaser": null
