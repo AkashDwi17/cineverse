@@ -4,9 +4,9 @@ title: "About"
 permalink: /about/
 ---
 
-## About 
+## About Cineverse
 
-The BookMyShow is a secure and reliable platform designed for booking the Movies. Built with modern web technologies, it ensures transparency, security, and ease of use for both users and administrators.
+**Cineverse** is a modern movie booking platform designed to provide a seamless experience for discovering, exploring, and booking movie tickets. Built with cutting-edge microservices architecture, it ensures scalability, reliability, and an exceptional user experience.
 
 ---
 
@@ -14,7 +14,7 @@ The BookMyShow is a secure and reliable platform designed for booking the Movies
 
 **Course Name**: PG-DAC  
 **Batch Name**: August 2025  
-**Group Number**: 24 
+**Project Name**: Cineverse - Movie Booking System
 
 ---
 
@@ -22,22 +22,23 @@ The BookMyShow is a secure and reliable platform designed for booking the Movies
 
 | Sr. No | Name | PRN | GitHub |
 |--------|------|-----|--------|
-| 01 | Aaman Javaed Sayyad | 250850120003 | [@Aamanjs](https://github.com/Aamanjs) |
-| 02 | Avadhut Ravindra Joshi | 250850120042 | [@AvadhutJoshi012](https://github.com/AvadhutJoshi012) |
-| 03 | Deepak Sanjay Revgade | 250850120137 | [@deepakrevgade](https://github.com/deepakrevgade) |
-| 04 | Rishikesh Sukhadev More | 250850120143 | [@rushimore17](https://github.com/rushimore17) |
-| 05 | Yadnyesh Rajesh Kolte | 250850120192 | [@yadnyeshkolte](https://github.com/yadnyeshkolte) |
+| 01 | Akash Dwivedi | 250850120018 | [@AkashDwi17](https://github.com/AkashDwi17) |
+| 02 | Mayuri Narale | 250850120101 | [@mayurinarale](https://github.com/mayurinarale) |
+| 03 | Pranavi | 250850120124 | [@Pranavi5494](https://github.com/Pranavi5494) |
+| 04 | Pruthvi Bhat | 250850120129 | [@PruthviGBhat](https://github.com/PruthviGBhat) |
+| 05 | Raghavendra | 250850120130 | [@raghvendru](https://github.com/raghvendru) |
 
 ---
 
 ## 📖 Project Description
 
-The Online Voting System is a comprehensive solution that provides:
+Cineverse is a comprehensive movie booking solution that provides:
 
-1. **Secure Web-Based Platform** for online voting and real-time result display
-2. **Admin Management System** to efficiently manage elections, candidates, and voters
-3. **Modern Architecture** built using React.js, Spring Boot, and MySQL with secure authentication
-4. **Transparency & Security** ensuring fair elections with audit trails and vote integrity
+1. **User-Friendly Interface** - Browse movies, view showtimes, and book tickets effortlessly
+2. **Microservices Architecture** - Scalable and maintainable backend services
+3. **Real-Time Availability** - Check seat availability and book instantly
+4. **Secure Transactions** - Safe and reliable payment processing
+5. **Modern Tech Stack** - Built using React.js, Spring Boot, and MySQL
 
 ---
 
@@ -49,13 +50,21 @@ The Online Voting System is a comprehensive solution that provides:
 - **JavaScript (ES6+)** - Interactive components
 
 ### Backend
-- **Spring Boot** - Java-based backend framework
+- **Spring Boot** - Java-based microservices framework
+- **Spring Cloud** - Service discovery and configuration
 - **Spring Security** - Authentication and authorization
 - **JWT** - Secure token-based authentication
 - **Spring Data JPA** - Database operations
 
 ### Database
 - **MySQL 8.0+** - Relational database management
+
+### Infrastructure
+- **Service Registry (Eureka)** - Port 8761
+- **API Gateway** - Port 9191
+- **Config Server** - Port 8888
+- **User Service** - Port 8080
+- **Zipkin (Tracing)** - Port 9411
 
 ### Development Tools
 - **IntelliJ IDEA / Eclipse** - Java development
@@ -68,25 +77,27 @@ The Online Voting System is a comprehensive solution that provides:
 
 ## 🎯 Key Features
 
-### For Voters
-- ✅ **Secure Registration** - JWT-based authentication system
-- ✅ **Easy Voting** - Simple and intuitive voting interface
-- ✅ **Real-time Results** - Live vote counting and results display
-- ✅ **Vote Verification** - Check voting status and history
+### For Users
+- ✅ **Browse Movies** - Explore latest and upcoming movies
+- ✅ **View Showtimes** - Check available shows at nearby theaters
+- ✅ **Book Tickets** - Easy and quick ticket booking
+- ✅ **Seat Selection** - Choose your preferred seats
+- ✅ **Booking History** - View past and upcoming bookings
+- ✅ **User Profile** - Manage personal information and preferences
 
 ### For Administrators
-- ✅ **Election Management** - Create and manage elections
-- ✅ **Candidate Management** - Add and manage candidates
-- ✅ **Voter Management** - User verification and approval
-- ✅ **Results Dashboard** - Comprehensive election reports
-- ✅ **Audit Trail** - Complete voting history and logs
+- ✅ **Movie Management** - Add, edit, and remove movies
+- ✅ **Theater Management** - Configure theaters and screens
+- ✅ **Show Management** - Schedule shows and manage timings
+- ✅ **Booking Reports** - Track bookings and revenue
+- ✅ **User Management** - Handle user accounts and permissions
 
-### Security Features
-- 🔒 **Encrypted Passwords** - BCrypt hashing
-- 🔒 **Vote Integrity** - Cryptographic hash for each vote
-- 🔒 **One Vote Policy** - Database constraint enforcement
-- 🔒 **ID Verification** - Aadhar, PAN, Voter ID, Passport support
-- 🔒 **Role-Based Access** - Separate admin and voter privileges
+### System Features
+- 🔒 **Secure Authentication** - JWT-based login system
+- 🔒 **Role-Based Access** - Separate admin and user privileges
+- 🔒 **Encrypted Data** - BCrypt password hashing
+- 📊 **Distributed Tracing** - Zipkin integration for monitoring
+- ⚡ **Service Discovery** - Eureka-based microservices
 
 ---
 
@@ -94,28 +105,51 @@ The Online Voting System is a comprehensive solution that provides:
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│                    ONLINE VOTING SYSTEM                 │
+│                  CINEVERSE MOVIE BOOKING                │
 └─────────────────────────────────────────────────────────┘
                             │
         ┌───────────────────┼───────────────────┐
         ▼                   ▼                   ▼
    ┌─────────┐        ┌──────────┐       ┌──────────┐
-   │ React.js│◄──────►│  Spring  │◄─────►│  MySQL   │
-   │Frontend │        │   Boot   │       │ Database │
+   │ React.js│◄──────►│   API    │◄─────►│  MySQL   │
+   │Frontend │        │ Gateway  │       │ Database │
    └─────────┘        └──────────┘       └──────────┘
         │                   │                   │
-    UI Layer          Business Logic      Data Storage
-    Components        REST APIs            Relationships
-    State Mgmt        JWT Auth             Transactions
+    UI Layer          Microservices       Data Storage
+    Components        Spring Boot          Transactions
+    State Mgmt        Service Mesh         Relationships
+```
+
+### Microservices Overview
+
+```
+┌────────────────┐   ┌────────────────┐   ┌────────────────┐
+│ Service        │   │   API          │   │   Config       │
+│ Registry       │   │   Gateway      │   │   Server       │
+│ (Eureka:8761)  │   │   (:9191)      │   │   (:8888)      │
+└────────────────┘   └────────────────┘   └────────────────┘
+        │                   │                   │
+        └───────────────────┼───────────────────┘
+                            ▼
+        ┌───────────────────────────────────────┐
+        │           Business Services           │
+        ├───────────────────────────────────────┤
+        │   User Service  │  Movie Service      │
+        │   Booking Service │ Theater Service   │
+        └───────────────────────────────────────┘
+                            │
+                            ▼
+                   ┌────────────────┐
+                   │    Zipkin      │
+                   │   (:9411)      │
+                   └────────────────┘
 ```
 
 ---
 
 ## 🔗 Repository & Links
 
-- **GitHub Repository**: [yadnyeshkolte/online-voting-system](https://github.com/yadnyeshkolte/online-voting-system)
-- **Documentation Site**: [https://yadnyeshkolte.github.io/online-voting-system](https://yadnyeshkolte.github.io/online-voting-system)
-- **Issue Tracker**: [GitHub Issues](https://github.com/yadnyeshkolte/online-voting-system/issues)
-
+- **GitHub Repository**: [AkashDwi17/cineverse](https://github.com/AkashDwi17/cineverse)
+- **Documentation Site**: [Cineverse Docs](https://akashdwi17.github.io/cineverse)
 
 ---
