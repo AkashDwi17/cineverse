@@ -90,7 +90,7 @@ Cineverse is a comprehensive movie booking solution that provides:
 - ✅ **Theater Management** - Configure theaters and screens
 - ✅ **Show Management** - Schedule shows and manage timings
 - ✅ **Booking Reports** - Track bookings and revenue
-- ✅ **User Management** - Handle user accounts and permissions
+-  **User Management** - Handle user accounts and permissions
 
 ### System Features
 - 🔒 **Secure Authentication** - JWT-based login system
