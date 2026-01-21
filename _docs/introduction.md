@@ -6,14 +6,14 @@ last_modified_at: 2025-11-15
 toc: true
 ---
 
-# 🎬 Cineverse - BookMyShow Microservices Platform
+#  Cineverse - BookMyShow Microservices Platform
 
 > **A Comprehensive Online Movie Booking & Ticket Management System**  
 > Built with modern microservices architecture, implementing Spring Boot, MySQL, MongoDB, and Eureka service discovery. 
 
 ---
 
-## 📋 Table of Contents
+##  Table of Contents
 
 - [Overview](#overview)
 - [Key Features](#key-features)
@@ -30,7 +30,7 @@ toc: true
 
 ---
 
-## 🎯 Overview
+##  Overview
 
 **Cineverse** is an enterprise-grade, scalable movie booking platform inspired by BookMyShow.  It leverages a distributed microservices architecture to handle complex operations like:
 
@@ -46,9 +46,9 @@ The system ensures **reliability**, **scalability**, and **maintainability** thr
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
-### 🎫 For Users (Customers)
+###  For Users (Customers)
 - ✅ **Secure Registration & Authentication** - JWT-based authentication with role-based access
 - ✅ **Movie Discovery** - Browse movies by language, genre, release date
 - ✅ **Show Listings** - Filter shows by theatre, date, and time
@@ -64,16 +64,16 @@ The system ensures **reliability**, **scalability**, and **maintainability** thr
 - ✅ **Booking Oversight** - Monitor and manage customer bookings
 - ✅ **Analytics Dashboard** - Real-time booking statistics and reports
 
-### 🛡️ Security Features
-- 🔒 **Password Encryption** - BCrypt hashing for secure password storage
-- 🔒 **JWT Token Authentication** - Stateless, secure API authentication
-- 🔒 **Role-Based Access Control** - USER and ADMIN role separation
-- 🔒 **Seat Lock Mechanism** - Prevents double-booking with TTL-based locks
-- 🔒 **Data Validation** - Comprehensive input validation across services
+###  Security Features
+-  **Password Encryption** - BCrypt hashing for secure password storage
+-  **JWT Token Authentication** - Stateless, secure API authentication
+-  **Role-Based Access Control** - USER and ADMIN role separation
+-  **Seat Lock Mechanism** - Prevents double-booking with TTL-based locks
+-  **Data Validation** - Comprehensive input validation across services
 
 ---
 
-## 💻 Technology Stack
+##  Technology Stack
 
 ### Backend Services
 
@@ -109,7 +109,7 @@ The system ensures **reliability**, **scalability**, and **maintainability** thr
 
 ---
 
-## 🏗️ System Architecture
+##  System Architecture
 
 ### Architecture Diagram
 
@@ -174,7 +174,7 @@ Response to Client
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 cineverse/
@@ -232,7 +232,7 @@ cineverse/
 
 ## 🔧 Services Overview
 
-### 1️⃣ **Auth Service** (Port: 8081)
+### 1️ **Auth Service** (Port: 8081)
 **Purpose**: User authentication and JWT token generation
 
 **Responsibilities**:
@@ -250,7 +250,7 @@ cineverse/
 
 ---
 
-### 2️⃣ **Theatre Service** (Port: 8082)
+### 2️ **Theatre Service** (Port: 8082)
 **Purpose**: Manage theatres, screens, and seat information
 
 **Responsibilities**:
@@ -267,7 +267,7 @@ cineverse/
 
 ---
 
-### 3️⃣ **Movie Service** (Port: 8083)
+### 3️ **Movie Service** (Port: 8083)
 **Purpose**: Movie catalog and metadata management
 
 **Responsibilities**:
@@ -284,7 +284,7 @@ cineverse/
 
 ---
 
-### 4️⃣ **Show Service** (Port: 8084)
+### 4️ **Show Service** (Port: 8084)
 **Purpose**: Map movies to theatres with date, time, and pricing
 
 **Responsibilities**:
@@ -303,7 +303,7 @@ cineverse/
 
 ---
 
-### 5️⃣ **Booking Service** (Port: 8085)
+### 5️ **Booking Service** (Port: 8085)
 **Purpose**: Complete booking lifecycle management
 
 **Responsibilities**:
@@ -329,7 +329,7 @@ cineverse/
 
 ---
 
-### 6️⃣ **Notification Service** (Port: 8086)
+### 6️ **Notification Service** (Port: 8086)
 **Purpose**: Send booking tickets via WhatsApp
 
 **Responsibilities**:
@@ -356,7 +356,7 @@ cineverse/
 
 ---
 
-### 🔄 **Eureka Service Registry** (Port: 8761)
+###  **Eureka Service Registry** (Port: 8761)
 **Purpose**: Service discovery and registration
 
 **Features**:
@@ -367,7 +367,7 @@ cineverse/
 
 ---
 
-### 🚪 **API Gateway** (Port: 9191)
+###  **API Gateway** (Port: 9191)
 **Purpose**: Unified entry point for all frontend requests
 
 **Routing Rules**:
@@ -390,7 +390,7 @@ cineverse/
 
 ---
 
-## 🗄️ Database Architecture
+##  Database Architecture
 
 ### SQL Databases (MySQL)
 
@@ -480,7 +480,7 @@ CREATE TABLE seat_locks (
 
 ---
 
-## ⚙️ Installation & Setup
+##  Installation & Setup
 
 ### Prerequisites
 
@@ -613,7 +613,7 @@ Frontend will be available at: `http://localhost:5173`
 
 ---
 
-## 🚀 Quick Start Guide
+##  Quick Start Guide
 
 ### Access the Application
 
@@ -700,7 +700,7 @@ Authorization: Bearer {JWT_TOKEN}
 
 ---
 
-## 👨‍💻 Development
+##  Development
 
 ### Project Structure Best Practices
 
@@ -754,7 +754,7 @@ java -jar target/service-name-1.0.0.jar
 
 ---
 
-## 📊 Monitoring & Troubleshooting
+##  Monitoring & Troubleshooting
 
 ### Eureka Dashboard
 Visit: http://localhost:8761
@@ -788,7 +788,7 @@ logging.level.com.cineverse=DEBUG
 
 ---
 
-## 🔐 Security Considerations
+##  Security Considerations
 
 1. **Never commit credentials** - Use environment variables
 2. **JWT Expiration** - Set appropriate token expiration times
@@ -801,7 +801,7 @@ logging.level.com.cineverse=DEBUG
 
 ---
 
-## 📈 Performance Optimization
+##  Performance Optimization
 
 - **Caching**: Implement Redis for frequently accessed data
 - **Database Indexing**: Create indexes on frequently queried columns
@@ -812,7 +812,7 @@ logging.level.com.cineverse=DEBUG
 
 ---
 
-## 🧪 Testing
+##  Testing
 
 ### Unit Tests
 ```java
@@ -847,7 +847,7 @@ public class BookingControllerIntegrationTest {
 
 ---
 
-## 📝 API Documentation
+##  API Documentation
 
 Each service exposes Swagger/OpenAPI documentation:
 
@@ -860,7 +860,7 @@ Each service exposes Swagger/OpenAPI documentation:
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -883,7 +883,7 @@ This project is licensed under the **Apache License 2.0** - see the [LICENSE](LI
 
 ---
 
-## 📞 Support & Contact
+##  Support & Contact
 
 For issues, questions, or suggestions:
 
@@ -893,7 +893,7 @@ For issues, questions, or suggestions:
 
 ---
 
-## 🎓 Learning Resources
+##  Learning Resources
 
 - [Spring Boot Documentation](https://spring.io/projects/spring-boot)
 - [Spring Cloud Documentation](https://spring.io/projects/spring-cloud)
@@ -903,9 +903,9 @@ For issues, questions, or suggestions:
 
 ---
 
-## 🗺️ Project Roadmap
+##  Project Roadmap
 
-### Phase 1 (Current) ✅
+### Phase 1 (Current) 
 - Core microservices
 - Basic booking functionality
 - User authentication
@@ -924,9 +924,6 @@ For issues, questions, or suggestions:
 
 ---
 
-## ⭐ Show Your Support
-
-If you found this project helpful, please give it a star!  ⭐
 
 ---
 
