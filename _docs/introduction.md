@@ -49,20 +49,20 @@ The system ensures **reliability**, **scalability**, and **maintainability** thr
 ##  Key Features
 
 ###  For Users (Customers)
-- ✅ **Secure Registration & Authentication** - JWT-based authentication with role-based access
-- ✅ **Movie Discovery** - Browse movies by language, genre, release date
-- ✅ **Show Listings** - Filter shows by theatre, date, and time
-- ✅ **Smart Seat Selection** - Real-time seat availability with temporary locking
-- ✅ **Seamless Booking** - Complete booking workflow with payment simulation
-- ✅ **Instant Notifications** - WhatsApp ticket delivery with booking details
-- ✅ **Booking History** - Track and manage all bookings
+-  **Secure Registration & Authentication** - JWT-based authentication with role-based access
+-  **Movie Discovery** - Browse movies by language, genre, release date
+-  **Show Listings** - Filter shows by theatre, date, and time
+-  **Smart Seat Selection** - Real-time seat availability with temporary locking
+-  **Seamless Booking** - Complete booking workflow with payment simulation
+-  **Instant Notifications** - WhatsApp ticket delivery with booking details
+-  **Booking History** - Track and manage all bookings
 
-### 🔐 For Administrators
-- ✅ **Movie Management** - Add, update, delete movie metadata
-- ✅ **Theatre Management** - Manage theatres, screens, and seat configurations
-- ✅ **Show Scheduling** - Create shows with pricing and timings
-- ✅ **Booking Oversight** - Monitor and manage customer bookings
-- ✅ **Analytics Dashboard** - Real-time booking statistics and reports
+###  For Administrators
+-  **Movie Management** - Add, update, delete movie metadata
+-  **Theatre Management** - Manage theatres, screens, and seat configurations
+-  **Show Scheduling** - Create shows with pricing and timings
+-  **Booking Oversight** - Monitor and manage customer bookings
+-  **Analytics Dashboard** - Real-time booking statistics and reports
 
 ###  Security Features
 -  **Password Encryption** - BCrypt hashing for secure password storage
