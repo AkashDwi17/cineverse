@@ -10,7 +10,7 @@ permalink: /about/
 
 ---
 
-## 📋 Project Details
+##  Project Details
 
 **Course Name**: PG-DAC  
 **Batch Name**: August 2025  
@@ -18,7 +18,7 @@ permalink: /about/
 
 ---
 
-## 👥 Team Members
+##  Team Members
 
 | Sr. No | Name | PRN | GitHub |
 |--------|------|-----|--------|
@@ -30,7 +30,7 @@ permalink: /about/
 
 ---
 
-## 📖 Project Description
+##  Project Description
 
 Cineverse is a comprehensive movie booking solution that provides:
 
@@ -42,7 +42,7 @@ Cineverse is a comprehensive movie booking solution that provides:
 
 ---
 
-## 💻 Technology Stack
+##  Technology Stack
 
 ### Frontend
 - **React.js** - Modern UI framework
@@ -75,33 +75,33 @@ Cineverse is a comprehensive movie booking solution that provides:
 
 ---
 
-## 🎯 Key Features
+##  Key Features
 
 ### For Users
-- ✅ **Browse Movies** - Explore latest and upcoming movies
-- ✅ **View Showtimes** - Check available shows at nearby theaters
-- ✅ **Book Tickets** - Easy and quick ticket booking
-- ✅ **Seat Selection** - Choose your preferred seats
-- ✅ **Booking History** - View past and upcoming bookings
-- ✅ **User Profile** - Manage personal information and preferences
+-  **Browse Movies** - Explore latest and upcoming movies
+-  **View Showtimes** - Check available shows at nearby theaters
+-  **Book Tickets** - Easy and quick ticket booking
+-  **Seat Selection** - Choose your preferred seats
+-  **Booking History** - View past and upcoming bookings
+-  **User Profile** - Manage personal information and preferences
 
 ### For Administrators
-- ✅ **Movie Management** - Add, edit, and remove movies
-- ✅ **Theater Management** - Configure theaters and screens
-- ✅ **Show Management** - Schedule shows and manage timings
-- ✅ **Booking Reports** - Track bookings and revenue
+-  **Movie Management** - Add, edit, and remove movies
+-  **Theater Management** - Configure theaters and screens
+-  **Show Management** - Schedule shows and manage timings
+-  **Booking Reports** - Track bookings and revenue
 -  **User Management** - Handle user accounts and permissions
 
 ### System Features
-- 🔒 **Secure Authentication** - JWT-based login system
-- 🔒 **Role-Based Access** - Separate admin and user privileges
-- 🔒 **Encrypted Data** - BCrypt password hashing
-- 📊 **Distributed Tracing** - Zipkin integration for monitoring
-- ⚡ **Service Discovery** - Eureka-based microservices
+-  **Secure Authentication** - JWT-based login system
+-  **Role-Based Access** - Separate admin and user privileges
+-  **Encrypted Data** - BCrypt password hashing
+-  **Distributed Tracing** - Zipkin integration for monitoring
+-  **Service Discovery** - Eureka-based microservices
 
 ---
 
-## 🏗️ Project Architecture
+##  Project Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────┐
